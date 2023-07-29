@@ -1,0 +1,257 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    position: relative;
+}
+
+// 로그인 모달
+#Header-Login-Wrapper {
+    border: 1px solid #000;
+    background: #eeefff;
+    width: 400px;
+    height: 600px;
+
+    position: absolute;
+    top: 370%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .header-login-box {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+
+        // Logo
+        .header-login-logo-box {
+            width: 100%;
+            height: 20%;
+            position: relative;
+
+            .header-login-logo {
+                border: 1px solid #000;
+                width: 50%;
+                height: 50%;
+                margin: 0 auto;
+                @include disflex();
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        // 사용자 정보 입력 창
+        .header-login-user-info-box {
+            width: 100%;
+            height: 20%;
+
+            .header-login-user-email-box {
+                width: 100%;
+                height: 50%;
+                @include disflex();
+
+                .header-login-user-email {
+                    border: 1px solid #000;
+                    width: 100%;
+                    height: 85%;
+                    padding-left: 2%;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            
+            .header-login-user-password-box {
+                width: 100%;
+                height: 50%;
+                @include disflex();
+                
+                .header-login-user-password {
+                    border: 1px solid #000;
+                    width: 100%;
+                    height: 85%;
+                    padding-left: 2%;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        // 로그인 유지
+        .header-login-keep-login-wrapper {
+            width: 100%;
+            height: 10%;
+
+            .header-login-keep-login-box {
+                width: 35%;
+                height: 50%;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
+                .header-login-keep-login-check-btn {
+                    border: 1px solid #000;
+                    background: #fff;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+
+                .header-login-keep-login-text {
+                    margin-left: 5px;
+                    font-size: 13px;
+                }
+            }
+
+        }
+
+        // 로그인 클릭
+        .header-login-login-box {
+            width: 100%;
+            height: 15%;
+            @include disflex();
+
+            .header-login-login {
+                border: 1px solid #000;
+                width: 100%;
+                height: 50%;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        // 사용자 정보 찾기
+        .header-login-find-info-wrapper {
+            width: 100%;
+            height: 10%;
+            
+            .header-login-find-info-box {
+                width: 100%;
+                height: 100%;
+                @include disflex();
+
+                .header-login-find-email-pw-box {
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    // 아이디 찾기
+                    .header-login-find-email {
+                        border-right: 1px solid #000;
+                        width: 45%;
+                        height: 50%;
+                        font-size: 13px;
+                        cursor: pointer;
+                        @include disflex();
+                        
+                    }
+                    
+                    // 비밀번호 찾기
+                    .header-login-find-pw {
+                        border-right: 1px solid #000;
+                        width: 55%;
+                        height: 50%;
+                        font-size: 13px;
+                        cursor: pointer;
+                        @include disflex();
+                    }
+                }
+                
+                // 회원가입
+                .header-login-signup-box {
+                    width: 30%;
+                    height: 100%;
+                    
+                    .header-login-signup {
+                        width: 100%;
+                        height: 50%;
+                        font-size: 13px;
+                        cursor: pointer;
+                        @include disflex();
+                    }
+                }
+            }
+        }
+
+        // 소셜 로그인
+        .header-login-social-login-box {
+            width: 100%;
+            height: 25%;
+            @include disflex();
+
+            .header-login-social-login {
+                width: 25%;
+                height: 100%;
+
+                .header-login-social-login-img-box {
+                    width: 100%;
+                    height: 50%;
+                    @include disflex();
+
+                    .header-login-social-login-img {
+                        border: 1px solid #000;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                    }
+                }
+
+                .header-login-social-login-text-box {
+                    width: 100%;
+                    height: 50%;
+
+                    .header-login-social-login-select-text {
+                        font-size: 13px;
+                        cursor: pointer;
+                        @include disflex();
+                    }
+                    
+                    .header-login-social-login-text {
+                        font-size: 13px;
+                        cursor: pointer;
+                        @include disflex();
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
