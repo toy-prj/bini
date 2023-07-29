@@ -12,6 +12,7 @@ const MovieLogin = () => {
 
 
             <div>test</div>
+            <div>test2</div>
 
 
 
