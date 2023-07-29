@@ -29,7 +29,7 @@ const MovieLogin = () => {
                 
                 {/* Logo */}
                 <div className="header-login-logo-box">
-                    <div className="header-login-logo">Logo</div>
+                    <div className="header-login-logo"></div>
                 </div>
 
                 {/* 사용자 정보 입력 창 */}
@@ -80,8 +80,12 @@ const MovieLogin = () => {
 
                     <div className="header-login-find-info-box">
                         <div className="header-login-find-email-pw-box">
-                            <div className="header-login-find-email">아이디 찾기</div>
-                            <div className="header-login-find-pw">비밀번호 찾기</div>
+                            <div className="header-login-find-email">
+                                <p className="header-login-find-email-text">아이디 찾기</p>
+                            </div>
+                            <div className="header-login-find-pw">
+                                <p className="header-login-find-pw-text">비밀번호 찾기</p>
+                            </div>
                         </div>
                     
                         <div className="header-login-signup-box">

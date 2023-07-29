@@ -12,8 +12,7 @@ body {
 
 // 로그인 모달
 #Header-Login-Wrapper {
-    border: 1px solid #000;
-    background: #eeefff;
+    border: 1px solid #b0b0ff;
     width: 400px;
     height: 600px;
 
@@ -30,13 +29,14 @@ body {
         // Logo
         .header-login-logo-box {
             width: 100%;
-            height: 20%;
+            height: 25%;
             position: relative;
 
             .header-login-logo {
-                border: 1px solid #000;
+                background: url('../../scss/img/MainLogo.png') no-repeat;
+                background-size: 100%;
                 width: 50%;
-                height: 50%;
+                height: 80%;
                 margin: 0 auto;
                 @include disflex();
 
@@ -58,7 +58,8 @@ body {
                 @include disflex();
 
                 .header-login-user-email {
-                    border: 1px solid #000;
+                    border: 1px solid #b0b0ff;
+                    border-radius: 5px;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
@@ -75,7 +76,8 @@ body {
                 @include disflex();
                 
                 .header-login-user-password {
-                    border: 1px solid #000;
+                    border: 1px solid #b0b0ff;
+                    border-radius: 5px;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
@@ -90,11 +92,11 @@ body {
         // 로그인 유지
         .header-login-keep-login-wrapper {
             width: 100%;
-            height: 10%;
+            height: 5%;
 
             .header-login-keep-login-box {
                 width: 35%;
-                height: 50%;
+                height: 100%;
                 display: flex;
                 justify-content: left;
                 align-items: center;
@@ -112,19 +114,20 @@ body {
                     font-size: 13px;
                 }
             }
-
         }
 
         // 로그인 클릭
         .header-login-login-box {
             width: 100%;
-            height: 15%;
+            height: 10%;
             @include disflex();
 
             .header-login-login {
-                border: 1px solid #000;
+                background: #b0b0ff;
+                border-radius: 5px;
                 width: 100%;
-                height: 50%;
+                height: 80%;
+                color: #fff;
                 font-size: 16px;
                 font-weight: bold;
                 cursor: pointer;
@@ -134,7 +137,7 @@ body {
         // 사용자 정보 찾기
         .header-login-find-info-wrapper {
             width: 100%;
-            height: 10%;
+            height: 5%;
             
             .header-login-find-info-box {
                 width: 100%;
@@ -149,23 +152,28 @@ body {
 
                     // 아이디 찾기
                     .header-login-find-email {
-                        border-right: 1px solid #000;
                         width: 45%;
-                        height: 50%;
+                        height: 100%;
                         font-size: 13px;
-                        cursor: pointer;
                         @include disflex();
                         
+                        .header-login-find-email-text {
+                            width: 65%;
+                            cursor: pointer;
+                        }
                     }
                     
                     // 비밀번호 찾기
                     .header-login-find-pw {
-                        border-right: 1px solid #000;
                         width: 55%;
-                        height: 50%;
+                        height: 100%;
                         font-size: 13px;
-                        cursor: pointer;
                         @include disflex();
+
+                        .header-login-find-pw-text {
+                            width: 65%;
+                            cursor: pointer;
+                        }
                     }
                 }
                 
@@ -173,10 +181,11 @@ body {
                 .header-login-signup-box {
                     width: 30%;
                     height: 100%;
+                    @include disflex();
                     
                     .header-login-signup {
-                        width: 100%;
-                        height: 50%;
+                        width: 60%;
+                        height: 100%;
                         font-size: 13px;
                         cursor: pointer;
                         @include disflex();
@@ -188,20 +197,20 @@ body {
         // 소셜 로그인
         .header-login-social-login-box {
             width: 100%;
-            height: 25%;
+            height: 35%;
             @include disflex();
-
+            
             .header-login-social-login {
                 width: 25%;
-                height: 100%;
-
+                height: 60%;
+                
                 .header-login-social-login-img-box {
                     width: 100%;
-                    height: 50%;
+                    height: 60%;
                     @include disflex();
 
                     .header-login-social-login-img {
-                        border: 1px solid #000;
+                        background: #b0b0ff;
                         border-radius: 50%;
                         width: 50px;
                         height: 50px;
@@ -211,17 +220,15 @@ body {
 
                 .header-login-social-login-text-box {
                     width: 100%;
-                    height: 50%;
+                    height: 40%;
 
                     .header-login-social-login-select-text {
                         font-size: 13px;
-                        cursor: pointer;
                         @include disflex();
                     }
                     
                     .header-login-social-login-text {
                         font-size: 13px;
-                        cursor: pointer;
                         @include disflex();
                     }
                 }

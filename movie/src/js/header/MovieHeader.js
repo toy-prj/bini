@@ -49,7 +49,7 @@ const MovieHeader = () => {
                 <div className="header-top-banner">
 
                     <div className="header-main-logo-box">
-                        <div className="header-main-logo">메인 로고</div>
+                        <div className="header-main-logo"></div>
                     </div>
 
                     <div className="header-menu-box">
