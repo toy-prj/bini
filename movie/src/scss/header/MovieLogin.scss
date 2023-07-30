@@ -14,22 +14,24 @@ body {
     0% {
         width: 0;
         height: 0;
+        opacity: 0;
     }
-
+    
     50% {
         width: 400px;
         height: 0;
     }
-
+    
     100% {
         width: 400px;
         height: 600px;
+        opacity: 1;
     }
 }
 
 // 로그인 모달
 #Header-Login-Wrapper {
-    border: 1px solid #b0b0ff;
+    border: 1px solid #6633ff;
     width: 400px;
     height: 600px;
     overflow: hidden;
@@ -51,7 +53,7 @@ body {
         left: 0;
 
         #Login-Modal-Close-Btn {
-            color: #b0b0ff;
+            color: #6633ff;
             font-size: 16px;
         }
 
@@ -76,9 +78,11 @@ body {
 
             .header-login-logo {
                 background: url('../../scss/img/MainLogo.png') no-repeat;
-                background-size: 100%;
+                background-size: 80%;
+                background-position-x: 18px;
+                background-position-y: 20px;
                 width: 50%;
-                height: 80%;
+                height: 100%;
                 margin: 0 auto;
                 @include disflex();
 
@@ -93,49 +97,41 @@ body {
         .header-login-user-info-box {
             width: 100%;
             height: 20%;
-
             
-
             .header-login-user-email-box {
                 width: 100%;
                 height: 50%;
                 @include disflex();
-
+                
                 .header-login-user-email {
-                    border: 1px solid #b0b0ff;
+                    border: 1px solid #6633ff;
                     border-radius: 5px;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
-
+                    font-size: 15px;
+                    
                     &:focus {
                         outline: none;
                     }
-
-                    &::placeholder {
-                        color: #b0b0ff;
-                    }
                 }
             }
-
+            
             .header-login-user-password-box {
                 width: 100%;
                 height: 50%;
                 @include disflex();
 
                 .header-login-user-password {
-                    border: 1px solid #b0b0ff;
+                    border: 1px solid #6633ff;
                     border-radius: 5px;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
-
+                    font-size: 15px;
+                    
                     &:focus {
                         outline: none;
-                    }
-
-                    &::placeholder {
-                        color: #b0b0ff;
                     }
                 }
             }
@@ -149,9 +145,9 @@ body {
             .header-login-keep-login-box {
                 width: 35%;
                 height: 100%;
+                padding-top: 4px;
                 display: flex;
                 justify-content: left;
-                align-items: center;
 
                 .header-login-keep-login-check-btn {
                     width: 20px;
@@ -160,10 +156,9 @@ body {
                 }
 
                 .header-login-keep-login-text {
-                    color: #b0b0ff;
+                    color: #6633ff;
                     margin-left: 5px;
                     font-size: 13px;
-                    font-weight: bold;
                 }
             }
         }
@@ -175,7 +170,7 @@ body {
             @include disflex();
 
             .header-login-login {
-                background: #b0b0ff;
+                background: #6633ff;
                 border-radius: 5px;
                 width: 100%;
                 height: 80%;
@@ -202,7 +197,7 @@ body {
                 @include disflex();
 
                 .header-login-find-email-pw-box {
-                    color: #b0b0ff;
+                    color: #6633ff;
                     width: 70%;
                     height: 100%;
                     display: flex;
@@ -242,7 +237,7 @@ body {
                     @include disflex();
 
                     .header-login-signup {
-                        color: #b0b0ff;
+                        color: #6633ff;
                         width: 60%;
                         height: 100%;
                         font-size: 13px;
@@ -254,25 +249,51 @@ body {
             }
         }
 
+        .block {
+            width: 100%;
+            height: 15%;
+        }
+
+        // 소셜 로그인 문구
+        .header-login-social-login-text-box {
+            width: 100%;
+            height: 5%;
+            display: flex;
+
+            .header-login-social-login-text-block {
+                border-bottom: 1px solid #000;
+                width: 25%;
+                height: 50%;
+            }
+            
+            .header-login-social-login-text {
+                width: 50%;
+                height: 100%;
+                font-size: 13px;
+                @include disflex();
+            }
+        }
+
         // 소셜 로그인
         .header-login-social-login-box {
             width: 100%;
-            height: 35%;
-            @include disflex();
-
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            
             .header-login-social-login {
                 width: 25%;
-                height: 60%;
+                height: 80%;
 
                 .header-login-social-login-img-box {
                     width: 100%;
-                    height: 60%;
+                    height: 100%;
                     @include disflex();
                     
                     .header-login-social-login-img {
                         border-radius: 50%;
-                        width: 50px;
-                        height: 50px;
+                        width: 40px;
+                        height: 40px;
                         transition-duration: 0.3s;
                         cursor: pointer;
 
@@ -296,22 +317,6 @@ body {
                         background-size: 130%;
                         background-position-x: -7px;
                         background-position-y: -5px;
-                    }
-                }
-
-                .header-login-social-login-text-box {
-                    width: 100%;
-                    height: 40%;
-                    font-weight: bold;
-
-                    .header-login-social-login-select-text {
-                        font-size: 13px;
-                        @include disflex();
-                    }
-
-                    .header-login-social-login-text {
-                        font-size: 13px;
-                        @include disflex();
                     }
                 }
             }

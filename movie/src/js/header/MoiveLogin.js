@@ -104,33 +104,33 @@ const MovieLogin = ( {clickCloseBtn} ) => {
 
                 </div>
 
+                {/* 빈 블럭 */}
+                <div className="block"></div>
+
+                {/* 소셜 로그인 문구 */}
+                <div className="header-login-social-login-text-box">
+                    <div className="header-login-social-login-text-block"></div>
+                    <p className="header-login-social-login-text">
+                        다른 계정으로 간편 로그인
+                    </p>
+                    <div className="header-login-social-login-text-block"></div>
+                </div>
+
                 {/* 소셜 로그인 */}
                 <div className="header-login-social-login-box">
                     <div className="header-login-social-login">
                         <div className="header-login-social-login-img-box">
                             <div className="header-login-social-login-img" id="Kakao"></div>
                         </div>
-                        <div className="header-login-social-login-text-box">
-                            <p className="header-login-social-login-select-text">카카오로</p>
-                            <p className="header-login-social-login-text">시작하기</p>
-                        </div>
                     </div>
                     <div className="header-login-social-login">
                         <div className="header-login-social-login-img-box">
                             <div className="header-login-social-login-img" id="Naver"></div>
                         </div>
-                        <div className="header-login-social-login-text-box">
-                            <p className="header-login-social-login-select-text">네이버로</p>
-                            <p className="header-login-social-login-text">시작하기</p>
-                        </div>
                     </div>
                     <div className="header-login-social-login">
                         <div className="header-login-social-login-img-box">
                             <div className="header-login-social-login-img" id="Google"></div>
-                        </div>
-                        <div className="header-login-social-login-text-box">
-                            <p className="header-login-social-login-select-text">구글로</p>
-                            <p className="header-login-social-login-text">시작하기</p>
                         </div>
                     </div>
                 </div>
