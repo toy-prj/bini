@@ -1,8 +1,10 @@
 import React from "react";
-
+import { MdOutlineClose } from 'react-icons/md';
 import '../../scss/header/MovieLogin.scss';
 
-const MovieLogin = () => {
+const MovieLogin = ( {clickCloseBtn} ) => {
+
+    
 
     return(
         <>
@@ -25,7 +27,15 @@ const MovieLogin = () => {
             <div id="Header-Login-Wrapper">
                 <div className="header-login-box">
 
-                
+                {/* 닫기 */}
+                <div id="Close-Login-Modal-Wrapper">
+                    <button 
+                        className="header-login-close-btn"
+                        type="button"  
+                        onClick={ clickCloseBtn }
+                    ><MdOutlineClose /></button>
+                </div>
+
                 {/* Logo */}
                 <div className="header-login-logo-box">
                     <div className="header-login-logo"></div>

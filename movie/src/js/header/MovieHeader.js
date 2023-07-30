@@ -13,6 +13,10 @@ const MovieHeader = () => {
         setOpenLogin(true);
     }
 
+    const clickCloseBtn = e => {
+        setOpenLogin(false);
+    }
+
 
 
 
@@ -26,7 +30,7 @@ const MovieHeader = () => {
     return (
         <>
 
-            {openLogin && <MovieLogin />}
+            {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn }/>}
 
 
 

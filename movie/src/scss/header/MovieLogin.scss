@@ -10,16 +10,53 @@ body {
     position: relative;
 }
 
+@keyframes openLoginModal {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    50% {
+        width: 400px;
+        height: 0;
+    }
+
+    100% {
+        width: 400px;
+        height: 600px;
+    }
+}
+
 // 로그인 모달
 #Header-Login-Wrapper {
     border: 1px solid #b0b0ff;
     width: 400px;
     height: 600px;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    animation: openLoginModal 0.7s forwards 1;
 
-    position: absolute;
-    top: 370%;
+    position: fixed;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    // 닫기
+    #Close-Login-Modal-Wrapper {
+        width: 30px;
+        height: 30px;
+        @include disflex();
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .header-login-close-btn {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+    }
 
     .header-login-box {
         width: 90%;
@@ -69,12 +106,12 @@ body {
                     }
                 }
             }
-            
+
             .header-login-user-password-box {
                 width: 100%;
                 height: 50%;
                 @include disflex();
-                
+
                 .header-login-user-password {
                     border: 1px solid #b0b0ff;
                     border-radius: 5px;
@@ -138,7 +175,7 @@ body {
         .header-login-find-info-wrapper {
             width: 100%;
             height: 5%;
-            
+
             .header-login-find-info-box {
                 width: 100%;
                 height: 100%;
@@ -156,13 +193,13 @@ body {
                         height: 100%;
                         font-size: 13px;
                         @include disflex();
-                        
+
                         .header-login-find-email-text {
                             width: 65%;
                             cursor: pointer;
                         }
                     }
-                    
+
                     // 비밀번호 찾기
                     .header-login-find-pw {
                         width: 55%;
@@ -176,13 +213,13 @@ body {
                         }
                     }
                 }
-                
+
                 // 회원가입
                 .header-login-signup-box {
                     width: 30%;
                     height: 100%;
                     @include disflex();
-                    
+
                     .header-login-signup {
                         width: 60%;
                         height: 100%;
@@ -199,11 +236,11 @@ body {
             width: 100%;
             height: 35%;
             @include disflex();
-            
+
             .header-login-social-login {
                 width: 25%;
                 height: 60%;
-                
+
                 .header-login-social-login-img-box {
                     width: 100%;
                     height: 60%;
@@ -226,7 +263,7 @@ body {
                         font-size: 13px;
                         @include disflex();
                     }
-                    
+
                     .header-login-social-login-text {
                         font-size: 13px;
                         @include disflex();
