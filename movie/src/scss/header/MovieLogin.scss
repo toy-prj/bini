@@ -94,6 +94,8 @@ body {
             width: 100%;
             height: 20%;
 
+            
+
             .header-login-user-email-box {
                 width: 100%;
                 height: 50%;
@@ -130,6 +132,10 @@ body {
 
                     &:focus {
                         outline: none;
+                    }
+
+                    &::placeholder {
+                        color: #b0b0ff;
                     }
                 }
             }
