@@ -50,6 +50,11 @@ body {
         top: 0;
         left: 0;
 
+        #Login-Modal-Close-Btn {
+            color: #b0b0ff;
+            font-size: 16px;
+        }
+
         .header-login-close-btn {
             background: #fff;
             width: 100%;
@@ -104,6 +109,10 @@ body {
                     &:focus {
                         outline: none;
                     }
+
+                    &::placeholder {
+                        color: #b0b0ff;
+                    }
                 }
             }
 
@@ -139,16 +148,16 @@ body {
                 align-items: center;
 
                 .header-login-keep-login-check-btn {
-                    border: 1px solid #000;
-                    background: #fff;
                     width: 20px;
                     height: 20px;
                     cursor: pointer;
                 }
 
                 .header-login-keep-login-text {
+                    color: #b0b0ff;
                     margin-left: 5px;
                     font-size: 13px;
+                    font-weight: bold;
                 }
             }
         }
@@ -167,7 +176,12 @@ body {
                 color: #fff;
                 font-size: 16px;
                 font-weight: bold;
+                transition-duration: 0.3s;
                 cursor: pointer;
+
+                &:hover {
+                    opacity: 0.8;
+                }
             }
         }
 
@@ -182,6 +196,7 @@ body {
                 @include disflex();
 
                 .header-login-find-email-pw-box {
+                    color: #b0b0ff;
                     width: 70%;
                     height: 100%;
                     display: flex;
@@ -221,9 +236,11 @@ body {
                     @include disflex();
 
                     .header-login-signup {
+                        color: #b0b0ff;
                         width: 60%;
                         height: 100%;
                         font-size: 13px;
+                        font-weight: bold;
                         cursor: pointer;
                         @include disflex();
                     }
@@ -247,11 +264,32 @@ body {
                     @include disflex();
 
                     .header-login-social-login-img {
-                        background: #b0b0ff;
                         border-radius: 50%;
                         width: 50px;
                         height: 50px;
+                        transition-duration: 0.3s;
                         cursor: pointer;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+
+                    #Kakao {
+                        background: url('../img/KakaoTalk-Logo.png') no-repeat;
+                        background-size: 100%;
+                    }
+
+                    #Naver {
+                        background: url('../img/Naver-Logo.png') no-repeat;
+                        background-size: 100%;
+                    }
+
+                    #Google {
+                        background: url('../img/Google-Logo.png') no-repeat;
+                        background-size: 130%;
+                        background-position-x: -7px;
+                        background-position-y: -5px;
                     }
                 }
 

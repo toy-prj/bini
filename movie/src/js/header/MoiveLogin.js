@@ -33,7 +33,7 @@ const MovieLogin = ( {clickCloseBtn} ) => {
                         className="header-login-close-btn"
                         type="button"  
                         onClick={ clickCloseBtn }
-                    ><MdOutlineClose /></button>
+                    ><MdOutlineClose id="Login-Modal-Close-Btn"/></button>
                 </div>
 
                 {/* Logo */}
