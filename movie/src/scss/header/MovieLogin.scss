@@ -268,7 +268,7 @@ body {
                     width: 100%;
                     height: 60%;
                     @include disflex();
-
+                    
                     .header-login-social-login-img {
                         border-radius: 50%;
                         width: 50px;
@@ -302,6 +302,7 @@ body {
                 .header-login-social-login-text-box {
                     width: 100%;
                     height: 40%;
+                    font-weight: bold;
 
                     .header-login-social-login-select-text {
                         font-size: 13px;
