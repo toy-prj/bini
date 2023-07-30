@@ -43,6 +43,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
+    z-index: 100;
+
     // 닫기
     #Close-Login-Modal-Wrapper {
         width: 30px;

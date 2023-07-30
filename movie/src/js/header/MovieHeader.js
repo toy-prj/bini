@@ -9,10 +9,12 @@ const MovieHeader = () => {
     // 로그인
     const[openLogin, setOpenLogin] = useState(false);
 
+    // 메인화면 로그인 클릭
     const clickLogin = e => {
         setOpenLogin(true);
     }
 
+    // 모달창 닫기
     const clickCloseBtn = e => {
         setOpenLogin(false);
     }
@@ -58,15 +60,22 @@ const MovieHeader = () => {
 
                     <div className="header-menu-box">
                         <ul className="header-menu">
+                            <li className="header-menu-list">
+                                <p className="header-menu-list-text">맴버쉽</p>
+                            </li>
                             <button 
                                 className="header-menu-list" 
                                 id="Login"
                                 onClick={clickLogin}
-                            >로그인</button>
-                            <li className="header-menu-list">menu2</li>
-                            <li className="header-menu-list">menu3</li>
-                            <li className="header-menu-list">menu4</li>
-                            <li className="header-menu-list">menu5</li>
+                            >
+                            <p className="header-menu-list-text">로그인</p>
+                            </button>
+                            <button
+                                className="header-menu-list"                            
+                                id="SignUp"
+                            >   
+                            <p className="header-menu-list-text">회원가입</p>
+                            </button>
                         </ul>
                     </div>
 
