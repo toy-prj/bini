@@ -24,12 +24,12 @@
         width: 100%;
         height: 60%;
         display: flex;
-        
+
         .header-main-logo-box {
             width: 10%;
             height: 100%;
             @include disflex();
-            
+
             .header-main-logo {
                 width: 100%;
                 height: 100%;
@@ -44,24 +44,24 @@
             background: none;
             width: 90%;
             height: 100%;
-            
+
             .header-menu {
                 background: none;
                 width: 100%;
                 height: 100%;
                 display: flex;
                 justify-content: right;
-                
+
                 .header-menu-list {
                     background: none;
                     width: 10%;
                     height: 100%;
-                    
+
                     .header-menu-list-icons-box {
                         width: 100%;
                         height: 60%;
-                        position: relative;                        
-                        
+                        position: relative;
+
                         .header-menu-list-icons {
                             color: #6633ff;
                             font-size: 28px;
@@ -71,7 +71,7 @@
                             left: 29px;
                         }
                     }
-                    
+
                     .header-menu-list-text {
                         color: #6633ff;
                         width: 100%;
@@ -80,7 +80,7 @@
                         font-weight: bold;
                         transition-duration: 0.3s;
                         cursor: pointer;
-                        
+
                         &:hover {
                             color: #ff0000;
                         }
@@ -93,15 +93,15 @@
 
 
 
-                    
-                    
+
+
                 }
 
             }
         }
     }
 
-    
+
     // header 아래쪽 banner
     .header-bottom-banner {
         height: 100%;
@@ -143,34 +143,64 @@
                     border: none;
                 }
             }
-            
+
         }
 
-        // 전체 메뉴 보기 버튼
-        .header-bottom-menu-view-all-btn-box {
-            width: 90px;
+        // header 아래쪽 sub menu
+        .header-bottom-sub-menu {
+            width: 175px;
             height: 100%;
-            @include disflex();
+            display: flex;
+
             position: absolute;
             top: 0;
             right: 0;
 
-            .header-bottom-menu-view-all-btn {
-                background: none;
-                color: #6633ff;
-                width: 35px;
-                height: 32px;
-                font-size: 30px;
-                transition-duration: 0.3s;
-                cursor: pointer;
+            // 바로 예매
+            .header-bottom-menu-quick-reservation-box {
+                width: 50%;
+                height: 100%;
+                @include disflex();
 
-                &:hover {
-                    color: #ff0000;
+                .header-bottom-menu-quick-reservation {
+                    background: none;
+                    width: 100%;
+                    height: 50%;
+                    cursor: pointer;
+
+                    .header-bottom-menu-quick-reservation-text {
+                        color: #ff0000;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            // 전체 메뉴 보기 버튼
+            .header-bottom-menu-view-all-btn-box {
+                width: 90px;
+                height: 100%;
+                @include disflex();
+                
+                .header-bottom-menu-view-all-btn {
+                    background: none;
+                    color: #6633ff;
+                    width: 35px;
+                    height: 32px;
+                    font-size: 30px;
+                    transition-duration: 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #ff0000;
+                    }
                 }
             }
         }
+
+
     }
-    
+
 
 
 

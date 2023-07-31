@@ -215,18 +215,32 @@ const MovieHeader = () => {
 
                     </ul>
 
-                    {/* 바로 예매 */}
-                    <div className="header-bottom-menu-quick-reservation-box">
-                        <div className=""></div>
-                    </div>
 
-                    {/* 전체 메뉴 보기 버튼 */}
-                    <div className="header-bottom-menu-view-all-btn-box">
-                        <button 
-                            className="header-bottom-menu-view-all-btn"
-                            id="View-All-Btn"
-                            ><GiHamburgerMenu /></button>
-                    </div>
+                    {/* header 아래쪽 sub menu */}
+                    <ul className="header-bottom-sub-menu">
+
+                        {/* 바로 예매 */}
+                        <li className="header-bottom-menu-quick-reservation-box">
+                            {/* TODO : 여기에 컴포넌트 호출 */}
+                            <button 
+                                className="header-bottom-menu-quick-reservation"
+                                id="Quick-Reservation"
+                            >
+                                <p className="header-bottom-menu-quick-reservation-text">
+                                    바로 예매
+                                </p>
+                            </button>
+                        </li>
+
+                        {/* 전체 메뉴 보기 버튼 */}
+                        <li className="header-bottom-menu-view-all-btn-box">
+                            <button 
+                                className="header-bottom-menu-view-all-btn"
+                                id="View-All-Btn"
+                                ><GiHamburgerMenu /></button>
+                        </li>
+
+                    </ul>
 
                 </div>
             </div>
