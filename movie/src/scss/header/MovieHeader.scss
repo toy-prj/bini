@@ -59,29 +59,30 @@
                     
                     .header-menu-list-icons-box {
                         width: 100%;
-                        height: 55%;
+                        height: 60%;
                         position: relative;                        
                         
                         .header-menu-list-icons {
                             color: #6633ff;
-                            font-size: 20px;
+                            font-size: 28px;
                             @include disflex();
                             position: absolute;
-                            top: 20px;
-                            left: 34px;
+                            top: 15px;
+                            left: 29px;
                         }
                     }
                     
                     .header-menu-list-text {
                         color: #6633ff;
                         width: 100%;
-                        height: 45%;
+                        height: 40%;
                         font-size: 12px;
+                        font-weight: bold;
+                        transition-duration: 0.3s;
                         cursor: pointer;
-
+                        
                         &:hover {
                             color: #ff0000;
-                            font-weight: bold;
                         }
                     }
 
@@ -101,10 +102,11 @@
     }
 
     
-    // header 아래 banner
+    // header 아래쪽 banner
     .header-bottom-banner {
         height: 100%;
         height: 40%;
+        position: relative;
 
         .header-bottom-menu {
             width: 100%;
@@ -129,7 +131,7 @@
                     border-right: 1px solid #000;
                     width: 100%;
                     height: 50%;
-                    // font-weight: bold;
+                    font-weight: bold;
                     @include disflex();
                 }
 
@@ -139,6 +141,31 @@
 
                 #Store {
                     border: none;
+                }
+            }
+            
+        }
+
+        // 전체 메뉴 보기 버튼
+        .header-bottom-menu-view-all-btn-box {
+            width: 90px;
+            height: 100%;
+            @include disflex();
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .header-bottom-menu-view-all-btn {
+                background: none;
+                color: #6633ff;
+                width: 35px;
+                height: 32px;
+                font-size: 30px;
+                transition-duration: 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ff0000;
                 }
             }
         }
