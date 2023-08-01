@@ -20,12 +20,12 @@
         position: relative;
 
         &:hover {
-            border-bottom: 2px solid #ff0000;
             color: #ff0000;
         }
 
         &:hover .header-bottom-menu-list-text {
-            transform: translateY(-2px);
+            transform: translateY(2px);
+            transition-duration: 0.2s;
         }
 
         .header-bottom-menu-list-text {

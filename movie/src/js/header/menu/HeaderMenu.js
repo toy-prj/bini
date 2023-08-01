@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import HeaderReservationMenu from './reservation/HeaderReservationMenu';
 import HeaderMovieMenu from './movie/HeaderMovieMenu';
+import HeaderCinemaMenu from "./cinema/HeaderCinemaMenuList";
+import HeaderEventMenu from "./event/HeaderEventMenu";
+import HeaderStoreMenu from "./store/HeaderStoreMenu";
 
 import '../../../scss/header/menu/HeaderMenu.scss';
 
@@ -68,22 +71,16 @@ const HeaderMenu = () => {
     
     // 스토어 hover
     const storeMouseEnter = () => {
-        setIsHoveredEvent(true);
+        setIsHoveredStore(true);
+        setIsHoveredEvent(false);
         setIsHoveredCinema(false);
         setIsHoveredMovie(false);
         setIsHoveredReservation(false);
-        setIsHoveredStore(false);
     }
 
     const storeMouseLeave = () => {
         setIsHoveredStore(false);
     }
-
-    
-
-    
-
-    
 
     return(
         <>
@@ -101,7 +98,7 @@ const HeaderMenu = () => {
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Reservation"
-                                >예매</p>
+                            >예매</p>
                         </Link>
 
                         {/* 영화 */}
@@ -110,7 +107,7 @@ const HeaderMenu = () => {
                             className="header-bottom-menu-list"
                             onMouseEnter={ movieMouseEnter }
                             onMouseLeave={ movieMouseLeave }
-                        >
+                            >
                             { isHoveredMovie && <HeaderMovieMenu /> }
                             <p 
                                 className="header-bottom-menu-list-text"
@@ -119,28 +116,46 @@ const HeaderMenu = () => {
                         </Link>
 
                         {/* 영화관 */}
-                        <li className="header-bottom-menu-list">
+                        <Link 
+                            to={'/contents/cinema'} 
+                            className="header-bottom-menu-list"
+                            onMouseEnter={ cinemaMouseEnter }
+                            onMouseLeave={ cinemaMouseLeave }
+                            >
+                            { isHoveredCinema && <HeaderCinemaMenu /> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Cinema"
                             >영화관</p>
-                        </li>
+                        </Link>
 
                         {/* 이벤트 */}
-                        <li className="header-bottom-menu-list">
+                        <Link 
+                            to={'/contents/event'} 
+                            className="header-bottom-menu-list"
+                            onMouseEnter={ eventMouseEnter }
+                            onMouseLeave={ eventMouseLeave }
+                        >
+                            { isHoveredEvent && <HeaderEventMenu /> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Event"
                             >이벤트</p>
-                        </li>
+                        </Link>
 
                         {/* 스토어 */}
-                        <li className="header-bottom-menu-list">
+                        <Link 
+                            to={'/contents/store'} 
+                            className="header-bottom-menu-list"
+                            onMouseEnter={ storeMouseEnter }
+                            onMouseLeave={ storeMouseLeave }
+                        >
+                            { isHoveredStore && <HeaderStoreMenu /> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Store"
                             >스토어</p>
-                        </li>
+                        </Link>
 
                     {/* header 아래쪽 sub menu */}
                     <ul className="header-bottom-sub-menu">
