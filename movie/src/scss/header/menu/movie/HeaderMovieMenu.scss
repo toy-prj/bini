@@ -1,0 +1,10 @@
+@import url('../../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

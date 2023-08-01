@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import MovieLogin from "./MoiveLogin";
+import { Link } from "react-router-dom";
 import { MdCardMembership } from 'react-icons/md';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { BsPersonFill, BsPersonFillAdd, BsPersonFillLock } from 'react-icons/bs';
-
+import MovieLogin from "./MoiveLogin";
+import MovieSignUp from "./MovieSignUp";
+import HeaderMenu from "./menu/HeaderMenu";
 
 import '../../scss/header/MovieHeader.scss';
-import { useEffect } from "react";
-import MovieSignUp from "./MovieSignUp";
-
 
 const MovieHeader = () => {
 
@@ -35,6 +33,16 @@ const MovieHeader = () => {
         setOpenLogin(false);
     }
 
+    // 메뉴 hover
+    const [isHovered, setIsHovered] = useState(false);
+
+    const HandleMouseEnter = () => {
+        setIsHovered(true);
+    }
+
+    const HandleMouseLeave = () => {
+        setIsHovered(false);
+    }
 
 
 
@@ -42,9 +50,6 @@ const MovieHeader = () => {
         <>
             {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/>}
             {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn }/> }            
-
-
-
 
 
 
@@ -66,7 +71,7 @@ const MovieHeader = () => {
 
                     {/* header 로고 */}
                     <div className="header-main-logo-box">
-                        <div className="header-main-logo"></div>
+                        <Link to={'/'} className="header-main-logo"></Link>
                     </div>
 
                     {/* header 위쪽 메뉴 */}
@@ -147,90 +152,21 @@ const MovieHeader = () => {
 
             {/* header 아래 banner */}
 
-                <div 
+            <div 
                 className="header-bottom-banner"
-                    id="headerBottomBanner"
-                >
+                id="headerBottomBanner"
+            >
+                {/* header 아래쪽 메뉴 */}
+                <ul className="header-bottom-menu">
+                    <HeaderMenu />
+                </ul>
 
-                    {/* header 아래쪽 메뉴 */}
-                    <ul className="header-bottom-menu">
-
-                        {/* header 아래쪽 메뉴 list */}
-                        {/* 예매 */}
-                        <li className="header-bottom-menu-list">
-                            <p 
-                                className="header-bottom-menu-list-text"
-                                id="Reservation"
-                            >예매</p>
-                        </li>
-
-                        {/* 영화 */}
-                        <li className="header-bottom-menu-list">
-                            <p 
-                                className="header-bottom-menu-list-text"
-                                id="Movie"
-                            >영화</p>
-                        </li>
-
-                        {/* 영화관 */}
-                        <li className="header-bottom-menu-list">
-                            <p 
-                                className="header-bottom-menu-list-text"
-                                id="Cinema"
-                            >영화관</p>
-                        </li>
-
-                        {/* 이벤트 */}
-                        <li className="header-bottom-menu-list">
-                            <p 
-                                className="header-bottom-menu-list-text"
-                                id="Event"
-                            >이벤트</p>
-                        </li>
-
-                        {/* 스토어 */}
-                        <li className="header-bottom-menu-list">
-                            <p 
-                                className="header-bottom-menu-list-text"
-                                id="Store"
-                            >스토어</p>
-                        </li>
-
-                    </ul>
-
-
-                    {/* header 아래쪽 sub menu */}
-                    <ul className="header-bottom-sub-menu">
-
-                        {/* 바로 예매 */}
-                        <li className="header-bottom-menu-quick-reservation-box">
-                            {/* TODO : 여기에 컴포넌트 호출 */}
-                            <button 
-                                className="header-bottom-menu-quick-reservation"
-                                id="quickReservation"
-                            >
-                                <p className="header-bottom-menu-quick-reservation-text">
-                                    바로 예매
-                                </p>
-                            </button>
-                        </li>
-
-                        {/* 전체 메뉴 보기 버튼 */}
-                        <li className="header-bottom-menu-view-all-btn-box">
-                            <button 
-                                className="header-bottom-menu-view-all-btn"
-                                id="viewAllBtn"
-                                ><GiHamburgerMenu /></button>
-                        </li>
-
-                    </ul>
-
-                </div>
+            </div>
 
 
 
 
-
+                
 
 
 
