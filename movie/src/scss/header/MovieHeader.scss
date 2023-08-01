@@ -10,20 +10,15 @@
 // header 
 #headerWrapper {
     width: 980px;
-    height: 130px;
+    height: 80px;
     margin: 0 auto;
-
-    // position: fixed;
-    // top: 0%;
-    // left: 50%;
-    // transform: translate(-50%, 0%);
 
     // header 위쪽 banner
     .header-top-banner {
         border-bottom: 1px solid #6633ff;
         background: none;
         width: 100%;
-        height: 60%;
+        height: 100%;
         display: flex;
 
         .header-main-logo-box {
@@ -91,167 +86,109 @@
                         display: flex;
                         justify-content: center;
                     }
-
-
-
-
-
                 }
-
             }
         }
     }
+}
 
 
-    // header 아래쪽 banner
-    .header-bottom-banner {
+// header 아래쪽 banner
+.header-bottom-banner {
+    width: 980px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+
+    .header-bottom-menu {
+        width: 100%;
         height: 100%;
-        height: 40%;
-        position: relative;
+        @include disflex();
 
-        .header-bottom-menu {
-            width: 100%;
+        .header-bottom-menu-list {
+            width: 10%;
+            height: 100%;
+            cursor: pointer;
+            @include disflex();
+            position: relative;
+
+            &:hover {
+                color: #ff0000;
+            }
+
+            &:hover .header-bottom-menu-list-text {
+                transform: translateY(1px);
+            }
+
+            .header-bottom-menu-list-text {
+                border-right: 1px solid #6633ff;
+                width: 100%;
+                height: 50%;
+                font-weight: bold;
+                transition-duration: 0.2s;
+                @include disflex();
+            }
+
+            #Reservation {
+                color: #ff0000;
+            }
+
+            #Store {
+                border: none;
+            }
+        }
+
+    }
+
+    // header 아래쪽 sub menu
+    .header-bottom-sub-menu {
+        width: 175px;
+        height: 100%;
+        display: flex;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        // 바로 예매
+        .header-bottom-menu-quick-reservation-box {
+            width: 50%;
             height: 100%;
             @include disflex();
 
-            .header-bottom-menu-list {
-                width: 10%;
-                height: 90%;
+            .header-bottom-menu-quick-reservation {
+                background: none;
+                width: 100%;
+                height: 50%;
                 cursor: pointer;
-                @include disflex();
-                position: relative;
 
-                &:hover {
-                    border-bottom: 1px solid #ff0000;
+                .header-bottom-menu-quick-reservation-text {
                     color: #ff0000;
+                    font-size: 12px;
                     font-weight: bold;
-                    opacity: 0.8;
-                }
-
-                .header-bottom-menu-list-text {
-                    border-right: 1px solid #000;
-                    width: 100%;
-                    height: 50%;
-                    font-weight: bold;
-                    @include disflex();
-                }
-
-                #Reservation {
-                    color: #ff0000;
-                }
-
-                #Store {
-                    border: none;
                 }
             }
-
         }
 
-        // header 아래쪽 sub menu
-        .header-bottom-sub-menu {
-            width: 175px;
+        // 전체 메뉴 보기 버튼
+        .header-bottom-menu-view-all-btn-box {
+            width: 90px;
             height: 100%;
-            display: flex;
+            @include disflex();
 
-            position: absolute;
-            top: 0;
-            right: 0;
+            .header-bottom-menu-view-all-btn {
+                background: none;
+                color: #6633ff;
+                width: 35px;
+                height: 32px;
+                font-size: 30px;
+                transition-duration: 0.3s;
+                cursor: pointer;
 
-            // 바로 예매
-            .header-bottom-menu-quick-reservation-box {
-                width: 50%;
-                height: 100%;
-                @include disflex();
-
-                .header-bottom-menu-quick-reservation {
-                    background: none;
-                    width: 100%;
-                    height: 50%;
-                    cursor: pointer;
-
-                    .header-bottom-menu-quick-reservation-text {
-                        color: #ff0000;
-                        font-size: 12px;
-                        font-weight: bold;
-                    }
-                }
-            }
-
-            // 전체 메뉴 보기 버튼
-            .header-bottom-menu-view-all-btn-box {
-                width: 90px;
-                height: 100%;
-                @include disflex();
-
-                .header-bottom-menu-view-all-btn {
-                    background: none;
-                    color: #6633ff;
-                    width: 35px;
-                    height: 32px;
-                    font-size: 30px;
-                    transition-duration: 0.3s;
-                    cursor: pointer;
-
-                    &:hover {
-                        color: #ff0000;
-                    }
+                &:hover {
+                    color: #ff0000;
                 }
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

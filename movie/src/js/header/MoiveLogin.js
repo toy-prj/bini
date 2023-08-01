@@ -2,7 +2,7 @@ import React from "react";
 import { MdOutlineClose } from 'react-icons/md';
 import '../../scss/header/MovieLogin.scss';
 
-const MovieLogin = ( {clickCloseBtn} ) => {
+const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
 
     
 
@@ -83,7 +83,10 @@ const MovieLogin = ( {clickCloseBtn} ) => {
                             </div>
                         
                             <div className="header-login-signup-box">
-                                <div className="header-login-signup">회원가입</div>
+                                <button 
+                                    className="header-login-signup"
+                                    onClick={ clickSignUp }
+                                >회원가입</button>
                             </div>
                         </div>
 

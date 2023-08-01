@@ -12,19 +12,9 @@ body {
 
 @keyframes openLoginModal {
     0% {
-        width: 0;
-        height: 0;
         opacity: 0;
     }
-    
-    50% {
-        width: 400px;
-        height: 0;
-    }
-    
     100% {
-        width: 400px;
-        height: 600px;
         opacity: 1;
     }
 }
@@ -32,18 +22,19 @@ body {
 // 로그인 모달
 #Header-Login-Wrapper {
     border: 2px solid #6633ff;
+    background: #fff;
     width: 400px;
     height: 600px;
     overflow: hidden;
     transition-duration: 0.3s;
-    animation: openLoginModal 1s forwards 1;
+    animation: openLoginModal 0.5s forwards 1;
 
     position: fixed;
-    top: 50%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    z-index: 100;
+    z-index: 1000;
 
     // 닫기
     #Close-Login-Modal-Wrapper {
@@ -239,6 +230,7 @@ body {
                     @include disflex();
 
                     .header-login-signup {
+                        background: none;
                         color: #6633ff;
                         width: 60%;
                         height: 100%;

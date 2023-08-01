@@ -6,9 +6,16 @@ import { BsPersonFill, BsPersonFillAdd, BsPersonFillLock } from 'react-icons/bs'
 
 
 import '../../scss/header/MovieHeader.scss';
+import { useEffect } from "react";
+import MovieSignUp from "./MovieSignUp";
 
 
 const MovieHeader = () => {
+
+    // 모달창 닫기
+    const clickCloseBtn = e => {
+        setOpenLogin(false);
+    }
 
     // 로그인
     const[openLogin, setOpenLogin] = useState(false);
@@ -16,27 +23,25 @@ const MovieHeader = () => {
     // 메인화면 로그인 클릭
     const clickLogin = e => {
         setOpenLogin(true);
+        setOpenSignUp(false);
     }
 
-    // 모달창 닫기
-    const clickCloseBtn = e => {
+    // 회원가입
+    const [openSignUp, setOpenSignUp] = useState(false);
+
+    // 메인화면 회원가입 클릭
+    const clickSignUp = e => {
+        setOpenSignUp(true);
         setOpenLogin(false);
     }
-
-    // sticky header
-    
-
-
-
-
 
 
 
 
     return (
         <>
-
-            {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn }/>}
+            {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/>}
+            {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn }/> }            
 
 
 
@@ -107,6 +112,7 @@ const MovieHeader = () => {
                             <button
                                 className="header-menu-list"                            
                                 id="signUp"
+                                onClick={ clickSignUp }
                             >   
                                 <div className="header-menu-list-icons-box">
                                     <div 
@@ -137,38 +143,12 @@ const MovieHeader = () => {
                     </div>
 
                 </div>
+            </div>
 
+            {/* header 아래 banner */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                {/* header 아래 banner */}
                 <div 
-                    className="header-bottom-banner"
+                className="header-bottom-banner"
                     id="headerBottomBanner"
                 >
 
@@ -246,9 +226,6 @@ const MovieHeader = () => {
                     </ul>
 
                 </div>
-            </div>
-
-
 
 
 
