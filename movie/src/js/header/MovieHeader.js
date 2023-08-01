@@ -23,8 +23,8 @@ const MovieHeader = () => {
         setOpenLogin(false);
     }
 
-
-
+    // sticky header
+    
 
 
 
@@ -54,7 +54,7 @@ const MovieHeader = () => {
 
 
             {/* header 전체 */}
-            <div id="Header-Wrapper">
+            <div id="headerWrapper">
 
                 {/* header 위쪽 banner */}
                 <div className="header-top-banner">
@@ -72,18 +72,18 @@ const MovieHeader = () => {
                             {/* 맴버쉽 */}
                             <li 
                                 className="header-menu-list"
-                                id="MemberShip"
+                                id="memberShip"
                             >
                                 <div className="header-menu-list-icons-box">
                                     <div 
                                         className="header-menu-list-icons"
-                                        id="MemberShip-Icons"
+                                        id="memberShipIcons"
                                         ><MdCardMembership />
                                     </div>
                                 </div>
                                 <p 
                                     className="header-menu-list-text"
-                                    id="MemberShip-Text"
+                                    id="memberShipText"
                                 >맴버쉽</p>
                             </li>
 
@@ -96,7 +96,7 @@ const MovieHeader = () => {
                                 <div className="header-menu-list-icons-box">
                                     <div 
                                         className="header-menu-list-icons"
-                                        id="Login-Icons"
+                                        id="loginIcons"
                                         ><BsPersonFillLock />
                                     </div>
                                 </div>
@@ -106,12 +106,12 @@ const MovieHeader = () => {
                             {/* 회원가입 */}
                             <button
                                 className="header-menu-list"                            
-                                id="SignUp"
+                                id="signUp"
                             >   
                                 <div className="header-menu-list-icons-box">
                                     <div 
                                         className="header-menu-list-icons"
-                                        id="SignUp-Icons"
+                                        id="signUpIcons"
                                         ><BsPersonFillAdd />
                                     </div>
                                 </div>
@@ -121,12 +121,12 @@ const MovieHeader = () => {
                             {/* 마이페이지 */}
                             <button
                                 className="header-menu-list"                            
-                                id="MyPage"
+                                id="myPage"
                             >   
                                 <div className="header-menu-list-icons-box">
                                     <div 
                                         className="header-menu-list-icons"
-                                        id="MyPage-Icons"
+                                        id="myPageIcons"
                                         ><BsPersonFill />
                                     </div>
                                 </div>
@@ -167,7 +167,10 @@ const MovieHeader = () => {
 
 
                 {/* header 아래 banner */}
-                <div className="header-bottom-banner">
+                <div 
+                    className="header-bottom-banner"
+                    id="headerBottomBanner"
+                >
 
                     {/* header 아래쪽 메뉴 */}
                     <ul className="header-bottom-menu">
@@ -224,7 +227,7 @@ const MovieHeader = () => {
                             {/* TODO : 여기에 컴포넌트 호출 */}
                             <button 
                                 className="header-bottom-menu-quick-reservation"
-                                id="Quick-Reservation"
+                                id="quickReservation"
                             >
                                 <p className="header-bottom-menu-quick-reservation-text">
                                     바로 예매
@@ -236,7 +239,7 @@ const MovieHeader = () => {
                         <li className="header-bottom-menu-view-all-btn-box">
                             <button 
                                 className="header-bottom-menu-view-all-btn"
-                                id="View-All-Btn"
+                                id="viewAllBtn"
                                 ><GiHamburgerMenu /></button>
                         </li>
 
