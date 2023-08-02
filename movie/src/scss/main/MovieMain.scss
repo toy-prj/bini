@@ -1,0 +1,50 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// main
+#movieMainWrapper {
+    background: aquamarine;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+    .main-visual-ad-change-btn-wrapper {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        
+        .main-visual-ad-change-btn-box {
+            width: 18%;
+            height: 100%;
+            @include disflex();
+        }
+
+        .main-visual-ad-change-btn {
+            background: none;
+            color: ivory;
+            width: 30%;
+            height: 30%;
+            font-size: 80px;
+            opacity: .5;
+            cursor: pointer;
+            @include disflex();
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    .main-visual-ad-box {
+        background: url('../img/KakaoTalk-Logo.png');
+        width: 100%;
+        height: 500px;
+    }
+}

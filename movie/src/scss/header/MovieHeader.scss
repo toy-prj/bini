@@ -9,151 +9,89 @@
 
 // header 
 #headerWrapper {
-    width: 980px;
-    height: 80px;
-    margin: 0 auto;
-
-    // header 위쪽 banner
-    .header-top-banner {
-        border-bottom: 1px solid #6633ff;
-        background: none;
-        width: 100%;
+    width: 100%;
+    height: 130px;
+    z-index: 1500;
+    
+    .header-box {
+        width: 980px;
         height: 100%;
-        display: flex;
+        margin: 0 auto;
 
-        .header-main-logo-box {
-            width: 10%;
-            height: 100%;
-            @include disflex();
-
-            .header-main-logo {
-                width: 100%;
-                height: 100%;
-                background: url('../../scss/img/MainLogo.png') no-repeat;
-                background-size: 80%;
-                background-position-x: 9px;
-                background-position-y: 7px;
-            }
-        }
-
-        .header-menu-box {
+        // header 위쪽 banner
+        .header-top-banner {
+            border-bottom: 1px solid #6633ff;
             background: none;
-            width: 90%;
-            height: 100%;
+            width: 100%;
+            height: 60%;
+            display: flex;
 
-            .header-menu {
-                background: none;
-                width: 100%;
+            .header-main-logo-box {
+                width: 10%;
                 height: 100%;
-                display: flex;
-                justify-content: right;
+                @include disflex();
 
-                .header-menu-list {
-                    background: none;
-                    width: 10%;
+                .header-main-logo {
+                    width: 100%;
                     height: 100%;
+                    background: url('../../scss/img/MainLogo.png') no-repeat;
+                    background-size: 80%;
+                    background-position-x: 9px;
+                    background-position-y: 7px;
+                }
+            }
 
-                    .header-menu-list-icons-box {
-                        width: 100%;
-                        height: 60%;
-                        position: relative;
+            .header-menu-box {
+                background: none;
+                width: 90%;
+                height: 100%;
 
-                        .header-menu-list-icons {
+                .header-menu {
+                    background: none;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: right;
+
+                    .header-menu-list {
+                        background: none;
+                        width: 10%;
+                        height: 100%;
+
+                        .header-menu-list-icons-box {
+                            width: 100%;
+                            height: 60%;
+                            position: relative;
+
+                            .header-menu-list-icons {
+                                color: #6633ff;
+                                font-size: 28px;
+                                @include disflex();
+                                position: absolute;
+                                top: 15px;
+                                left: 29px;
+                            }
+                        }
+
+                        .header-menu-list-text {
                             color: #6633ff;
-                            font-size: 28px;
-                            @include disflex();
-                            position: absolute;
-                            top: 15px;
-                            left: 29px;
+                            width: 100%;
+                            height: 40%;
+                            font-size: 12px;
+                            font-weight: bold;
+                            transition-duration: 0.3s;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: #ff0000;
+                            }
+                        }
+
+                        #memberShipText {
+                            display: flex;
+                            justify-content: center;
                         }
                     }
-
-                    .header-menu-list-text {
-                        color: #6633ff;
-                        width: 100%;
-                        height: 40%;
-                        font-size: 12px;
-                        font-weight: bold;
-                        transition-duration: 0.3s;
-                        cursor: pointer;
-
-                        &:hover {
-                            color: #ff0000;
-                        }
-                    }
-
-                    #memberShipText {
-                        display: flex;
-                        justify-content: center;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-// header 아래쪽 banner
-.header-bottom-banner {
-    width: 980px;
-    height: 50px;
-    margin: 0 auto;
-    position: relative;
-    @include disflex();
-
-    .header-bottom-menu {
-        width: 50%;
-        height: 100%;
-        @include disflex();
-    }
-
-    // header 아래쪽 sub menu
-    .header-bottom-sub-menu {
-        width: 175px;
-        height: 100%;
-        display: flex;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        // 바로 예매
-        .header-bottom-menu-quick-reservation-box {
-            width: 50%;
-            height: 100%;
-            @include disflex();
-
-            .header-bottom-menu-quick-reservation {
-                background: none;
-                width: 100%;
-                height: 50%;
-                cursor: pointer;
-
-                .header-bottom-menu-quick-reservation-text {
-                    color: #ff0000;
-                    font-size: 12px;
-                    font-weight: bold;
-                }
-            }
-        }
-
-        // 전체 메뉴 보기 버튼
-        .header-bottom-menu-view-all-btn-box {
-            width: 90px;
-            height: 100%;
-            @include disflex();
-
-            .header-bottom-menu-view-all-btn {
-                background: none;
-                color: #6633ff;
-                width: 35px;
-                height: 32px;
-                font-size: 30px;
-                transition-duration: 0.3s;
-                cursor: pointer;
-
-                &:hover {
-                    color: #ff0000;
                 }
             }
         }

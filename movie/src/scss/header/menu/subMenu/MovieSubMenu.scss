@@ -1,0 +1,52 @@
+@import url('../../../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#movieSubMenuWrapper {
+    width: 180px;
+    height: 100%;
+
+    .movie-sub-menu-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .header-bottom-menu-quick-reservation-box {
+            width: 50%;
+            height: 100%;
+
+            .header-bottom-menu-quick-reservation {
+                width: 100px;
+                height: 100%;
+                @include disflex();
+
+                .header-bottom-menu-quick-reservation-text {
+                    color: #ff0000;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .header-bottom-menu-view-all-btn-box {
+            width: 50%;
+            height: 100%;
+            @include disflex();
+
+            .header-bottom-menu-view-all-btn {
+                background: none;
+                color: #6633ff;
+                width: 30%;
+                height: 50%;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}

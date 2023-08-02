@@ -8,6 +8,8 @@ import HeaderEventMenu from "./event/HeaderEventMenu";
 import HeaderStoreMenu from "./store/HeaderStoreMenu";
 
 import '../../../scss/header/menu/HeaderMenu.scss';
+import MovieViewAllMenu from "./subMenu/MovieViewAllMenu";
+import MovieSubMenu from "./subMenu/MovieSubMenu";
 
 const HeaderMenu = () => {
     
@@ -82,9 +84,20 @@ const HeaderMenu = () => {
         setIsHoveredStore(false);
     }
 
+    // 전체 메뉴 버튼
+    const [isOpenViewAllMenu, setIsOpenViewAllMenu] = useState(false);
+
+    const viewAllMenu = () => {
+        setIsOpenViewAllMenu(true);
+    }
+
     return(
         <>
+            { isOpenViewAllMenu && <MovieViewAllMenu /> }
+
             <div id="headerMenuWrapper">
+                <div className="header-bottom-menu">
+
                 
                 {/* header 아래쪽 메뉴 list */}
                         {/* 예매 */}
@@ -93,12 +106,12 @@ const HeaderMenu = () => {
                             className="header-bottom-menu-list"
                             onMouseEnter={ reservationMouseEnter }
                             onMouseLeave={ reservationMouseLeave }
-                        >
+                            >
                             { isHoveredReservation && <HeaderReservationMenu /> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Reservation"
-                            >예매</p>
+                                >예매</p>
                         </Link>
 
                         {/* 영화 */}
@@ -112,7 +125,7 @@ const HeaderMenu = () => {
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Movie"
-                            >영화</p>
+                                >영화</p>
                         </Link>
 
                         {/* 영화관 */}
@@ -140,7 +153,7 @@ const HeaderMenu = () => {
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Event"
-                            >이벤트</p>
+                                >이벤트</p>
                         </Link>
 
                         {/* 스토어 */}
@@ -149,39 +162,21 @@ const HeaderMenu = () => {
                             className="header-bottom-menu-list"
                             onMouseEnter={ storeMouseEnter }
                             onMouseLeave={ storeMouseLeave }
-                        >
+                            >
                             { isHoveredStore && <HeaderStoreMenu /> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Store"
-                            >스토어</p>
+                                >스토어</p>
                         </Link>
+                    </div>
 
                     {/* header 아래쪽 sub menu */}
                     <ul className="header-bottom-sub-menu">
-
-                        {/* 바로 예매 */}
-                        <li className="header-bottom-menu-quick-reservation-box">
-                            {/* TODO : 여기에 컴포넌트 호출 */}
-                            <button 
-                                className="header-bottom-menu-quick-reservation"
-                                id="quickReservation"
-                            >
-                                <p className="header-bottom-menu-quick-reservation-text">
-                                    바로 예매
-                                </p>
-                            </button>
-                        </li>
-
-                        {/* 전체 메뉴 보기 버튼 */}
-                        <li className="header-bottom-menu-view-all-btn-box">
-                            <button 
-                                className="header-bottom-menu-view-all-btn"
-                                id="viewAllBtn"
-                                ><GiHamburgerMenu /></button>
-                        </li>
-
+                        <MovieSubMenu viewAllMenu={ viewAllMenu }/>
                     </ul>
+
+                
             </div>
         </>
     );

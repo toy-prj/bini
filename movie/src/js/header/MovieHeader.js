@@ -33,146 +33,124 @@ const MovieHeader = () => {
         setOpenLogin(false);
     }
 
-    // 메뉴 hover
-    const [isHovered, setIsHovered] = useState(false);
-
-    const HandleMouseEnter = () => {
-        setIsHovered(true);
+    // 새로 고침(임시)
+    const reload = () => {
+        window.onload();
     }
-
-    const HandleMouseLeave = () => {
-        setIsHovered(false);
-    }
-
-
 
     return (
         <>
             {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/>}
             {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn }/> }            
 
-
-
-
-
-
-
-
-
-
-
-
-
             {/* header 전체 */}
             <div id="headerWrapper">
 
-                {/* header 위쪽 banner */}
-                <div className="header-top-banner">
+                <div className="header-box">
 
-                    {/* header 로고 */}
-                    <div className="header-main-logo-box">
-                        <Link to={'/'} className="header-main-logo"></Link>
+                
+
+                    {/* header 위쪽 banner */}
+                    <div className="header-top-banner">
+
+                        {/* header 로고 */}
+                        <div className="header-main-logo-box">
+                            <Link 
+                                to={'/'} 
+                                className="header-main-logo"
+                                onClick={ reload }
+                            ></Link>
+                        </div>
+
+                        {/* header 위쪽 메뉴 */}
+                        <div className="header-menu-box">
+                            <ul className="header-menu">
+
+                                {/* header 위쪽 메뉴 list */}
+                                {/* 맴버쉽 */}
+                                <li 
+                                    className="header-menu-list"
+                                    id="memberShip"
+                                >
+                                    <div className="header-menu-list-icons-box">
+                                        <div 
+                                            className="header-menu-list-icons"
+                                            id="memberShipIcons"
+                                            ><MdCardMembership />
+                                        </div>
+                                    </div>
+                                    <p 
+                                        className="header-menu-list-text"
+                                        id="memberShipText"
+                                    >맴버쉽</p>
+                                </li>
+
+                                {/* 로그인 */}
+                                <button 
+                                    className="header-menu-list" 
+                                    id="Login"
+                                    onClick={clickLogin}
+                                >
+                                    <div className="header-menu-list-icons-box">
+                                        <div 
+                                            className="header-menu-list-icons"
+                                            id="loginIcons"
+                                            ><BsPersonFillLock />
+                                        </div>
+                                    </div>
+                                    <p className="header-menu-list-text">로그인</p>
+                                </button>
+
+                                {/* 회원가입 */}
+                                <button
+                                    className="header-menu-list"                            
+                                    id="signUp"
+                                    onClick={ clickSignUp }
+                                >   
+                                    <div className="header-menu-list-icons-box">
+                                        <div 
+                                            className="header-menu-list-icons"
+                                            id="signUpIcons"
+                                            ><BsPersonFillAdd />
+                                        </div>
+                                    </div>
+                                    <p className="header-menu-list-text">회원가입</p>
+                                </button>
+
+                                {/* 마이페이지 */}
+                                <button
+                                    className="header-menu-list"                            
+                                    id="myPage"
+                                >   
+                                    <div className="header-menu-list-icons-box">
+                                        <div 
+                                            className="header-menu-list-icons"
+                                            id="myPageIcons"
+                                            ><BsPersonFill />
+                                        </div>
+                                    </div>
+                                    <p className="header-menu-list-text">My Cinema</p>
+                                </button>
+
+                            </ul>
+                        </div>
+
                     </div>
 
-                    {/* header 위쪽 메뉴 */}
-                    <div className="header-menu-box">
-                        <ul className="header-menu">
-
-                            {/* header 위쪽 메뉴 list */}
-                            {/* 맴버쉽 */}
-                            <li 
-                                className="header-menu-list"
-                                id="memberShip"
-                            >
-                                <div className="header-menu-list-icons-box">
-                                    <div 
-                                        className="header-menu-list-icons"
-                                        id="memberShipIcons"
-                                        ><MdCardMembership />
-                                    </div>
-                                </div>
-                                <p 
-                                    className="header-menu-list-text"
-                                    id="memberShipText"
-                                >맴버쉽</p>
-                            </li>
-
-                            {/* 로그인 */}
-                            <button 
-                                className="header-menu-list" 
-                                id="Login"
-                                onClick={clickLogin}
-                            >
-                                <div className="header-menu-list-icons-box">
-                                    <div 
-                                        className="header-menu-list-icons"
-                                        id="loginIcons"
-                                        ><BsPersonFillLock />
-                                    </div>
-                                </div>
-                                <p className="header-menu-list-text">로그인</p>
-                            </button>
-
-                            {/* 회원가입 */}
-                            <button
-                                className="header-menu-list"                            
-                                id="signUp"
-                                onClick={ clickSignUp }
-                            >   
-                                <div className="header-menu-list-icons-box">
-                                    <div 
-                                        className="header-menu-list-icons"
-                                        id="signUpIcons"
-                                        ><BsPersonFillAdd />
-                                    </div>
-                                </div>
-                                <p className="header-menu-list-text">회원가입</p>
-                            </button>
-
-                            {/* 마이페이지 */}
-                            <button
-                                className="header-menu-list"                            
-                                id="myPage"
-                            >   
-                                <div className="header-menu-list-icons-box">
-                                    <div 
-                                        className="header-menu-list-icons"
-                                        id="myPageIcons"
-                                        ><BsPersonFill />
-                                    </div>
-                                </div>
-                                <p className="header-menu-list-text">My Cinema</p>
-                            </button>
-
+                    {/* header 아래 banner */}
+                    <div 
+                        className="header-bottom-banner"
+                        id="headerBottomBanner"
+                    >
+                        {/* header 아래쪽 메뉴 */}
+                        <ul className="header-bottom-menu">
+                            <HeaderMenu />
                         </ul>
+
                     </div>
 
                 </div>
             </div>
-
-            {/* header 아래 banner */}
-
-            <div 
-                className="header-bottom-banner"
-                id="headerBottomBanner"
-            >
-                {/* header 아래쪽 메뉴 */}
-                <ul className="header-bottom-menu">
-                    <HeaderMenu />
-                </ul>
-
-            </div>
-
-
-
-
-                
-
-
-
-
-
-
         </>
     );
 }
