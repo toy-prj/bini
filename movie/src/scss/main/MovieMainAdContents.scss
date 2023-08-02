@@ -8,7 +8,7 @@
 
 #movieMainAdContentsWrapper {
     width: 100%;
-    height: 100%;   
+    height: 100%;
 
     .movie-main-ad-contents-list-box {
         width: 100%;
@@ -21,7 +21,72 @@
             background: #fff;
             width: 175px;
             height: 300px;
+            position: relative;
 
+            .movie-main-ad-contents-list-option-background-box {
+                background: #000;
+                width: 100%;
+                height: 75%;
+                opacity: .7;
+                @include disflex();
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                .movie-main-ad-contents-list-option-background {
+                    width: 100%;
+                    height: 40%;
+
+                    .list-reservation-btn-box {
+                        background: #000;
+                        width: 100%;
+                        height: 50%;
+                        @include disflex();
+
+                        .list-reservation-btn {
+                            background: #000;
+                            color: #fff;
+                            border: 2px solid #fff;
+                            border-radius: 5px;
+                            
+                            .list-reservation-btn-text {
+                                width: 140px;
+                                height: 30px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                @include disflex();
+                            }
+                        }
+                        
+                    }
+                    
+                    .list-info-btn-box {
+                        background: #000;
+                        width: 100%;
+                        height: 50%;
+                        @include disflex();
+                        
+                        .list-info-btn {
+                            background: #000;
+                            color: #fff;
+                            border: 2px solid #fff;
+                            border-radius: 5px;
+                            
+                            .list-info-btn-text {
+                                width: 140px;
+                                height: 30px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                @include disflex();
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            
             .movie-main-ad-contents-img-box {
                 width: 100%;
                 height: 75%;
@@ -54,13 +119,13 @@
                 background: rgb(29, 29, 31, 1);
                 width: 100%;
                 height: 10%;
-                @include disflex();                
+                @include disflex();
 
                 .movie-main-ad-contents-reservation-rate {
                     background: rgb(29, 29, 31, 1);
                     width: 40%;
                     height: 100%;
-                    
+
                     .movie-main-ad-contents-reservation-rate-text {
                         color: #fff;
                         width: 100%;
