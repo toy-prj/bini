@@ -1,0 +1,100 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#movieMainAdContentsWrapper {
+    width: 100%;
+    height: 100%;   
+
+    .movie-main-ad-contents-list-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .movie-main-ad-contents-list {
+            background: #fff;
+            width: 175px;
+            height: 300px;
+
+            .movie-main-ad-contents-img-box {
+                width: 100%;
+                height: 75%;
+
+                .movie-main-ad-contents-img {
+                    background: url('../img/ad-test2.jpg') no-repeat;
+                    background-size: 100%;
+                    width: 100%;
+                    height: 100%;
+                    @include disflex();
+                }
+            }
+
+            .movie-main-ad-contents-title-box {
+                background: rgb(29, 29, 31, 1);
+                width: 100%;
+                height: 15%;
+                @include disflex();
+
+                .movie-main-ad-contents-title {
+                    color: #fff;
+                    width: fit-content;
+                    height: fit-content;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+            }
+
+            .movie-main-ad-contents-grade-box {
+                background: rgb(29, 29, 31, 1);
+                width: 100%;
+                height: 10%;
+                @include disflex();                
+
+                .movie-main-ad-contents-reservation-rate {
+                    background: rgb(29, 29, 31, 1);
+                    width: 40%;
+                    height: 100%;
+                    
+                    .movie-main-ad-contents-reservation-rate-text {
+                        color: #fff;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 10px;
+                        font-weight: bold;
+                        @include disflex();
+                    }
+                }
+
+                .movie-main-ad-contents-star-point {
+                    background: rgb(29, 29, 31, 1);
+                    width: 30%;
+                    height: 100%;
+
+                    .movie-main-ad-contents-star-point-text {
+                        color: #fff;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 10px;
+                        font-weight: bold;
+                        @include disflex();
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+        }
+    }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight }from 'react-icons/bs';
 
 import '../../scss/main/MovieMain.scss';
+import MovieMainAdContents from "./MovieMainAdContents";
 
 const MovieMain = () => {
 
@@ -27,8 +28,11 @@ const MovieMain = () => {
 
                     <div className="main-visual-ad"></div>
 
-                    <div className="main-visual-ad-contents-box">
-                        <div className="main-visual-ad-contents"></div>
+                    <div className="main-visual-ad-contents-wrapper">
+                        <div className="main-background"></div>
+                        <div className="main-visual-ad-contents-box">
+                            <MovieMainAdContents />
+                        </div>
                     </div>
 
                 </div>
