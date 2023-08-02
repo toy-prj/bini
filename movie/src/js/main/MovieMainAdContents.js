@@ -1,15 +1,22 @@
 import React from "react";
+import { AiFillStar } from 'react-icons/ai';
 
 import '../../scss/main/MovieMainAdContents.scss';
 
 const MovieMainAdContents = () => {
 
+
+
+        
+            
+
+    
     return(
         <>
             <div id="movieMainAdContentsWrapper">
                 <div className="movie-main-ad-contents-list-box">
 
-
+                {[...Array(5)].map((_, index) => (
                     <div className="movie-main-ad-contents-list">
 
                         <div className="movie-main-ad-contents-list-option-background-box">
@@ -38,17 +45,19 @@ const MovieMainAdContents = () => {
                                 <p className="movie-main-ad-contents-reservation-rate-text">예매율 10.8%</p>
                             </div>
                             <div className="movie-main-ad-contents-star-point">
+                                <p 
+                                    className="movie-main-ad-contents-star-point-text"
+                                    id="starPoint"
+                                >
+                                    
+                                    <AiFillStar />
+                                </p>
                                 <p className="movie-main-ad-contents-star-point-text">9.5</p>
                             </div>
                         </div>
                     </div>
-
+                ))}
                     
-
-
-
-
-
                 </div>
             </div>
         </>

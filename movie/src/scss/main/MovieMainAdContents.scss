@@ -14,14 +14,21 @@
         width: 100%;
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
 
         .movie-main-ad-contents-list {
             background: #fff;
+            border: none;
+            border-radius: 5px;
             width: 175px;
             height: 300px;
             position: relative;
+
+            &:hover .movie-main-ad-contents-list-option-background-box {
+                display: block;
+            }
 
             .movie-main-ad-contents-list-option-background-box {
                 background: #000;
@@ -34,9 +41,13 @@
                 top: 0;
                 left: 0;
 
+                display: none;
+
                 .movie-main-ad-contents-list-option-background {
                     width: 100%;
                     height: 40%;
+                    position: absolute;
+                    top: 30%;
 
                     .list-reservation-btn-box {
                         background: #000;
@@ -49,6 +60,10 @@
                             color: #fff;
                             border: 2px solid #fff;
                             border-radius: 5px;
+
+                            &:hover {
+                                border: 2px solid #ff0000;
+                            }
                             
                             .list-reservation-btn-text {
                                 width: 140px;
@@ -73,6 +88,10 @@
                             border: 2px solid #fff;
                             border-radius: 5px;
                             
+                            &:hover {
+                                border: 2px solid #ff0000;
+                            }
+
                             .list-info-btn-text {
                                 width: 140px;
                                 height: 30px;
@@ -83,15 +102,16 @@
                         }
                     }
                 }
-
+                
             }
 
             
             .movie-main-ad-contents-img-box {
                 width: 100%;
                 height: 75%;
-
+                
                 .movie-main-ad-contents-img {
+                    border-radius: 5px 5px 0 0;
                     background: url('../img/ad-test2.jpg') no-repeat;
                     background-size: 100%;
                     width: 100%;
@@ -117,6 +137,7 @@
 
             .movie-main-ad-contents-grade-box {
                 background: rgb(29, 29, 31, 1);
+                border-radius: 0 0 5px 5px;
                 width: 100%;
                 height: 10%;
                 @include disflex();
@@ -140,14 +161,19 @@
                     background: rgb(29, 29, 31, 1);
                     width: 30%;
                     height: 100%;
-
+                    @include disflex();
+                    
                     .movie-main-ad-contents-star-point-text {
                         color: #fff;
-                        width: 100%;
+                        width: 30%;
                         height: 100%;
                         font-size: 10px;
                         font-weight: bold;
                         @include disflex();
+                    }
+
+                    #starPoint {
+                        color: #ffff00;
                     }
                 }
             }
