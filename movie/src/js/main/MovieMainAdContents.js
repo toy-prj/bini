@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillStar } from 'react-icons/ai';
 
 import '../../scss/main/MovieMainAdContents.scss';
+import { Link } from "react-router-dom";
 
 const MovieMainAdContents = () => {
 
@@ -22,9 +23,12 @@ const MovieMainAdContents = () => {
                         <div className="movie-main-ad-contents-list-option-background-box">
                             <div className="movie-main-ad-contents-list-option-background">
                                 <div className="list-reservation-btn-box">
-                                    <button className="list-reservation-btn">
+                                    <Link 
+                                        to={'/contents/reservation'} 
+                                        className="list-reservation-btn"
+                                    >
                                         <p className="list-reservation-btn-text">예매하기</p>
-                                    </button>
+                                    </Link>
                                 </div>
                                 <div className="list-info-btn-box">
                                     <button className="list-info-btn">
@@ -49,7 +53,6 @@ const MovieMainAdContents = () => {
                                     className="movie-main-ad-contents-star-point-text"
                                     id="starPoint"
                                 >
-                                    
                                     <AiFillStar />
                                 </p>
                                 <p className="movie-main-ad-contents-star-point-text">9.5</p>

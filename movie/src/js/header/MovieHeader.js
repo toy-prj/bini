@@ -37,6 +37,7 @@ const MovieHeader = () => {
     const reload = () => {
         window.onload();
     }
+    
 
     return (
         <>
