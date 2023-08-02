@@ -1,5 +1,6 @@
 import React from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight }from 'react-icons/bs';
+import { AiOutlineLeft, AiOutlineRight }from 'react-icons/ai';
 
 import '../../scss/main/MovieMain.scss';
 import MovieMainAdContents from "./MovieMainAdContents";
@@ -29,7 +30,18 @@ const MovieMain = () => {
                     <div className="main-visual-ad"></div>
 
                     <div className="main-visual-ad-contents-wrapper">
+
+                        <div className="main-visual-ad-contents-change-btn-box">
+                            <div className="main-visual-ad-contents-change-btn">
+                                <AiOutlineLeft id="beforeContents"/>
+                            </div>
+                            <div className="main-visual-ad-contents-change-btn">
+                                <AiOutlineRight id="afterContents"/>
+                            </div>
+                        </div>
+
                         <div className="main-background"></div>
+                        
                         <div className="main-visual-ad-contents-box">
                             <MovieMainAdContents />
                         </div>

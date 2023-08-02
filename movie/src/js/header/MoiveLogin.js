@@ -23,7 +23,7 @@ const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
 
                     {/* Logo */}
                     <div className="header-login-logo-box">
-                        <div className="header-login-logo"></div>
+                        <div className="header-login-logo">Logo</div>
                     </div>
 
                     {/* 사용자 정보 입력 창 */}

@@ -35,7 +35,7 @@ const MovieHeader = () => {
 
     // 새로 고침(임시)
     const reload = () => {
-        window.onload();
+        window.onload.href='/';
     }
     
 
@@ -60,7 +60,7 @@ const MovieHeader = () => {
                                 to={'/'} 
                                 className="header-main-logo"
                                 onClick={ reload }
-                            ></Link>
+                            >Logo</Link>
                         </div>
 
                         {/* header 위쪽 메뉴 */}
