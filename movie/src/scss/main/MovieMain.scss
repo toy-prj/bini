@@ -8,14 +8,14 @@
 
 // main
 #movieMainWrapper {
-    background: aquamarine;
+    background: #999;
     width: 100%;
-    height: 100vh;
+    height: 3000px;
     position: relative;
     
     .main-visual-ad-change-btn-wrapper {
         width: 100%;
-        height: 500px;
+        height: 700px;
         display: flex;
         justify-content: space-between;
         position: absolute;
@@ -28,7 +28,7 @@
 
         .main-visual-ad-change-btn {
             background: none;
-            color: ivory;
+            color: #ccc;
             width: 30%;
             height: 30%;
             font-size: 80px;
@@ -37,14 +37,28 @@
             @include disflex();
 
             &:hover {
-                opacity: .7;
+                opacity: .9;
             }
         }
     }
 
     .main-visual-ad-box {
-        background: url('../img/KakaoTalk-Logo.png');
         width: 100%;
-        height: 500px;
+        height: 1000px;
+        border-bottom: 1px solid #000;
+        
+        .main-visual-ad {
+            background: url('../img/ad-test1.jpg') no-repeat;
+            background-size: 100%;
+            width: 100%;
+            height: 70%;
+            border-bottom: 1px solid red;
+        }
+
+        .main-visual-ad-contents-box {
+            width: 100%;
+            height: 30%;
+            border: 1px solid #000;
+        }
     }
 }

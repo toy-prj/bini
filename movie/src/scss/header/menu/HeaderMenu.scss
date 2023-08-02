@@ -18,6 +18,7 @@
         display: flex;
 
         .header-bottom-menu-list {
+            color: #ccc;
             width: 20%;
             height: 100%;
             cursor: pointer;
@@ -30,11 +31,11 @@
 
             &:hover .header-bottom-menu-list-text {
                 transform: translateY(2px);
-                transition-duration: 0.2s;
+                transition-duration: 0.1s;
             }
 
             .header-bottom-menu-list-text {
-                border-right: 1px solid #6633ff;
+                border-right: 1px solid #ccc;
                 width: 100%;
                 height: 50%;
                 font-weight: bold;

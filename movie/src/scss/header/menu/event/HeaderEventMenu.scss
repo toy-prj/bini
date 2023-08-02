@@ -15,7 +15,7 @@
 }
 
 #headerEventMenuWrapper {
-    background: #6633ff;
+    background: rgb(31, 31, 31, .7);
     width: 980px;
     height: 50px;
     animation: opacity 0.3s forwards 1;
@@ -42,7 +42,7 @@
             }
 
             &:hover .header-event-menu-list-text {
-                color: #6633ff;
+                color: rgb(31, 31, 31, .7);
             }
 
             .header-event-menu-list-text {
