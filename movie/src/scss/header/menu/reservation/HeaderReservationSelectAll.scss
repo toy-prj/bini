@@ -6,6 +6,7 @@
     align-items: center;
 }
 
+// 전체 선택
 #HeaderReservationSelectAllWrapper {
     width: 100%;
     height: 100%;
@@ -17,7 +18,6 @@
         display: flex;
 
         .header-reservation-select-all-area-box {
-            border-right: 1px solid #000;
             width: 50%;
             height: 100%;
 

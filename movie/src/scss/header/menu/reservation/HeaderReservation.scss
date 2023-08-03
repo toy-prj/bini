@@ -6,8 +6,8 @@
     align-items: center;
 }
 
+// 예매하기
 #headerMovieReservationWrapper {
-    border: 2px solid yellow;
     background: #fff;
     width: 1200px;
     height: 800px;
@@ -32,10 +32,9 @@
         .header-movie-reservation-info-box {
             width: 1200px;
             height: 800px;
-            border: 1px solid #000;
 
             .header-movie-reservation-select-cinema-style-info-box {
-                border: 1px solid #000;
+                border-right: 1px solid #000;
                 width: 350px;
                 height: 100%;
             }

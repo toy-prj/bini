@@ -11,7 +11,7 @@ const HeaderReservationSelectSpecial = () => {
 
                     <div className="header-reservation-select-special-area-box">
                         <div className="header-reservation-select-special-area">
-                            <p className="header-reservation-select-special-area-text">샤롯데</p>
+                            <p className="header-reservation-select-special-area-text">샤롯데(11)</p>
                         </div>
                     </div>
                     
