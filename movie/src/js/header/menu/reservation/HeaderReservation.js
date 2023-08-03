@@ -1,7 +1,8 @@
 import React from "react";
+import HeaderReservationProgress from "./HeaderReservationProgress";
+import HeaderReservationSelectCinemaStyle from "./HeaderReservationSelectCinemaStyle";
 
 import '../../../../scss/header/menu/reservation/HeaderReservation.scss';
-import HeaderReservationProgress from "./HeaderReservationProgress";
 
 const HeaderReservation = () => {
 
@@ -14,7 +15,11 @@ const HeaderReservation = () => {
                         <HeaderReservationProgress />
                     </div>
 
-                    
+                    <div className="header-movie-reservation-info-box">
+                        <div className="header-movie-reservation-select-cinema-style-info-box">
+                            <HeaderReservationSelectCinemaStyle />
+                        </div>
+                    </div>
 
 
 

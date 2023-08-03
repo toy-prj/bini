@@ -1,0 +1,69 @@
+@import url('../../../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerReservationSelectCinemaWrapper {
+    width: 100%;
+    height: 100%;
+
+    .header-movie-reservation-select-cinema-style-text-box {
+        border-bottom: 1px solid #000;
+        width: 100%;
+        height: 6%;
+
+        .header-movie-reservation-select-cinema-style-text {
+            background: #000;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            font-size: 21px;
+            @include disflex();
+        }
+    }
+
+    .header-movie-reservation-select-cinema-style-box {
+        border-bottom: 1px solid #000;
+        width: 100%;
+        height: 6%;
+        display: flex;
+
+        .header-movie-reservation-select-all {
+            border-right: 1px solid #000;
+            background: none;
+            width: 50%;
+            height: 100%;
+            cursor: pointer;
+
+            &:hover .header-movie-reservation-select-text{
+                color: #ff0000;
+            }
+        }
+        
+        .header-movie-reservation-select-special {
+            background: none;
+            width: 50%;
+            height: 100%;
+            cursor: pointer;
+
+            &:hover .header-movie-reservation-select-text{
+                color: #ff0000;
+            }
+        }
+
+        .header-movie-reservation-select-text {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    .header-movie-reservation-selected-style-box {
+        border-bottom: 1px solid #000;
+        width: 100%;
+        height: 88%;
+    }
+    
+}

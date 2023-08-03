@@ -1,0 +1,59 @@
+@import url('../../../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#HeaderReservationSelectSpecialWrapper {
+    width: 100%;
+    height: 100%;
+    
+    .header-reservation-select-special-box {
+        background: #ddd;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .header-reservation-select-special-area-box {
+            border-right: 1px solid #000;
+            width: 50%;
+            height: 100%;
+
+            .header-reservation-select-special-area {
+                width: 100%;
+                height: 5%;
+                cursor: pointer;
+
+                .header-reservation-select-special-area-text {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 13px;
+                    font-weight: bold;
+                    @include disflex();
+                }
+            }
+        }
+
+        .header-reservation-select-special-detail-area-box {
+            background: #eee;
+            width: 50%;
+            height: 100%;
+
+            .header-reservation-select-special-detail-area {
+                width: 100%;
+                height: 5%;
+                cursor: pointer;
+
+                .header-reservation-select-special-detail-area-text {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 13px;
+                    font-weight: bold;
+                    @include disflex();
+                }
+            }
+        }
+    }
+}
