@@ -16,7 +16,7 @@ const MovieSubMenu = ({ viewAllMenu }) => {
                         <Link 
                             to={'/contents/reservation'} 
                             className="header-bottom-menu-quick-reservation"
-                            id="quickReservation"
+                            id="quickReservation"                            
                             >
                             <p className="header-bottom-menu-quick-reservation-text">
                                 바로 예매

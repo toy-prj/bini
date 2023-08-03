@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from 'react-icons/gi';
 import HeaderReservationMenu from './reservation/HeaderReservationMenu';
+import HeaderReservation from './reservation/HeaderReservation';
 import HeaderMovieMenu from './movie/HeaderMovieMenu';
 import HeaderCinemaMenu from "./cinema/HeaderCinemaMenuList";
 import HeaderEventMenu from "./event/HeaderEventMenu";
 import HeaderStoreMenu from "./store/HeaderStoreMenu";
-
-import '../../../scss/header/menu/HeaderMenu.scss';
 import MovieViewAllMenu from "./subMenu/MovieViewAllMenu";
 import MovieSubMenu from "./subMenu/MovieSubMenu";
+
+import '../../../scss/header/menu/HeaderMenu.scss';
 
 const HeaderMenu = () => {
     
@@ -91,9 +91,17 @@ const HeaderMenu = () => {
         setIsOpenViewAllMenu(true);
     }
 
+    // 예매하기
+    const [isOpenReservation, setIsOpenReservation] = useState(false);
+    
+    const clickReservation = () => {
+        setIsOpenReservation(true);
+    }
+
     return(
         <>
             { isOpenViewAllMenu && <MovieViewAllMenu /> }
+            { isOpenReservation && <HeaderReservation /> }
 
             <div id="headerMenuWrapper">
                 <div className="header-bottom-menu">
@@ -106,6 +114,7 @@ const HeaderMenu = () => {
                             className="header-bottom-menu-list"
                             onMouseEnter={ reservationMouseEnter }
                             onMouseLeave={ reservationMouseLeave }
+                            onClick={ clickReservation }
                             >
                             { isHoveredReservation && <HeaderReservationMenu /> }
                             <p 
