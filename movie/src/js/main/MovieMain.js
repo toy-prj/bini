@@ -4,6 +4,7 @@ import { AiOutlineLeft, AiOutlineRight }from 'react-icons/ai';
 
 import '../../scss/main/MovieMain.scss';
 import MovieMainAdContents from "./MovieMainAdContents";
+import MovieMainVisualEvent from "./event/MovieMainVisualEvent";
 
 const MovieMain = () => {
 
@@ -51,7 +52,11 @@ const MovieMain = () => {
 
 
 
-
+                <div className="main-visual-event-box">
+                    <div className="main-visual-event">
+                        <MovieMainVisualEvent />
+                    </div>
+                </div>
 
 
 
