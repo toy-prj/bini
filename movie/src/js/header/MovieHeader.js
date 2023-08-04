@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MdCardMembership } from 'react-icons/md';
 import { BsPersonFill, BsPersonFillAdd, BsPersonFillLock } from 'react-icons/bs';
@@ -33,11 +33,46 @@ const MovieHeader = () => {
         setOpenLogin(false);
     }
 
+    
+
+
+
+
+
+
+
+
+
     // 새로 고침(임시)
     const reload = () => {
         window.onload.href='/';
     }
     
+
+
+    // sticky header 
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const updateScroll = () => {
+        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', updateScroll);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return (
         <>
@@ -45,12 +80,11 @@ const MovieHeader = () => {
             {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn }/> }            
 
             {/* header 전체 */}
-            <div id="headerWrapper">
-
+            <div id='headerWrapper'>
                 <div className="header-box">
 
                     {/* header 위쪽 banner */}
-                    <div className="header-top-banner">
+                    <div className={ scrollPosition < 130 ? "header-top-banner" : "header-top-banner_none"}>
 
                         {/* header 로고 */}
                         <div className="header-main-logo-box">

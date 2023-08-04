@@ -6,12 +6,69 @@
     align-items: center;
 }
 
-#headerMenuWrapper {
+.sticky_header_bottom_menu {
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    width: 100vmax;
+    height: 52px;
+    transition-duration: 0.3s;
+    display: flex;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .header-bottom-menu {
+        width: 980px;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+
+        .header-bottom-menu-list {
+            color: #000;
+            width: 20%;
+            height: 100%;
+            cursor: pointer;
+            @include disflex();
+            position: relative;
+
+            &:hover {
+                color: #ff0000;
+            }
+
+            &:hover .header-bottom-menu-list-text {
+                transform: translateY(2px);
+                transition-duration: 0.1s;
+            }
+
+            .header-bottom-menu-list-text {
+                border-right: 1px solid #ccc;
+                width: 100%;
+                height: 50%;
+                font-weight: bold;
+                transition-duration: 0.1s;
+                @include disflex();
+            }
+
+            #Reservation {
+                color: #ff0000;
+            }
+
+            #Store {
+                border: none;
+            }
+        }
+    }
+}
+
+
+.header_menu_wrapper {
     width: 980px;
     height: 52px;
     display: flex;
     justify-content: space-between;
-    
+
     .header-bottom-menu {
         width: 50%;
         height: 100%;

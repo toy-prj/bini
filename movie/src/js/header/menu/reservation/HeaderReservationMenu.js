@@ -2,12 +2,12 @@ import React from "react";
 
 import '../../../../scss/header/menu/reservation/HeaderReservationMenu.scss';
 
-const HeaderReservationMenu = () => {
+const HeaderReservationMenu = ({ scrollPosition }) => {
 
     return(
         <>
             {/* 예매하기 */}
-            <div id="headerReservationWrapper">
+            <div className={ scrollPosition < 130 ? "header-reservation-wrapper" : "sticky-header-reservation-wrapper"}>
                 <ul className="header-reservation-menu">
                     
                     <li className="header-reservation-menu-list">

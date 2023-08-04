@@ -28,6 +28,9 @@ const MovieMain = () => {
 
                 <div className="main-visual-ad-box">
 
+                    <div className="main-visual-ad-header-background"></div>
+                    <div className="main-visual-ad-footer-background"></div>
+
                     <div className="main-visual-ad"></div>
 
                     <div className="main-visual-ad-contents-wrapper">

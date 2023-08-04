@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeaderReservationMenu from './reservation/HeaderReservationMenu';
 import HeaderReservation from './reservation/HeaderReservation';
@@ -98,12 +98,25 @@ const HeaderMenu = () => {
         setIsOpenReservation(true);
     }
 
+    // sticky header 
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const updateScroll = () => {
+        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', updateScroll);
+    });
+
+
+
     return(
         <>
             { isOpenViewAllMenu && <MovieViewAllMenu /> }
             { isOpenReservation && <HeaderReservation /> }
 
-            <div id="headerMenuWrapper">
+            <div className={scrollPosition < 130 ? "header_menu_wrapper" : "sticky_header_bottom_menu"}>
                 <div className="header-bottom-menu">
 
                 
@@ -116,7 +129,7 @@ const HeaderMenu = () => {
                             onMouseLeave={ reservationMouseLeave }
                             onClick={ clickReservation }
                             >
-                            { isHoveredReservation && <HeaderReservationMenu /> }
+                            { isHoveredReservation && <HeaderReservationMenu scrollPosition={ scrollPosition }/> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Reservation"
