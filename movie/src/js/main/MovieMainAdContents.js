@@ -5,12 +5,6 @@ import '../../scss/main/MovieMainAdContents.scss';
 import { Link } from "react-router-dom";
 
 const MovieMainAdContents = () => {
-
-
-
-        
-            
-
     
     return(
         <>

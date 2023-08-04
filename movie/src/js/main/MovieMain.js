@@ -1,10 +1,10 @@
 import React from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight }from 'react-icons/bs';
 import { AiOutlineLeft, AiOutlineRight }from 'react-icons/ai';
-
-import '../../scss/main/MovieMain.scss';
 import MovieMainAdContents from "./MovieMainAdContents";
 import MovieMainVisualEvent from "./event/MovieMainVisualEvent";
+
+import '../../scss/main/MovieMain.scss';
 
 const MovieMain = () => {
 
