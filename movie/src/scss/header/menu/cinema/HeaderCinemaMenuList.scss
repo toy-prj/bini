@@ -23,7 +23,7 @@
 
     position: absolute;
     bottom: -97%;
-    left: -200%;
+    left: -720%;
     z-index: 1000;
 
     .header-cinema-menu-list-box {
@@ -32,7 +32,7 @@
         @include disflex();
 
         .header-cinema-menu-list {
-            width: 10%;
+            width: 7%;
             height: 100%;
 
             &:hover {
