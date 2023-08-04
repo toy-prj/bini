@@ -2,11 +2,12 @@ import React from "react";
 
 import '../../../../scss/header/menu/cinema/HeaderCinemaMenuList.scss';
 
-const HeaderCinemaMenu = () => {
+const HeaderCinemaMenu = ({  scrollPosition }) => {
 
     return (
         <>
-            <div id="headerCinemaMenuListWrapper">
+            <div className={ scrollPosition < 130 ? "header-cinema-menu-list-wrapper" : "header-cinema-menu-list-wrapper_none"}>
+                
 
                 <ul className="header-cinema-menu-list-box">
 

@@ -6,14 +6,22 @@
     align-items: center;
 }
 
-#movieSubMenuWrapper {
+// sticky
+.movie-sub-menu-wrapper_none {
     width: 180px;
     height: 100%;
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    
     .movie-sub-menu-box {
         width: 100%;
         height: 100%;
         display: flex;
+        
+        position: absolute;
+        top: 0;
+        right: 0;
 
         .header-bottom-menu-quick-reservation-box {
             width: 50%;
@@ -47,6 +55,54 @@
             }
         }
     }
+}
 
+.movie-sub-menu-wrapper {
+    width: 180px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    .movie-sub-menu-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        
+        position: absolute;
+        top: 0;
+        right: 0;
 
+        .header-bottom-menu-quick-reservation-box {
+            width: 50%;
+            height: 100%;
+
+            .header-bottom-menu-quick-reservation {
+                width: 100px;
+                height: 100%;
+                @include disflex();
+
+                .header-bottom-menu-quick-reservation-text {
+                    color: #ff0000;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .header-bottom-menu-view-all-btn-box {
+            width: 50%;
+            height: 100%;
+            @include disflex();
+
+            .header-bottom-menu-view-all-btn {
+                background: none;
+                color: #ccc;
+                width: 30%;
+                height: 50%;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+    }
 }

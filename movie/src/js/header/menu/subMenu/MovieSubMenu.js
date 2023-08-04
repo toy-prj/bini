@@ -4,11 +4,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import '../../../../scss/header/menu/subMenu/MovieSubMenu.scss';
 
-const MovieSubMenu = ({ viewAllMenu }) => {
+const MovieSubMenu = ({ viewAllMenu, scrollPosition }) => {
 
     return(
         <>
-            <div id="movieSubMenuWrapper">
+            <div className={ scrollPosition < 130 ? "movie-sub-menu-wrapper" : "movie-sub-menu-wrapper_none"}>
+                
                 <div className="movie-sub-menu-box">
 
                     {/* 바로 예매 */}

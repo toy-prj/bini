@@ -113,8 +113,8 @@ const HeaderMenu = () => {
 
     return(
         <>
-            { isOpenViewAllMenu && <MovieViewAllMenu /> }
-            { isOpenReservation && <HeaderReservation /> }
+            { isOpenViewAllMenu && <MovieViewAllMenu scrollPosition={ scrollPosition }/> }
+            { isOpenReservation && <HeaderReservation scrollPosition={ scrollPosition }/> }
 
             <div className={scrollPosition < 130 ? "header_menu_wrapper" : "sticky_header_bottom_menu"}>
                 <div className="header-bottom-menu">
@@ -143,7 +143,7 @@ const HeaderMenu = () => {
                             onMouseEnter={ movieMouseEnter }
                             onMouseLeave={ movieMouseLeave }
                             >
-                            { isHoveredMovie && <HeaderMovieMenu /> }
+                            { isHoveredMovie && <HeaderMovieMenu scrollPosition={ scrollPosition }/> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Movie"
@@ -157,7 +157,7 @@ const HeaderMenu = () => {
                             onMouseEnter={ cinemaMouseEnter }
                             onMouseLeave={ cinemaMouseLeave }
                             >
-                            { isHoveredCinema && <HeaderCinemaMenu /> }
+                            { isHoveredCinema && <HeaderCinemaMenu scrollPosition={ scrollPosition }/> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Cinema"
@@ -171,7 +171,7 @@ const HeaderMenu = () => {
                             onMouseEnter={ eventMouseEnter }
                             onMouseLeave={ eventMouseLeave }
                         >
-                            { isHoveredEvent && <HeaderEventMenu /> }
+                            { isHoveredEvent && <HeaderEventMenu scrollPosition={ scrollPosition }/> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Event"
@@ -185,20 +185,19 @@ const HeaderMenu = () => {
                             onMouseEnter={ storeMouseEnter }
                             onMouseLeave={ storeMouseLeave }
                             >
-                            { isHoveredStore && <HeaderStoreMenu /> }
+                            { isHoveredStore && <HeaderStoreMenu scrollPosition={ scrollPosition }/> }
                             <p 
                                 className="header-bottom-menu-list-text"
                                 id="Store"
                                 >스토어</p>
                         </Link>
                     </div>
-
-                    {/* header 아래쪽 sub menu */}
-                    <ul className="header-bottom-sub-menu">
-                        <MovieSubMenu viewAllMenu={ viewAllMenu }/>
-                    </ul>
-
                 
+                {/* header 아래쪽 sub menu */}
+                <div className="header-bottom-sub-menu">
+                    <MovieSubMenu viewAllMenu={ viewAllMenu } scrollPosition={ scrollPosition }/>
+                </div>
+
             </div>
         </>
     );

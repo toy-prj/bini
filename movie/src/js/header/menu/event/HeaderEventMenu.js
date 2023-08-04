@@ -2,11 +2,12 @@ import React from "react";
 
 import '../../../../scss/header/menu/event/HeaderEventMenu.scss';
 
-const HeaderEventMenu = () => {
+const HeaderEventMenu = ({ scrollPosition }) => {
 
     return(
         <>
-        <div id="headerEventMenuWrapper">
+        <div className={ scrollPosition < 130 ? "header-event-menu-wrapper" : "header-event-menu-wrapper_none"} >
+            
             <ul className="header-event-menu">
                 
                 <li className="header-event-menu-list">

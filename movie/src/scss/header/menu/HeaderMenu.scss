@@ -13,17 +13,17 @@
     height: 52px;
     transition-duration: 0.3s;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     position: fixed;
     top: 0;
     left: 0;
 
     .header-bottom-menu {
-        width: 980px;
+        width: 500px;
         height: 100%;
         display: flex;
-        justify-content: start;
+        justify-content: center;
 
         .header-bottom-menu-list {
             color: #000;
@@ -66,8 +66,7 @@
 .header_menu_wrapper {
     width: 980px;
     height: 52px;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 
     .header-bottom-menu {
         width: 50%;

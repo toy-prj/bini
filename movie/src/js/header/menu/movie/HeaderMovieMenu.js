@@ -2,11 +2,11 @@ import React from "react";
 
 import '../../../../scss/header/menu/movie/HeaderMovieMenu.scss';
 
-const HeaderMovieMenu = () => {
+const HeaderMovieMenu = ({ scrollPosition }) => {
 
     return(
         <>
-            <div id="headerMovieMenuWrapper">
+            <div className={ scrollPosition < 130 ? "header-movie-menu-wrapper" : "header-movie-menu-wrapper_none"}>
 
                 <ul className="header-movie-menu">
 
