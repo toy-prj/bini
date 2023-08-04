@@ -11,15 +11,15 @@ import '../../scss/header/MovieHeader.scss';
 const MovieHeader = () => {
 
     // 모달창 닫기
-    const clickCloseBtn = e => {
+    const clickCloseBtn = () => {
         setOpenLogin(false);
     }
 
     // 로그인
-    const[openLogin, setOpenLogin] = useState(false);
+    const [openLogin, setOpenLogin] = useState(false);
 
     // 메인화면 로그인 클릭
-    const clickLogin = e => {
+    const clickLogin = () => {
         setOpenLogin(true);
         setOpenSignUp(false);
     }
@@ -28,7 +28,7 @@ const MovieHeader = () => {
     const [openSignUp, setOpenSignUp] = useState(false);
 
     // 메인화면 회원가입 클릭
-    const clickSignUp = e => {
+    const clickSignUp = () => {
         setOpenSignUp(true);
         setOpenLogin(false);
     }
@@ -48,8 +48,6 @@ const MovieHeader = () => {
             <div id="headerWrapper">
 
                 <div className="header-box">
-
-                
 
                     {/* header 위쪽 banner */}
                     <div className="header-top-banner">
@@ -90,7 +88,7 @@ const MovieHeader = () => {
                                 <button 
                                     className="header-menu-list" 
                                     id="Login"
-                                    onClick={clickLogin}
+                                    onClick={ clickLogin }
                                 >
                                     <div className="header-menu-list-icons-box">
                                         <div 

@@ -39,7 +39,7 @@ const MovieMainAdContents = () => {
                         </div>
 
                         <div className="movie-main-ad-contents-img-box">
-                            <div className="movie-main-ad-contents-img">사진</div>
+                            <div className="movie-main-ad-contents-img"></div>
                         </div>
                         <div className="movie-main-ad-contents-title-box">
                             <div className="movie-main-ad-contents-title">영화 제목</div>
