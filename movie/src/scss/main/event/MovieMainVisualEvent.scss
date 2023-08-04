@@ -12,22 +12,20 @@
     height: 100%;
 
     .main-visual-event-header {
-        border-bottom: 1px solid #000;
         width: 100%;
-        height: 10%;
+        height: 8%;
+        padding-top: 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         .main-visual-event-header-text {
-            width: 80px;
             height: 50%;
             @include disflex();
         }
 
         #title {
             font-size: 18px;
-            font-weight: bold;
         }
 
         #more {
@@ -35,6 +33,7 @@
             
             .more-text {
                 position: relative;
+                margin-right: 10px;
 
                 #rightIcons {
                     position: absolute;

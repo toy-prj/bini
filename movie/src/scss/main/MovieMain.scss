@@ -150,14 +150,11 @@
     // 이벤트
     .main-visual-event-box {
         border-bottom: 1px solid #000;
-        background: #eee;
         width: 100%;
         height: 600px;
         @include disflex();
 
         .main-visual-event {
-            border-left: 1px solid #000;
-            border-right: 1px solid #000;
             width: 980px;
             height: 100%;
         }

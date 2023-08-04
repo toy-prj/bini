@@ -11,30 +11,149 @@
     height: 100%;
     
     .movie-main-visual-event-main-box {
-        background: aquamarine;
         width: 100%;
         height: 100%;
+        display: flex;
 
         .movie-main-visual-event-left-box {
-            border-right: 1px solid #000;
             width: 70%;
             height: 100%;
 
             .movie-main-visual-event-top-box {
-                border-bottom: 1px solid #000;
                 width: 100%;
                 height: 50%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                
+                #firstEventBox {
+                    width: 27%;
+                    height: 95%;
+                    @include disflex();
+                    
+                    #firstEvent {
+                        background: url('../../img/event-test1.png') no-repeat;
+                        background-size: 100%;
+                    }
+                }
+
+                .movie-main-visual-event-top-list-box {
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
+                
+                #secondEventBox {
+                    width: 27%;
+                    height: 95%;
+                    @include disflex();
+
+                    #secondEvent {
+                        background: url('../../img/event-test2.png') no-repeat;
+                        background-size: 100%;
+                    }
+                }
+                
+                #thirdEventBox {
+                    width: 42%;
+                    height: 95%;
+                    @include disflex();
+                    
+                    #thirdEvent {
+                        background: url('../../img/event-test3.png') no-repeat;
+                        background-size: 102%;
+                    }
+                }
+                
+                .movie-main-visual-event-top-list {
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    transition-duration: 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
 
             .movie-main-visual-event-bottom-box {
                 width: 100%;
                 height: 50%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .movie-main-visual-event-bottom-list-box {
+                    overflow: hidden;
+                }
+
+                .movie-main-visual-event-bottom-list {
+                    transition-duration: 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                #bottomFirstEventBox {
+                    border-radius: 5px;
+                    width: 71%;
+                    height: 95%;
+
+                    #bottomFirstEvent {
+                        background: url('../../img/event-test4.png') no-repeat;
+                        background-size: 102%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                
+                #bottomSecondEventBox {
+                    border-radius: 5px;
+                    width: 27%;
+                    height: 95%;
+
+                    #bottomSecondEvent {
+                        background: url('../../img/event-test5.png') no-repeat;
+                        background-size: 102%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
         }
 
         .movie-main-visual-event-right-box {
             width: 30%;
             height: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+
+            .movie-main-visual-event-side-box {
+                border-radius: 5px;
+                width: 95%;
+                height: 98%;
+                overflow: hidden;
+                cursor: pointer;
+                
+                .movie-main-visual-event-side {
+                    background: url('../../img/event-test6.png') no-repeat;
+                    background-size: 110%;
+                    background-position-x: -11px;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+
+                    &:hover {
+                        transition-duration: 0.3s;
+                        transform: scale(1.1);
+                    }
+                }
+            }
         }
     }
 }

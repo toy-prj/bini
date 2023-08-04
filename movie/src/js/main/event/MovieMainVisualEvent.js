@@ -1,9 +1,9 @@
 import React from "react";
-
-import '../../../scss/main/event/MovieMainVisualEvent.scss';
 import { Link } from "react-router-dom";
 import { AiOutlineRight } from "react-icons/ai";
 import MovieMainVisualEventMain from "./MovieMainVisualEventMain";
+
+import '../../../scss/main/event/MovieMainVisualEvent.scss';
 
 const MovieMainVisualEvent = () => {
 
