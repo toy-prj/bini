@@ -6,3 +6,56 @@
     align-items: center;
 }
 
+.movie-main-special-cinema-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .movie-main-special-cinema-box {
+        width: 100%;
+        height: 100%;
+
+        .movie-main-special-cinema-header-box {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .movie-main-special-cinema-header-title {
+                width: fit-content;
+                height: 100%;
+                @include disflex();
+
+                .movie-main-special-cinema-header-title-text {
+                    font-size: 18px;
+                }
+            }
+
+            .movie-main-special-cinema-header-view-all {
+                width: 130px;
+                height: 100%;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                
+                .movie-main-special-cinema-header-view-all-text {
+                    width: fit-content;
+                    height: 25px;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    @include disflex();
+
+                    #viewAll {
+                        @include disflex();
+                    }
+                }
+            }
+        }
+
+        .movie-main-special-cinema-main-box {
+            width: 100%;    
+            height: 90%;
+        }
+    }
+}
