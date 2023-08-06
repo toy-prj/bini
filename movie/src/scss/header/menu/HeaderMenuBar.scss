@@ -1,0 +1,33 @@
+@import url('../../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-menu-bar-wrapper-none {
+    background: #fff;
+    width: 100vmax;
+    height: 50px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .header-menu-bar-box {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.header-menu-bar-wrapper {
+    width: 980px;
+    height: 50px;
+
+    .header-menu-bar-box {
+        width: 50%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}

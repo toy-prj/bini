@@ -4,7 +4,8 @@ import { MdCardMembership } from 'react-icons/md';
 import { BsPersonFill, BsPersonFillAdd, BsPersonFillLock } from 'react-icons/bs';
 import MovieLogin from "./MoiveLogin";
 import MovieSignUp from "./MovieSignUp";
-import HeaderMenu from "./menu/HeaderMenu";
+import HeaderMenuBar from "./menu/HeaderMenuBar";
+// import HeaderMenu from "./menu/HeaderMenu";
 
 import '../../scss/header/MovieHeader.scss';
 
@@ -177,7 +178,8 @@ const MovieHeader = () => {
                     >
                         {/* header 아래쪽 메뉴 */}
                         <ul className="header-bottom-menu">
-                            <HeaderMenu />
+                            {/* <HeaderMenu /> */}
+                            <HeaderMenuBar scrollPosition={ scrollPosition }/>
                         </ul>
 
                     </div>
