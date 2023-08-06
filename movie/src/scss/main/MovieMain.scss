@@ -24,7 +24,6 @@
             width: 18%;
             height: 100%;
             @include disflex();
-            border: 1px solid red;
         }
 
         .main-visual-ad-change-btn {
@@ -140,23 +139,94 @@
             }
         }
 
+        @keyframes show {
+            0% {
+                // transform: translateX(-1000px);
+                opacity: 0;
+            } 100% {
+                // transform: translateX(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        // sticky
+        .main-visual-ad-contents-box-sticky {
+            width: 980px;
+            height: 100%;
+            margin: 0 auto;
+            animation: show 0.75s forwards 1;
+        }
+
         .main-visual-ad-contents-box {
             width: 980px;
             height: 100%;
             margin: 0 auto;
+            display: none;
         }
     }
 
-    // 이벤트
-    .main-visual-event-box {
-        border-bottom: 1px solid #000;
+    // sticky 이벤트
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+            transform: translateX(-1000px);
+        } 100% {
+            opacity: 1;
+            transform: translateX(-50%, -50%);
+        }
+    }
+
+    .main-visual-event-box-sticky {
         width: 100%;
         height: 600px;
+        animation: opacity 0.5s forwards 1;
         @include disflex();
 
         .main-visual-event {
             width: 980px;
             height: 100%;
+        }
+    }
+
+    // 이벤트
+    .main-visual-event-box {
+        width: 100%;
+        height: 600px;
+        @include disflex();
+        
+        .main-visual-event {
+            width: 980px;
+            height: 100%;
+            display: none;
+        }
+    }
+    
+    // sticky 스페셜관
+    .main-visual-special-cinema-box {
+        background: #eee;
+        width: 100%;
+        height: 400px;
+        @include disflex();
+        
+        .main-visual-special-cinema-sticky {
+            border: 1px solid #000;
+            width: 980px;
+            height: 100%;
+            animation: opacity 0.5s forwards 1;
+        }
+    }
+
+    // 스페셜관
+    .main-visual-special-cinema-box {
+        background: #eee;
+        width: 100%;
+        height: 400px;
+        @include disflex();
+
+        .main-visual-special-cinema {
+            width: 980px;
+            height: 100%;
+            display: none;
         }
     }
 }

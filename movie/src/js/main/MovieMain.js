@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight }from 'react-icons/bs';
 import { AiOutlineLeft, AiOutlineRight }from 'react-icons/ai';
 import MovieMainAdContents from "./MovieMainAdContents";
 import MovieMainVisualEvent from "./event/MovieMainVisualEvent";
+import MovieMainSpecialCinema from "./special/MovieMainSpecialCinema";
 
 import '../../scss/main/MovieMain.scss';
 
 const MovieMain = () => {
+
+    // sticky header 
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const updateScroll = () => {
+        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', updateScroll);
+    });
 
     return(
         <>
@@ -46,7 +58,7 @@ const MovieMain = () => {
 
                         <div className="main-background"></div>
                         
-                        <div className="main-visual-ad-contents-box">
+                        <div className={ scrollPosition < 160 ? "main-visual-ad-contents-box" : "main-visual-ad-contents-box-sticky"}>
                             <MovieMainAdContents />
                         </div>
                     </div>
@@ -55,13 +67,18 @@ const MovieMain = () => {
 
 
 
-                <div className="main-visual-event-box">
+                <div className={ scrollPosition < 600 ? "main-visual-event-box" : "main-visual-event-box-sticky"}>
                     <div className="main-visual-event">
                         <MovieMainVisualEvent />
                     </div>
                 </div>
 
 
+                <div className="main-visual-special-cinema-box">
+                    <div className={ scrollPosition < 1100 ? "main-visual-special-cinema" : "main-visual-special-cinema-sticky"}>
+                        <MovieMainSpecialCinema />
+                    </div>
+                </div>
 
 
 
