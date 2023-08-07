@@ -5,7 +5,6 @@ import { BsPersonFill, BsPersonFillAdd, BsPersonFillLock } from 'react-icons/bs'
 import MovieLogin from "./MoiveLogin";
 import MovieSignUp from "./MovieSignUp";
 import HeaderMenuBar from "./menu/HeaderMenuBar";
-// import HeaderMenu from "./menu/HeaderMenu";
 
 import '../../scss/header/MovieHeader.scss';
 

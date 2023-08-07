@@ -6,14 +6,24 @@
     align-items: center;
 }
 
+@keyframes move {
+    0% {
+        opacity: 0;
+        width: 95%;
+    } 100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
 .sticky_header_bottom_menu {
     border-bottom: 1px solid #ccc;
     background: #fff;
     width: 100vmax;
     height: 52px;
-    transition-duration: 0.3s;
     display: flex;
     justify-content: center;
+    // animation: move .5s forwards 1;
     
     position: fixed;
     top: 0;
