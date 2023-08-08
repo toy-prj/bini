@@ -200,6 +200,16 @@
             display: none;
         }
     }
+
+    @keyframes showMenu {
+        0% {
+            opacity: 0;
+            height: 0;
+        } 100% {
+            opacity: 1;
+            height: 100%;
+        }
+    }
     
     // sticky 스페셜관
     .main-visual-special-cinema-box {
@@ -211,7 +221,7 @@
         .main-visual-special-cinema-sticky {
             width: 980px;
             height: 100%;
-            animation: opacity 0.5s forwards 1;
+            animation: showMenu 0.5s forwards 1;
         }
     }
 
