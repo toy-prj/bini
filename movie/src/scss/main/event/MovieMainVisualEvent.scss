@@ -23,11 +23,12 @@
             height: 50%;
             @include disflex();
         }
-
+        
         #title {
             font-size: 18px;
+            font-weight: bold;
         }
-
+        
         #more {
             font-size: 13px;
             

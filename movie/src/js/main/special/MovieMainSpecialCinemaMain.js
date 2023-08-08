@@ -1,8 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import MovieMainSuite from "./cinema/MovieMainSuite";
+import MovieMainLivingRoom from "./cinema/MovieMainLivingRoom";
+import MovieMain4DX from "./cinema/MovieMain4DX";
+import MovieMainChef from "./cinema/MovieMainChef";
 
 import '../../../scss/main/special/MovieMainSpecialCinemaMain.scss';
 
 const MovieMainSpecialCinemaMain = () => {
+
+    const [isSuiteHoveredList, setIsSuiteHoveredList] = useState(false);
+    const [isLivingRoomHoveredList, setIsLivingRoomHoveredList] = useState(false);
+    const [is4DXHoveredList, setIs4DXHoveredList] = useState(false);
+    const [isChefHoveredList, setIsChefHoveredList] = useState(false);
+
+    // Suite
+    const isSuiteMouseEnter = () => {
+        setIsSuiteHoveredList(true);
+    }
+    
+    const isSuiteMouseLeave = () => {
+        setIsSuiteHoveredList(false);
+    }
+    
+    // LivingRoom
+    const isLivingRoomMouseEnter = () => {
+        setIsLivingRoomHoveredList(true);
+    }
+    
+    const isLivingRoomMouseLeave = () => {
+        setIsLivingRoomHoveredList(false);
+    }
+    
+    // 4DX
+    const is4DXMouseEnter = () => {
+        setIs4DXHoveredList(true);
+    }
+    
+    const is4DXMouseLeave = () => {
+        setIs4DXHoveredList(false);
+    }
+    
+    // Chef
+    const isChefMouseEnter = () => {
+        setIsChefHoveredList(true);
+    }
+    
+    const isChefMouseLeave = () => {
+        setIsChefHoveredList(false);
+    }
+
+    
+
+
 
     return(
         <>
@@ -10,13 +59,22 @@ const MovieMainSpecialCinemaMain = () => {
                 <div className="movie-main-special-cinema-main-select-box">
 
                     <div className="movie-main-special-cinema-main-img-box">
-                        <div className="movie-main-special-cinema-main-img"></div>
+                        <div className="movie-main-special-cinema-main-img">
+                            { isSuiteHoveredList && <MovieMainSuite /> }
+                            { isLivingRoomHoveredList && <MovieMainLivingRoom /> }
+                            { is4DXHoveredList && <MovieMain4DX /> }
+                            { isChefHoveredList && <MovieMainChef /> }
+                        </div>
                     </div>
 
                     <div className="movie-main-special-cinema-main-select-menu-box">
                         <div className="movie-main-special-cinema-main-select-menu">
 
-                            <div className="movie-main-special-cinema-main-select-menu-list">
+                            <div 
+                                className="movie-main-special-cinema-main-select-menu-list"
+                                onMouseEnter={ isSuiteMouseEnter }
+                                onMouseLeave={ isSuiteMouseLeave }
+                            >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
                                     <p className="movie-main-special-cinema-main-select-menu-list-text">SUITE CINEMA</p>
                                 </div>
@@ -24,7 +82,11 @@ const MovieMainSpecialCinemaMain = () => {
                                     <p className="movie-main-special-cinema-main-select-menu-list-tag">#호텔 컨셉의 프리미엄관</p>
                                 </div>
                             </div>
-                            <div className="movie-main-special-cinema-main-select-menu-list">
+                            <div 
+                                className="movie-main-special-cinema-main-select-menu-list"
+                                onMouseEnter={ isLivingRoomMouseEnter }
+                                onMouseLeave={ isLivingRoomMouseLeave }
+                                >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
                                     <p className="movie-main-special-cinema-main-select-menu-list-text">CINE & LIVINGROOM</p>
                                 </div>
@@ -32,7 +94,11 @@ const MovieMainSpecialCinemaMain = () => {
                                     <p className="movie-main-special-cinema-main-select-menu-list-tag">#신개념 소셜 상영관</p>
                                 </div>
                             </div>
-                            <div className="movie-main-special-cinema-main-select-menu-list">
+                            <div 
+                                className="movie-main-special-cinema-main-select-menu-list"
+                                onMouseEnter={ is4DXMouseEnter }
+                                onMouseLeave={ is4DXMouseLeave }
+                                >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
                                     <p className="movie-main-special-cinema-main-select-menu-list-text">4DX</p>
                                 </div>
@@ -40,7 +106,11 @@ const MovieMainSpecialCinemaMain = () => {
                                     <p className="movie-main-special-cinema-main-select-menu-list-tag">#모션시트 #오감체험</p>
                                 </div>
                             </div>
-                            <div className="movie-main-special-cinema-main-select-menu-list">
+                            <div 
+                                className="movie-main-special-cinema-main-select-menu-list"
+                                onMouseEnter={ isChefMouseEnter }
+                                onMouseLeave={ isChefMouseLeave }
+                            >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
                                     <p className="movie-main-special-cinema-main-select-menu-list-text">CINE de CHEF</p>
                                 </div>

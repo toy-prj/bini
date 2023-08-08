@@ -1,0 +1,22 @@
+@import url('../../../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-main-suite-wrapper {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    
+    .movie-main-suite {
+        border-radius: 10px;
+        background: url('../../../img/main-special-cinema-list1.png') no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+    }
+}
+

@@ -8,7 +8,7 @@
 
 .movie-main-special-cinema-wrapper {
     width: 100%;
-    height: 100%;
+    height: 250px;
 
     .movie-main-special-cinema-box {
         width: 100%;
@@ -16,7 +16,7 @@
 
         .movie-main-special-cinema-header-box {
             width: 100%;
-            height: 10%;
+            height: 20%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -24,6 +24,7 @@
             .movie-main-special-cinema-header-title {
                 width: fit-content;
                 height: 100%;
+                font-weight: bold;
                 @include disflex();
 
                 .movie-main-special-cinema-header-title-text {
