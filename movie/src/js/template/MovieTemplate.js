@@ -1,8 +1,8 @@
 import React from "react";
 import MovieHeader from "../header/MovieHeader";
+import MovieMain from "../main/MovieMain";
 
 import '../../scss/template/MovieTemplate.scss';
-import MovieMain from "../main/MovieMain";
 
 const MovieTemplate = () => {
     return (
