@@ -1,8 +1,8 @@
 import React from "react";
 import { AiFillStar } from 'react-icons/ai';
+import { Link } from "react-router-dom";
 
 import '../../scss/main/MovieMainAdContents.scss';
-import { Link } from "react-router-dom";
 
 const MovieMainAdContents = () => {
     

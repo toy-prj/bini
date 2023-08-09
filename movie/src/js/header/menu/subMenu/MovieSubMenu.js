@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import '../../../../scss/header/menu/subMenu/MovieSubMenu.scss';
 
-const MovieSubMenu = ({ viewAllMenu, scrollPosition }) => {
+const MovieSubMenu = ({ viewAllMenu, scrollPosition, clickReservation }) => {
 
     return(
         <>
@@ -17,7 +17,8 @@ const MovieSubMenu = ({ viewAllMenu, scrollPosition }) => {
                         <Link 
                             to={'/contents/reservation'} 
                             className="header-bottom-menu-quick-reservation"
-                            id="quickReservation"                            
+                            id="quickReservation"                     
+                            onClick={ clickReservation }       
                             >
                             <p className="header-bottom-menu-quick-reservation-text">
                                 바로 예매

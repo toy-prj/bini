@@ -195,7 +195,11 @@ const HeaderMenu = () => {
                 
                 {/* header 아래쪽 sub menu */}
                 <div className="header-bottom-sub-menu">
-                    <MovieSubMenu viewAllMenu={ viewAllMenu } scrollPosition={ scrollPosition }/>
+                    <MovieSubMenu 
+                        viewAllMenu={ viewAllMenu } 
+                        scrollPosition={ scrollPosition }
+                        clickReservation={ clickReservation }
+                    />
                 </div>
 
             </div>
