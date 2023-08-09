@@ -14,6 +14,7 @@ body {
     0% {
         opacity: 0;
     }
+    
     100% {
         opacity: 1;
     }
@@ -21,8 +22,8 @@ body {
 
 // 로그인 모달
 #Header-Login-Wrapper {
-    border: 2px solid #6633ff;
-    background: #fff;
+    border: 1px solid #33ffff;
+    background: rgb(29, 29, 31, .9);
     width: 400px;
     height: 600px;
     overflow: hidden;
@@ -30,7 +31,7 @@ body {
     animation: openLoginModal 0.5s forwards 1;
 
     position: fixed;
-    top: 53%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -43,15 +44,15 @@ body {
         @include disflex();
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
 
         #Login-Modal-Close-Btn {
-            color: #6633ff;
+            color: #33ffff;
             font-size: 16px;
         }
-
+        
         .header-login-close-btn {
-            background: #fff;
+            background: none;
             width: 100%;
             height: 100%;
             cursor: pointer;
@@ -70,10 +71,7 @@ body {
             position: relative;
 
             .header-login-logo {
-                // background: url('../../scss/img/MainLogo.png') no-repeat;
-                // background-size: 80%;
-                // background-position-x: 18px;
-                // background-position-y: 20px;
+                color: #33ffff;
                 width: 50%;
                 height: 100%;
                 margin: 0 auto;
@@ -90,15 +88,17 @@ body {
         .header-login-user-info-box {
             width: 100%;
             height: 20%;
-            
+
             .header-login-user-email-box {
                 width: 100%;
                 height: 50%;
                 @include disflex();
-                
+
                 .header-login-user-email {
-                    border: 1px solid #6633ff;
+                    background: rgb(29, 29, 31, 1);
+                    border: 1px solid #33ffff;
                     border-radius: 5px;
+                    color: #fff;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
@@ -114,10 +114,12 @@ body {
                 width: 100%;
                 height: 50%;
                 @include disflex();
-
+                
                 .header-login-user-password {
-                    border: 1px solid #6633ff;
+                    background: rgb(29, 29, 31, 1);
+                    border: 1px solid #33ffff;
                     border-radius: 5px;
+                    color: #fff;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
@@ -149,7 +151,7 @@ body {
                 }
 
                 .header-login-keep-login-text {
-                    color: #6633ff;
+                    color: #33ffff;
                     margin-left: 5px;
                     font-size: 13px;
                 }
@@ -163,11 +165,11 @@ body {
             @include disflex();
 
             .header-login-login {
-                background: #6633ff;
+                background: #33ffff;
                 border-radius: 5px;
                 width: 100%;
                 height: 80%;
-                color: #fff;
+                color: rgb(29, 29, 31, 1);
                 font-size: 16px;
                 font-weight: bold;
                 transition-duration: 0.3s;
@@ -190,7 +192,7 @@ body {
                 @include disflex();
 
                 .header-login-find-email-pw-box {
-                    color: #6633ff;
+                    color: #33ffff;
                     width: 70%;
                     height: 100%;
                     display: flex;
@@ -231,7 +233,7 @@ body {
 
                     .header-login-signup {
                         background: none;
-                        color: #6633ff;
+                        color: #33ffff;
                         width: 60%;
                         height: 100%;
                         font-size: 13px;
@@ -255,7 +257,7 @@ body {
             display: flex;
 
             .header-login-social-login-text {
-                color: #6633ff;
+                color: #33ffff;
                 width: 100%;
                 height: 100%;
                 font-size: 13px;
@@ -269,7 +271,7 @@ body {
             height: 15%;
             display: flex;
             justify-content: center;
-            
+
             .header-login-social-login {
                 width: 25%;
                 height: 80%;
@@ -278,7 +280,7 @@ body {
                     width: 100%;
                     height: 100%;
                     @include disflex();
-                    
+
                     .header-login-social-login-img {
                         border-radius: 50%;
                         width: 40px;
@@ -303,38 +305,12 @@ body {
 
                     #Google {
                         background: url('../img/Google-Logo.png') no-repeat;
-                        background-size: 130%;
-                        background-position-x: -6px;
-                        background-position-y: -4px;
+                        background-size: 145%;
+                        background-position-x: -8.5px;
+                        background-position-y: -7px;
                     }
                 }
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
