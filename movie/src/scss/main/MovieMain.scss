@@ -29,7 +29,7 @@
         .main-visual-ad-change-btn {
             background: none;
             color: #ccc;
-            width: 35%;
+            width: 30%;
             height: 11%;
             font-size: 80px;
             opacity: .5;
@@ -104,7 +104,7 @@
                 top: 0;
                 
                 .main-visual-ad-contents-change-btn {
-                    width: 30%;
+                    width: 40%;
                     height: 100%;
                     @include disflex();
                     
@@ -116,8 +116,6 @@
                         cursor: pointer;
                         
                         &:hover {
-                            background: rgb(150, 150, 150, .4);
-                            border-radius: 50%;
                             opacity: .9;
                         }
                     }
@@ -130,8 +128,6 @@
                         cursor: pointer;
 
                         &:hover {
-                            background: rgb(150, 150, 150, .4);
-                            border-radius: 50%;
                             opacity: .9;
                         }
                     }

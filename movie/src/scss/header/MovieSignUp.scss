@@ -9,24 +9,16 @@
 @keyframes openSignUpModal {
     0% {
         opacity: 0;
-        position: fixed;
-        top: 51%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
     
     100% {
         opacity: 1;
-        position: fixed;
-        top: 51%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 }
 
 #headerSignUpWrapper {
-    border: 2px solid red;
-    background: #fff;
+    border: 1px solid #33ffff;
+    background: rgb(29, 29, 31, .9);
     width: 400px;
     height: 600px;
     overflow: hidden;
@@ -34,9 +26,9 @@
     animation: openSignUpModal 0.5s forwards 1;
 
     position: fixed;
-    top: 51%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    z-index: 1000;
+    z-index: 2000;
 }
