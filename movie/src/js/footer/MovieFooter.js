@@ -6,7 +6,7 @@ const MovieFooter = () => {
 
     return(
         <>  
-            <div className="movie-footer-wrapper">MainFooter</div>
+            <div className="movie-footer-wrapper">MovieFooter</div>
         </>
     );
 }
