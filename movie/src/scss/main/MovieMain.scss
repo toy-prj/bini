@@ -234,4 +234,57 @@
             display: none;
         }
     }
+
+    @keyframes left {
+        0% {
+            transform: translateX(1500px);
+            @include disflex();
+        } 100% {
+            transform: translateX(0);
+            @include disflex();
+        }
+    }
+
+    //sticky
+    .main-view-ad-box-sticky {
+        width: 100%;
+        height: 400px;
+        animation: left .75s forwards 1;
+
+        .main-view-ad-background-sticky {
+            background: rgb(245, 242, 236);
+            width: 100%;
+            height: 250px;
+            @include disflex();
+        }
+        
+        .main-view-ad-sticky {
+            width: 980px;
+            height: 348px;
+            animation: left .75s forwards 1;
+            @include disflex();
+        }
+    }
+
+    // 광고
+    .main-view-ad-box {
+        width: 100%;
+        height: 400px;
+        @include disflex();
+
+        .main-view-ad-background {
+            background: rgb(245, 242, 236);
+            width: 100%;
+            height: 250px;
+            @include disflex();
+            display: none;
+        }
+        
+        .main-view-ad {
+            width: 980px;
+            height: 348px;
+            @include disflex();
+            display: none;
+        }
+    }
 }

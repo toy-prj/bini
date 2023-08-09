@@ -6,6 +6,7 @@ import MovieMainVisualEvent from "./event/MovieMainVisualEvent";
 import MovieMainSpecialCinema from "./special/MovieMainSpecialCinema";
 
 import '../../scss/main/MovieMain.scss';
+import MovieMainViewAD from "./viewAD/MovieMainViewAD";
 
 const MovieMain = () => {
 
@@ -75,8 +76,17 @@ const MovieMain = () => {
 
 
                 <div className="main-visual-special-cinema-box">
-                    <div className={ scrollPosition < 1100 ? "main-visual-special-cinema" : "main-visual-special-cinema-sticky"}>
+                    <div className={ scrollPosition < 1300 ? "main-visual-special-cinema" : "main-visual-special-cinema-sticky"}>
                         <MovieMainSpecialCinema />
+                    </div>
+                </div>
+
+
+                <div className={ scrollPosition < 1600 ? "main-view-ad-box" : "main-view-ad-box-sticky"}>
+                    <div className={ scrollPosition < 1600 ? "main-view-ad-background" : "main-view-ad-background-sticky"}>
+                        <div className={ scrollPosition < 1600 ? "main-view-ad" : "main-view-ad-sticky"}>
+                            <MovieMainViewAD />
+                        </div>
                     </div>
                 </div>
 
