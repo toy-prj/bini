@@ -22,20 +22,21 @@ body {
 
 // 로그인 모달
 #Header-Login-Wrapper {
-    border: 1px solid #33ffff;
-    background: rgb(29, 29, 31, .9);
+    border: 1px solid rgb(0, 117, 255, .9);
+    background: rgb(255, 255, 255);
     width: 400px;
     height: 600px;
     overflow: hidden;
     transition-duration: 0.3s;
     animation: openLoginModal 0.5s forwards 1;
-
+    
     position: fixed;
     top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    
     z-index: 2000;
+
 
     // 닫기
     #Close-Login-Modal-Wrapper {
@@ -47,7 +48,7 @@ body {
         right: 0;
 
         #Login-Modal-Close-Btn {
-            color: #33ffff;
+            color: rgb(0, 117, 255, .9);
             font-size: 16px;
         }
         
@@ -71,7 +72,7 @@ body {
             position: relative;
 
             .header-login-logo {
-                color: #33ffff;
+                color: rgb(0, 117, 255, .9);
                 width: 50%;
                 height: 100%;
                 margin: 0 auto;
@@ -95,10 +96,10 @@ body {
                 @include disflex();
 
                 .header-login-user-email {
-                    background: rgb(29, 29, 31, 1);
-                    border: 1px solid #33ffff;
+                    background: rgb(255, 255, 255, .9);
+                    border: 1px solid rgb(0, 117, 255, .9);
                     border-radius: 5px;
-                    color: #fff;
+                    color: #000;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
@@ -116,10 +117,10 @@ body {
                 @include disflex();
                 
                 .header-login-user-password {
-                    background: rgb(29, 29, 31, 1);
-                    border: 1px solid #33ffff;
+                    background: rgb(255, 255, 255, .9);
+                    border: 1px solid rgb(0, 117, 255, .9);
                     border-radius: 5px;
-                    color: #fff;
+                    color: #000;
                     width: 100%;
                     height: 85%;
                     padding-left: 2%;
@@ -151,7 +152,7 @@ body {
                 }
 
                 .header-login-keep-login-text {
-                    color: #33ffff;
+                    color: rgb(0, 117, 255, .9);
                     margin-left: 5px;
                     font-size: 13px;
                 }
@@ -165,11 +166,11 @@ body {
             @include disflex();
 
             .header-login-login {
-                background: #33ffff;
+                background: rgb(0, 117, 255, .9);
                 border-radius: 5px;
                 width: 100%;
                 height: 80%;
-                color: rgb(29, 29, 31, 1);
+                color: #fff;
                 font-size: 16px;
                 font-weight: bold;
                 transition-duration: 0.3s;
@@ -192,7 +193,7 @@ body {
                 @include disflex();
 
                 .header-login-find-email-pw-box {
-                    color: #33ffff;
+                    color: rgb(0, 117, 255, .9);
                     width: 70%;
                     height: 100%;
                     display: flex;
@@ -233,7 +234,7 @@ body {
 
                     .header-login-signup {
                         background: none;
-                        color: #33ffff;
+                        color: rgb(0, 117, 255, .9);
                         width: 60%;
                         height: 100%;
                         font-size: 13px;
@@ -257,7 +258,7 @@ body {
             display: flex;
 
             .header-login-social-login-text {
-                color: #33ffff;
+                color: rgb(0, 117, 255, .9);
                 width: 100%;
                 height: 100%;
                 font-size: 13px;

@@ -76,7 +76,7 @@ const MovieHeader = () => {
 
     return (
         <>
-            {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/>}
+            {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
             {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn }/> }            
 
             {/* header 전체 */}

@@ -135,12 +135,12 @@
                 width: 100%;
                 height: 15%;
                 @include disflex();
-
+                
                 .movie-main-ad-contents-title {
                     color: #fff;
                     width: fit-content;
                     height: fit-content;
-                    font-size: 13px;
+                    font-size: 16px;
                     font-weight: bold;
                 }
             }
@@ -154,14 +154,14 @@
 
                 .movie-main-ad-contents-reservation-rate {
                     background: rgb(29, 29, 31, 1);
-                    width: 40%;
+                    width: 50%;
                     height: 100%;
 
                     .movie-main-ad-contents-reservation-rate-text {
                         color: #fff;
                         width: 100%;
                         height: 100%;
-                        font-size: 10px;
+                        font-size: 12px;
                         font-weight: bold;
                         @include disflex();
                     }
@@ -177,7 +177,7 @@
                         color: #fff;
                         width: 30%;
                         height: 100%;
-                        font-size: 10px;
+                        font-size: 12px;
                         font-weight: bold;
                         @include disflex();
                     }
