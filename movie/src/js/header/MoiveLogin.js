@@ -41,6 +41,7 @@ const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
                                 className="header-login-user-password" 
                                 id="PW" 
                                 placeholder="비밀번호를 입력해주세요"
+                                type="password"
                             />
                         </div>
                     </div>

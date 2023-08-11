@@ -1,8 +1,8 @@
 import React from "react";
-
-import '../../../scss/main/special/MovieMainSpecialCinema.scss';
 import { AiOutlineRight } from "react-icons/ai";
 import MovieMainSpecialCinemaMain from "./MovieMainSpecialCinemaMain";
+
+import '../../../scss/main/special/MovieMainSpecialCinema.scss';
 
 const MovieMainSpecialCinema = () => {
 

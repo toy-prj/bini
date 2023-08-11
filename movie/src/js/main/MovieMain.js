@@ -4,9 +4,9 @@ import { AiOutlineLeft, AiOutlineRight }from 'react-icons/ai';
 import MovieMainAdContents from "./MovieMainAdContents";
 import MovieMainVisualEvent from "./event/MovieMainVisualEvent";
 import MovieMainSpecialCinema from "./special/MovieMainSpecialCinema";
+import MovieMainViewMovieAD from "./viewAD/MovieMainViewMovieAD";
 
 import '../../scss/main/MovieMain.scss';
-import MovieMainViewAD from "./viewAD/MovieMainViewAD";
 
 const MovieMain = () => {
 
@@ -68,30 +68,28 @@ const MovieMain = () => {
 
 
 
-                <div className={ scrollPosition < 600 ? "main-visual-event-box" : "main-visual-event-box-sticky"}>
+                {/* 스페셜관 */}
+                <div className="main-visual-special-cinema-box">
+                    <div className={ scrollPosition < 600 ? "main-visual-special-cinema" : "main-visual-special-cinema-sticky"}>
+                        <MovieMainSpecialCinema />
+                    </div>
+                </div>
+
+
+                {/* 이벤트 */}
+                <div className={ scrollPosition < 900 ? "main-visual-event-box" : "main-visual-event-box-sticky"}>
                     <div className="main-visual-event">
                         <MovieMainVisualEvent />
                     </div>
                 </div>
 
 
-                <div className="main-visual-special-cinema-box">
-                    <div className={ scrollPosition < 1300 ? "main-visual-special-cinema" : "main-visual-special-cinema-sticky"}>
-                        <MovieMainSpecialCinema />
+                {/* 영화 광고 */}
+                <div className={ scrollPosition < 1600 ? "main-view-movie-ad-box" : "main-view-movie-ad-box-sticky"}>
+                    <div className={ scrollPosition < 1600 ? "main-view-movie-ad" : "main-view-movie-ad-sticky"}>
+                        <MovieMainViewMovieAD />
                     </div>
                 </div>
-
-
-                <div className={ scrollPosition < 1600 ? "main-view-ad-box" : "main-view-ad-box-sticky"}>
-                    <div className={ scrollPosition < 1600 ? "main-view-ad-background" : "main-view-ad-background-sticky"}>
-                        <div className={ scrollPosition < 1600 ? "main-view-ad" : "main-view-ad-sticky"}>
-                            <MovieMainViewAD />
-                        </div>
-                    </div>
-                </div>
-
-
-
 
 
 

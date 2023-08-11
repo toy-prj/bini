@@ -145,6 +145,7 @@
             }
         }
 
+        
         // sticky
         .main-visual-ad-contents-box-sticky {
             width: 980px;
@@ -209,7 +210,6 @@
     
     // sticky 스페셜관
     .main-visual-special-cinema-box {
-        background: #eee;
         width: 100%;
         height: 400px;
         @include disflex();
@@ -237,7 +237,7 @@
 
     @keyframes left {
         0% {
-            transform: translateX(1500px);
+            transform: translateX(-1500px);
             @include disflex();
         } 100% {
             transform: translateX(0);
@@ -246,22 +246,44 @@
     }
 
     //sticky
+    .main-view-movie-ad-box-sticky {
+        width: 100%;
+        height: 300px;
+        margin: 100px 0 120px 0;
+        animation: showMenu .75s forwards 1;
+        @include disflex();
+
+        .main-view-movie-ad-sticky {
+            width: 980px;
+            height: 100%;
+            animation: showMenu .75s forwards 1;
+            @include disflex();
+        }
+    }
+    
+    // 광고
+    .main-view-movie-ad-box {
+        width: 100%;
+        height: 400px;
+        @include disflex();
+        
+        .main-view-movie-ad {
+            width: 980px;
+            height: 250px;
+            @include disflex();
+            display: none;
+        }
+    }
+    
+    //sticky
     .main-view-ad-box-sticky {
         width: 100%;
         height: 400px;
-        animation: left .75s forwards 1;
-
-        .main-view-ad-background-sticky {
-            background: rgb(245, 242, 236);
-            width: 100%;
-            height: 250px;
-            @include disflex();
-        }
+        @include disflex();
         
         .main-view-ad-sticky {
             width: 980px;
-            height: 348px;
-            animation: left .75s forwards 1;
+            height: 100%;
             @include disflex();
         }
     }
@@ -272,17 +294,9 @@
         height: 400px;
         @include disflex();
 
-        .main-view-ad-background {
-            background: rgb(245, 242, 236);
-            width: 100%;
-            height: 250px;
-            @include disflex();
-            display: none;
-        }
-        
         .main-view-ad {
             width: 980px;
-            height: 348px;
+            height: 100%;
             @include disflex();
             display: none;
         }
