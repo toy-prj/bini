@@ -20,7 +20,9 @@
         .movie-footer-menu-notice-box {
             width: 10%;
             height: 100%;
-            @include disflex();
+            display: flex;
+            justify-content: left;
+            align-items: center;
 
             .movie-footer-menu-list-text {
                 width: fit-content;
@@ -50,8 +52,9 @@
                 .movie-footer-menu-list-text {
                     width: fit-content;
                     height: 50%;
-                    margin-left: 20px;
+                    margin-left: 15px;
                     font-size: 13px;
+                    letter-spacing: -1px;
                     cursor: pointer;
                     @include disflex();
                 }

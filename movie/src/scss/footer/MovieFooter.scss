@@ -12,7 +12,47 @@
     height: 350px;
 
     .movie-footer-box {
-        width: 100%;
+        width: 980px;
         height: 100%;
+        margin: 0 auto;
+
+        .movie-footer-header {
+            width: 100%;
+            height: 20%;
+
+            .movie-footer-header-menu {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .movie-footer-main {
+            width: 100%;
+            height: 20%;
+
+            .movie-footer-main-text-box {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .movie-footer-bottom {
+            width: 100%;
+            height: 50%;
+
+            .movie-footer-bottom-text-box {
+                width: 100%;
+                height: 100%;
+                @include disflex();
+                
+                .movie-footer-bottom-text {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 13px;
+                    @include disflex();
+                }
+            }
+        }
+
     }
 }

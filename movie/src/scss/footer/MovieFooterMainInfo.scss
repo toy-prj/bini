@@ -1,0 +1,78 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-footer-main-info-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .movie-footer-main-info-box {
+        width: 100%;
+        height: 100%;
+
+        .movie-footer-main-first-info-box {
+            width: 100%;
+            height: 30%;
+
+            .movie-footer-main-first-info {
+                width: 100%;
+                height: 100%;
+                @include disflex();
+
+                .movie-footer-main-info-text {
+                    margin-right: 20px;
+                    font-size: 12px;
+                    letter-spacing: 0.1px;
+                    @include disflex();
+                }
+            }
+        }
+        
+        .movie-footer-main-second-info-box {
+            width: 100%;
+            height: 40%;
+            
+            .movie-footer-main-second-info {
+                width: 100%;
+                height: 100%;
+                @include disflex();
+
+                .movie-footer-main-info-text {
+                    margin-right: 20px;
+                    font-size: 12px;
+                    letter-spacing: 0.1px;
+                    @include disflex();
+                    
+                    .movie-footer-main-inr-info-text {
+                        margin-left: 20px;
+                        text-decoration: underline;
+                        letter-spacing: 0.1px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+        .movie-footer-main-third-info-box {
+            width: 100%;
+            height: 30%;
+            
+            .movie-footer-main-third-info {
+                width: 100%;
+                height: 100%;
+                @include disflex();
+                
+                .movie-footer-main-info-text {
+                    margin-right: 20px;
+                    font-size: 12px;
+                    letter-spacing: 0.1px;
+                    @include disflex();
+                }
+            }
+        }
+    }
+}
