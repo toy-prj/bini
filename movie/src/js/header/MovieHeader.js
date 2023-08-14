@@ -10,6 +10,8 @@ import '../../scss/header/MovieHeader.scss';
 
 const MovieHeader = () => {
 
+    
+
     // 모달창 닫기
     const clickCloseBtn = () => {
         setOpenLogin(false);
