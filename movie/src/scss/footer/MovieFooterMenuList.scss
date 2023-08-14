@@ -1,0 +1,61 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-footer-menu-list-wrapper {
+    width: 980px;
+    height: 350px;
+    margin: 0 auto;
+
+    .movie-footer-menu-list-box {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        border-bottom: 1px solid #aaa;
+        
+        .movie-footer-menu-notice-box {
+            width: 10%;
+            height: 100%;
+            @include disflex();
+
+            .movie-footer-menu-list-text {
+                width: fit-content;
+                height: 50%;
+                font-size: 13px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        
+        .movie-footer-menu-box {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            
+            .movie-footer-menu-list {
+                width: fit-content;
+                height: 100%;
+                @include disflex();
+
+                &:nth-child(4) {
+                    font-weight: bold;
+                }
+
+                .movie-footer-menu-list-text {
+                    width: fit-content;
+                    height: 50%;
+                    margin-left: 20px;
+                    font-size: 13px;
+                    cursor: pointer;
+                    @include disflex();
+                }
+            }
+        }
+    }
+}
