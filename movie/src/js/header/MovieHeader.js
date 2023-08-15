@@ -80,7 +80,9 @@ const MovieHeader = () => {
     return (
         <>
             {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
-            {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }            
+            {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }         
+
+            
 
             {/* header 전체 */}
             <div id='headerWrapper'>

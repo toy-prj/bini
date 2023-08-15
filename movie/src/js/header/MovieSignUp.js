@@ -1,7 +1,6 @@
 import React from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { AiOutlineLeft }from 'react-icons/ai';
-import MovieLogin from "./MoiveLogin";
 
 import '../../scss/header/MovieSignUp.scss';
 
