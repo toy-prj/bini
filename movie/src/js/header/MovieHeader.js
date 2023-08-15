@@ -6,6 +6,7 @@ import { WiDirectionUp } from 'react-icons/wi';
 import MovieLogin from "./MoiveLogin";
 import MovieSignUp from "./MovieSignUp";
 import HeaderMenuBar from "./menu/HeaderMenuBar";
+import MovieReservation from "./menu/reservation/HeaderReservation";
 
 import '../../scss/header/MovieHeader.scss';
 
@@ -67,6 +68,12 @@ const MovieHeader = () => {
 
     window.addEventListener('scroll', handleScroll);
 
+    // 바로 예매
+    const [openReservation, setOpenReservation] = useState(false);
+
+    const clickReservation = () => {
+        setOpenReservation(true);
+    }
 
 
 
@@ -80,14 +87,18 @@ const MovieHeader = () => {
 
     return (
         <>
-            {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
-            {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }         
+            { openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
+            { openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }         
+            { openReservation && <MovieReservation /> }
 
             {/* scroll btn */}
             <div className={ scrollPosition < 130 ? "scroll-btn-wrapper" : "scroll-btn-wrapper-sticky"}>
                 <div className="scroll-btn-box">
-                    <button className="reservation-btn">
-                        <p className="reservation-btn-text">바로예매</p>
+                    <button 
+                        className="reservation-btn"
+                        onClick={ clickReservation }
+                    >
+                        <p className="reservation-btn-text">바로 예매</p>
                     </button>
                     <button 
                         className="scroll-btn"
