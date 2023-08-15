@@ -32,12 +32,11 @@ body {
 
 @keyframes upDown {
     0% {
-        transform: translateY(0);
+        transform: translateY(1px);
     } 50% {
-        transform: translateY(-3px);
-        color: rgb(0, 117, 255, .9);
+        transform: translateY(-4px);
     }100% {
-        transform: translateY(0);
+        transform: translateY(1px);
     }
 }
 
@@ -59,24 +58,43 @@ body {
         @include disflex();
 
         .reservation-btn {
-            background: rgb(0, 117, 255, .9);
-            border: none;
+            background: #fff;
+            color: rgb(0, 117, 255, .9);
+            border: 2px solid rgb(0, 117, 255, .9);
             border-radius: 30px;
             width: 120px;
             height: 50px;
             opacity: 0;
             transition-duration: .3s;
             animation: openReservationBtn 1s .3s forwards 1;
+            overflow: hidden;
             cursor: pointer;
             @include disflex();
-
+            
             position: absolute;
             z-index: 1900;
-
+            
             &:hover {
-                background: rgb(0, 117, 255, .7);
+                color: #fff;
             }
 
+            &:hover .reservation-btn-background {
+                transition-duration: .5s;
+                width: 100%;
+                z-index: -1;
+            }
+
+            .reservation-btn-background {
+                background: rgb(0, 117, 255, .9);
+                border: none;
+                border-radius: 30px;
+                width: 0;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
             .reservation-btn-text {
                 font-size: 14px;
                 font-weight: bold;
@@ -85,16 +103,17 @@ body {
 
         .scroll-btn {
             background: #fff;
-            border: 2px solid #000;
+            color: rgb(0, 117, 255, .9);
+            border: 2px solid rgb(0, 117, 255, .9);
             border-radius: 50%;
             width: 50px;
             height: 50px;
             overflow: hidden;
             cursor: pointer;
             z-index: 2000;
-            
+
             &:hover {
-                border: 2px solid rgb(0, 117, 255, .9);
+                border-radius: 10px;
                 transition-duration: .3s;
             }
             
@@ -114,7 +133,6 @@ body {
 }
 
 .scroll-btn-wrapper {
-    border: 4px solid red;
     width: 100px;
     height: 100px;
 
@@ -135,16 +153,16 @@ body {
     width: 100%;
     height: 130px;
     z-index: 1500;
-
+    
     position: fixed;
     top: 0;
     left: 0;
-
+    
     .header-box {
         width: 980px;
         height: 100%;
         margin: 0 auto;
-
+        
         // header 위쪽 banner
         .header-top-banner {
             border-bottom: 1px solid #ccc;
@@ -152,12 +170,21 @@ body {
             width: 100%;
             height: 75%;
             display: flex;
+            animation: showHeaderTopBanner 1s forwards 1;
 
+            @keyframes showHeaderTopBanner {
+                0%{
+                    transform: translateY(-100px);
+                } 100% {
+                    transform: translateY(0);
+                }
+            }
+            
             .header-main-logo-box {
                 width: 10%;
                 height: 100%;
                 @include disflex();
-
+                
                 .header-main-logo {
                     width: 100%;
                     height: 100%;
@@ -184,7 +211,19 @@ body {
                         background: none;
                         width: 10%;
                         height: 100%;
-
+                        cursor: pointer;
+                        
+                        &:hover {
+                            .header-menu-list-icons-box .header-menu-list-icons {
+                                transition-duration: .3s;
+                                color: rgb(0, 117, 255, .9);
+                            }
+                            .header-menu-list-text {
+                                transition-duration: .3s;
+                                color: rgb(0, 117, 255, .9);
+                            }
+                        }
+                        
                         .header-menu-list-icons-box {
                             width: 100%;
                             height: 60%;
@@ -206,12 +245,7 @@ body {
                             height: 40%;
                             font-size: 12px;
                             font-weight: bold;
-                            transition-duration: 0.3s;
                             cursor: pointer;
-
-                            &:hover {
-                                color: #ff0000;
-                            }
                         }
 
                         #memberShipText {

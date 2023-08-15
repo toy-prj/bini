@@ -47,19 +47,24 @@
                     border-bottom: 1px solid #aaa;
                     width: 100%;
                     height: 25%;
-                    transition-duration: .5s;
+                    transition-duration: .2s;
+                    opacity: 0;
                     cursor: pointer;
+                    position: relative;
                     display: flex;
                     justify-content: right;
                     align-items: center;
+                    display: none;
 
                     &:hover {
+                        box-shadow: 1px 1px 1px 1px rgb(0, 117, 255, .9);
+                        border-radius: 0 5px 5px 5px;
                         opacity: .8;
-                        background: #fff;
                     }
 
                     &:hover .movie-main-special-cinema-main-select-menu-list-text {
                         font-weight: bold;
+                        color: rgb(0, 117, 255, .9);
                     }
 
                     .movie-main-special-cinema-main-select-menu-list-text-box {
@@ -84,6 +89,9 @@
                         height: 100%;
                         font-size: 13px;
                         @include disflex();
+                        position: absolute;
+                        top: 0;
+                        right: 0;
 
                         .movie-main-special-cinema-main-select-menu-list-tag {
                             border-radius: 3px;
@@ -94,6 +102,34 @@
                             @include disflex();
                         }
                     }
+                }
+
+                @keyframes openOpacity {
+                    0% {
+                        opacity: 0;
+                    } 100% {
+                        opacity: 1;
+                    }
+                }
+
+                #Suite {
+                    animation: openOpacity 1s .5s forwards 1;
+                    display: block;
+                }
+                
+                #LivingRoom {
+                    animation: openOpacity 1s 1s forwards 1;
+                    display: block;
+                }
+                
+                #DX {
+                    animation: openOpacity 1s 1.5s forwards 1;
+                    display: block;
+                }
+                
+                #Chef {
+                    animation: openOpacity 1s 2s forwards 1;
+                    display: block;
                 }
             }
         }

@@ -7,7 +7,7 @@
 }
 
 .header-menu-bar-wrapper-none {
-    background: #fff;
+    background: none;
     width: 100vmax;
     height: 50px;
     
@@ -24,6 +24,18 @@
 .header-menu-bar-wrapper {
     width: 980px;
     height: 50px;
+    opacity: 0;
+    animation: showHeaderBottomBanner 1s .8s forwards 1;
+
+    @keyframes showHeaderBottomBanner {
+        0% {
+            transform: translateY(-10px);
+        } 100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+    }
     
     .header-menu-bar-box {
         width: 50%;

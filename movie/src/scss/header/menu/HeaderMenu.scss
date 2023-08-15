@@ -9,10 +9,14 @@
 @keyframes move {
     0% {
         opacity: 0;
-        width: 90%;
-    } 100% {
+        width: 100vmax;
+        transform: translateY(-50px);
+    }
+
+    100% {
         opacity: 1;
-        width: 100%;
+        width: 100vmax;
+        transform: translateY(0);
     }
 }
 
@@ -21,10 +25,11 @@
     background: #fff;
     width: 100vmax;
     height: 52px;
+    transition-duration: .3s;
     display: flex;
     justify-content: center;
-    animation: move .5s forwards 1;
-    
+    animation: move 1s forwards 1;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -34,7 +39,9 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        
+        position: relative;
+
+
         .header-bottom-menu-list {
             color: #000;
             width: 20%;
@@ -44,7 +51,7 @@
             position: relative;
 
             &:hover {
-                color: #ff0000;
+                color: rgb(0, 117, 255, .9);
             }
 
             &:hover .header-bottom-menu-list-text {
@@ -62,7 +69,7 @@
             }
 
             #Reservation {
-                color: #ff0000;
+                color: rgb(0, 117, 255, .9);
             }
 
             #Store {
@@ -92,7 +99,7 @@
             position: relative;
 
             &:hover {
-                color: #ff0000;
+                color: rgb(0, 117, 255, .9);
             }
 
             &:hover .header-bottom-menu-list-text {
@@ -110,7 +117,7 @@
             }
 
             #Reservation {
-                color: #ff0000;
+                color: rgb(0, 117, 255, .9);
             }
 
             #Store {

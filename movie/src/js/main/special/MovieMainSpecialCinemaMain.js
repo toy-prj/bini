@@ -45,9 +45,6 @@ const MovieMainSpecialCinemaMain = () => {
         setIs4DXHoveredList(false);
     }
     
-    const isChefMouseLeave = () => {
-        setIsChefHoveredList(false);
-    }
     
     
     
@@ -72,6 +69,7 @@ const MovieMainSpecialCinemaMain = () => {
 
                             <div 
                                 className="movie-main-special-cinema-main-select-menu-list"
+                                id="Suite"
                                 onMouseEnter={ isSuiteMouseEnter }
                             >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
@@ -83,8 +81,8 @@ const MovieMainSpecialCinemaMain = () => {
                             </div>
                             <div 
                                 className="movie-main-special-cinema-main-select-menu-list"
+                                id="LivingRoom"
                                 onMouseEnter={ isLivingRoomMouseEnter }
-                                // onMouseLeave={ isLivingRoomMouseLeave }
                                 >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
                                     <p className="movie-main-special-cinema-main-select-menu-list-text">CINE & LIVINGROOM</p>
@@ -95,8 +93,8 @@ const MovieMainSpecialCinemaMain = () => {
                             </div>
                             <div 
                                 className="movie-main-special-cinema-main-select-menu-list"
+                                id="DX"
                                 onMouseEnter={ is4DXMouseEnter }
-                                // onMouseLeave={ is4DXMouseLeave }
                                 >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
                                     <p className="movie-main-special-cinema-main-select-menu-list-text">4DX</p>
@@ -107,8 +105,8 @@ const MovieMainSpecialCinemaMain = () => {
                             </div>
                             <div 
                                 className="movie-main-special-cinema-main-select-menu-list"
+                                id="Chef"
                                 onMouseEnter={ isChefMouseEnter }
-                                // onMouseLeave={ isChefMouseLeave }
                             >
                                 <div className="movie-main-special-cinema-main-select-menu-list-text-box">
                                     <p className="movie-main-special-cinema-main-select-menu-list-text">CINE de CHEF</p>

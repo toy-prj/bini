@@ -119,8 +119,8 @@ const HeaderMenu = () => {
             <div className={scrollPosition < 130 ? "header_menu_wrapper" : "sticky_header_bottom_menu"}>
                 <div className="header-bottom-menu">
 
-                
-                {/* header 아래쪽 메뉴 list */}
+
+                        {/* header 아래쪽 메뉴 list */}
                         {/* 예매 */}
                         <Link 
                             to={'/contents/reservation'} 

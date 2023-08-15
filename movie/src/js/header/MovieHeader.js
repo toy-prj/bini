@@ -75,6 +75,7 @@ const MovieHeader = () => {
         setOpenReservation(true);
     }
 
+    
 
 
 
@@ -98,6 +99,7 @@ const MovieHeader = () => {
                         className="reservation-btn"
                         onClick={ clickReservation }
                     >
+                        <div className="reservation-btn-background"></div>
                         <p className="reservation-btn-text">바로 예매</p>
                     </button>
                     <button 
