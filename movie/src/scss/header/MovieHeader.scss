@@ -10,6 +10,121 @@ body {
     position: relative;
 }
 
+@keyframes openScrollBtn {
+    0%{
+        opacity: 0;
+    }100% {
+        opacity: 1;
+    }
+}
+
+@keyframes openReservationBtn {
+    0%{
+        transform: translate(-50px);
+    }50% {
+        opacity: 0;
+    }100% {
+        opacity: 1;
+        transform: translate(-90px);
+        display: block;
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    } 50% {
+        transform: translateY(-3px);
+        color: rgb(0, 117, 255, .9);
+    }100% {
+        transform: translateY(0);
+    }
+}
+
+// scroll btn sticky
+.scroll-btn-wrapper-sticky {
+    width: 100px;
+    height: 100px;
+    transition-duration: .3s;
+    animation: openScrollBtn 1s forwards 1;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 2000;
+
+    .scroll-btn-box {
+        width: 100%;
+        height: 100%;
+        @include disflex();
+
+        .reservation-btn {
+            background: rgb(0, 117, 255, .9);
+            border: none;
+            border-radius: 30px;
+            width: 120px;
+            height: 50px;
+            opacity: 0;
+            transition-duration: .3s;
+            animation: openReservationBtn 1s .3s forwards 1;
+            cursor: pointer;
+            @include disflex();
+
+            position: absolute;
+            z-index: 1900;
+
+            &:hover {
+                background: rgb(0, 117, 255, .7);
+            }
+
+            .reservation-btn-text {
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+
+        .scroll-btn {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 2000;
+            
+            &:hover {
+                border: 2px solid rgb(0, 117, 255, .9);
+                transition-duration: .3s;
+            }
+            
+            &:hover .scroll-btn-icon{
+                transition-duration: .3s;
+                animation: upDown 1s forwards infinite;
+            }
+
+            .scroll-btn-icon {
+                width: 100%;
+                height: 100%;
+                font-size: 35px;
+                @include disflex();
+            }
+        }
+    }
+}
+
+.scroll-btn-wrapper {
+    border: 4px solid red;
+    width: 100px;
+    height: 100px;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 2000;
+    display: none;
+}
+
 // sticky-header
 .header-top-banner_none {
     display: none;

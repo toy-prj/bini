@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MdCardMembership } from 'react-icons/md';
 import { BsPersonFill, BsPersonFillAdd, BsPersonFillLock } from 'react-icons/bs';
+import { WiDirectionUp } from 'react-icons/wi';
 import MovieLogin from "./MoiveLogin";
 import MovieSignUp from "./MovieSignUp";
 import HeaderMenuBar from "./menu/HeaderMenuBar";
@@ -9,9 +10,7 @@ import HeaderMenuBar from "./menu/HeaderMenuBar";
 import '../../scss/header/MovieHeader.scss';
 
 const MovieHeader = () => {
-
     
-
     // 모달창 닫기
     const clickCloseBtn = () => {
         setOpenLogin(false);
@@ -36,23 +35,11 @@ const MovieHeader = () => {
         setOpenLogin(false);
     }
 
-    
-
-
-
-
-
-
-
-
-
     // 새로 고침(임시)
     const reload = () => {
         window.onload.href='/';
     }
     
-
-
     // sticky header 
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -64,7 +51,21 @@ const MovieHeader = () => {
         window.addEventListener('scroll', updateScroll);
     });
 
+    // scroll top
 
+    const handleScroll = () => {
+        const currentposition = window.pageYOffset || document.documentElement.scrollTop;
+        setScrollPosition(currentposition);
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
 
 
 
@@ -82,6 +83,20 @@ const MovieHeader = () => {
             {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
             {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }         
 
+            {/* scroll btn */}
+            <div className={ scrollPosition < 130 ? "scroll-btn-wrapper" : "scroll-btn-wrapper-sticky"}>
+                <div className="scroll-btn-box">
+                    <button className="reservation-btn">
+                        <p className="reservation-btn-text">바로예매</p>
+                    </button>
+                    <button 
+                        className="scroll-btn"
+                        onClick={ scrollToTop }
+                    >
+                        <p className="scroll-btn-icon"><WiDirectionUp /></p>
+                    </button>
+                </div>
+            </div>
             
 
             {/* header 전체 */}
