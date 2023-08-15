@@ -15,6 +15,7 @@ const MovieHeader = () => {
     // 모달창 닫기
     const clickCloseBtn = () => {
         setOpenLogin(false);
+        setOpenSignUp(false);
     }
 
     // 로그인
@@ -79,7 +80,7 @@ const MovieHeader = () => {
     return (
         <>
             {openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
-            {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn }/> }            
+            {openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }            
 
             {/* header 전체 */}
             <div id='headerWrapper'>

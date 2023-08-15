@@ -72,6 +72,7 @@
                             height: 100%;
                             padding-left: 2%;
                             font-size: 18px;
+                            letter-spacing: -1px;
                             display: flex;
                             justify-content: left;
                             align-items: center;
@@ -85,11 +86,11 @@
                         @include disflex();
 
                         .movie-main-special-cinema-main-select-menu-list-tag {
-                            background: #ddd;
                             border-radius: 3px;
                             width: fit-content;
                             height: fit-content;
                             padding: 4px;
+                            letter-spacing: -1px;
                             @include disflex();
                         }
                     }

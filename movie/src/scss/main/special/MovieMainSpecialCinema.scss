@@ -44,12 +44,13 @@
                     width: fit-content;
                     height: 25px;
                     font-size: 13px;
-                    letter-spacing: 1px;
+                    letter-spacing: -1px;
                     cursor: pointer;
                     @include disflex();
 
                     #viewAll {
                         @include disflex();
+                        padding-top: 2px;
                     }
                 }
             }

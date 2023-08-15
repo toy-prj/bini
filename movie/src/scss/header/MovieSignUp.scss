@@ -16,9 +16,9 @@
     }
 }
 
-#headerSignUpWrapper {
-    border: 1px solid #33ffff;
-    background: rgb(29, 29, 31, .9);
+.header-sign-up-wrapper {
+    border: 1px solid rgb(0, 117, 255, .9);
+    background: #fff;
     width: 400px;
     height: 600px;
     overflow: hidden;
@@ -31,4 +31,42 @@
     transform: translate(-50%, -50%);
 
     z-index: 2000;
+
+    .header-sign-up-btn-box {
+        width: 400px;
+        height: 25px;
+        display: flex;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .header-sign-up-back-btn-box {
+            width: 50%;
+            height: 100%;
+
+            .header-sign-up-back-btn {
+                background: none;
+                width: 25px;
+                height: 100%;
+                cursor: pointer;
+                @include disflex();
+            }
+        }
+
+        .header-sign-up-close-btn-box {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: right;
+            
+            .header-sign-up-close-btn {
+                background: none;
+                width: 25px;
+                height: 100%;
+                cursor: pointer;
+                @include disflex();
+            }
+        }
+    }
 }
