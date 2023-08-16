@@ -4,11 +4,11 @@ import HeaderReservationSelectCinemaStyle from "./HeaderReservationSelectCinemaS
 
 import '../../../../scss/header/menu/reservation/HeaderReservation.scss';
 
-const HeaderReservation = () => {
+const HeaderReservation = ({ scrollPosition }) => {
 
     return(
         <>
-            <div id="headerMovieReservationWrapper">
+            <div className={ scrollPosition < 130 ? "header-movie-reservation-wrapper" : "header-movie-reservation-wrapper-sticky"}>
                 <div className="header-movie-reservation-box">
 
                     <div className="header-movie-reservation-progress-box">
@@ -20,6 +20,18 @@ const HeaderReservation = () => {
                             <HeaderReservationSelectCinemaStyle />
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
                 </div>
             </div>
