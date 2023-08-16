@@ -21,18 +21,6 @@ const HeaderReservation = () => {
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
         </>
