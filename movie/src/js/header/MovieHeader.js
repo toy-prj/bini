@@ -9,6 +9,7 @@ import HeaderMenuBar from "./menu/HeaderMenuBar";
 import MovieReservation from "./menu/reservation/HeaderReservation";
 
 import '../../scss/header/MovieHeader.scss';
+import HeaderReservation from "./menu/reservation/HeaderReservation";
 
 const MovieHeader = () => {
     
@@ -90,7 +91,7 @@ const MovieHeader = () => {
         <>
             { openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
             { openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }         
-            { openReservation && <MovieReservation /> }
+            { openReservation && <HeaderReservation /> }
 
             {/* scroll btn */}
             <div className={ scrollPosition < 130 ? "scroll-btn-wrapper" : "scroll-btn-wrapper-sticky"}>

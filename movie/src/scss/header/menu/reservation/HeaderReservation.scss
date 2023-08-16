@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.paused {
+    animation-play-state: paused;
+}
+
 // 예매하기 sticky
 .header-movie-reservation-wrapper-sticky {
     background: #fff;
@@ -17,7 +21,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    z-index: 1000;
+    z-index: 3000;
 
     .header-movie-reservation-box {
         width: 100%;
@@ -53,7 +57,7 @@
     left: 50%;
     transform: translate(-50%, 2%);
 
-    z-index: 1000;
+    z-index: 3000;
 
     .header-movie-reservation-box {
         width: 100%;
