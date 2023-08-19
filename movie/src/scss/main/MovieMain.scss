@@ -172,21 +172,23 @@
             transform: translateX(-50%, -50%);
         }
     }
-
+    
     .main-visual-event-box-sticky {
+        background: rgb(29, 29, 31, 1);
         width: 100%;
         height: 600px;
-        animation: opacity 0.5s forwards 1;
         @include disflex();
-
+        
         .main-visual-event {
             width: 980px;
             height: 100%;
+            animation: opacity 0.5s forwards 1;
         }
     }
 
     // 이벤트
     .main-visual-event-box {
+        background: rgb(29, 29, 31, 1);
         width: 100%;
         height: 600px;
         @include disflex();
@@ -210,6 +212,7 @@
     
     // sticky 스페셜관
     .main-visual-special-cinema-box {
+        background: rgb(29, 29, 29, 1);
         width: 100%;
         height: 450px;
         @include disflex();
@@ -223,7 +226,7 @@
 
     // 스페셜관
     .main-visual-special-cinema-box {
-        background: #eee;
+        background: rgb(29, 29, 29, 1);
         width: 100%;
         height: 300px;
         @include disflex();

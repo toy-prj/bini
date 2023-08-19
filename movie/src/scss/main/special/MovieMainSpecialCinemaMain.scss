@@ -23,7 +23,7 @@
             align-items: center;
             
             .movie-main-special-cinema-main-img {
-                border: 1px dotted #aaa;
+                border: 2px solid rgb(255, 255, 255, .7);
                 background: none;
                 border-radius: 10px;
                 width: 95%;
@@ -44,7 +44,6 @@
                 height: 100%;
 
                 .movie-main-special-cinema-main-select-menu-list {
-                    border-bottom: 1px solid #aaa;
                     width: 100%;
                     height: 25%;
                     transition-duration: .2s;
@@ -56,15 +55,8 @@
                     align-items: center;
                     display: none;
 
-                    &:hover {
-                        box-shadow: 1px 1px 1px 1px rgb(0, 117, 255, .9);
-                        border-radius: 0 5px 5px 5px;
-                        opacity: .8;
-                    }
-
                     &:hover .movie-main-special-cinema-main-select-menu-list-text {
                         font-weight: bold;
-                        color: rgb(0, 117, 255, .9);
                     }
 
                     .movie-main-special-cinema-main-select-menu-list-text-box {
@@ -73,6 +65,7 @@
                         @include disflex();
 
                         .movie-main-special-cinema-main-select-menu-list-text {
+                            color: rgb(255, 255, 255, .7);
                             width: 100%;
                             height: 100%;
                             padding-left: 2%;
@@ -83,7 +76,7 @@
                             align-items: center;
                         }
                     }
-
+                    
                     .movie-main-special-cinema-main-select-menu-list-tag-box {
                         width: 50%;
                         height: 100%;
@@ -92,8 +85,9 @@
                         position: absolute;
                         top: 0;
                         right: 0;
-
+                        
                         .movie-main-special-cinema-main-select-menu-list-tag {
+                            color: rgb(255, 255, 255, .7);
                             border-radius: 3px;
                             width: fit-content;
                             height: fit-content;
