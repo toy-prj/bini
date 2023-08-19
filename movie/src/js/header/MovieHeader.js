@@ -89,8 +89,18 @@ const MovieHeader = () => {
 
     return (
         <>
-            { openLogin && <MovieLogin clickCloseBtn={ clickCloseBtn } clickSignUp={ clickSignUp }/> }
-            { openSignUp && <MovieSignUp clickCloseBtn={ clickCloseBtn } clickLogin={ clickLogin }/> }         
+            { openLogin && 
+                <MovieLogin 
+                    clickCloseBtn={ clickCloseBtn } 
+                    clickSignUp={ clickSignUp }
+            /> }
+
+            { openSignUp && 
+                <MovieSignUp 
+                    clickCloseBtn={ clickCloseBtn } 
+                    clickLogin={ clickLogin }
+            /> }         
+            
             { openReservation && <HeaderReservation /> }
 
             {/* scroll btn */}
