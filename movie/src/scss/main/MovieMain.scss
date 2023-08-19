@@ -247,12 +247,12 @@
 
     //sticky
     .main-view-movie-ad-box-sticky {
+        background: rgb(29, 29, 29, 1);
         width: 100%;
-        height: 300px;
-        margin: 100px 0 120px 0;
-        animation: showMenu .75s forwards 1;
+        height: 400px;
+        padding: 100px 0;
         @include disflex();
-
+        
         .main-view-movie-ad-sticky {
             width: 980px;
             height: 100%;
@@ -263,6 +263,7 @@
     
     // 광고
     .main-view-movie-ad-box {
+        background: rgb(29, 29, 29, 1);
         width: 100%;
         height: 400px;
         @include disflex();
@@ -270,33 +271,6 @@
         .main-view-movie-ad {
             width: 980px;
             height: 250px;
-            @include disflex();
-            display: none;
-        }
-    }
-    
-    //sticky
-    .main-view-ad-box-sticky {
-        width: 100%;
-        height: 400px;
-        @include disflex();
-        
-        .main-view-ad-sticky {
-            width: 980px;
-            height: 100%;
-            @include disflex();
-        }
-    }
-
-    // 광고
-    .main-view-ad-box {
-        width: 100%;
-        height: 400px;
-        @include disflex();
-
-        .main-view-ad {
-            width: 980px;
-            height: 100%;
             @include disflex();
             display: none;
         }
