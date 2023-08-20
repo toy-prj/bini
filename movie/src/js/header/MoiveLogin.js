@@ -2,6 +2,8 @@ import React from "react";
 import { MdOutlineClose } from 'react-icons/md';
 
 import '../../scss/header/MovieLogin.scss';
+import { BsPersonFill } from "react-icons/bs";
+import { AiFillLock } from "react-icons/ai";
 
 const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
 
@@ -30,6 +32,7 @@ const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
                     {/* 사용자 정보 입력 창 */}
                     <div className="header-login-user-info-box">
                         <div className="header-login-user-email-box">
+                            <div className="header-login-icon" id="email"><BsPersonFill /></div>
                             <input 
                                 className="header-login-user-email" 
                                 id="Email" 
@@ -37,6 +40,7 @@ const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
                             />
                         </div>
                         <div className="header-login-user-password-box">
+                            <div className="header-login-icon" id="password"><AiFillLock /></div>
                             <input 
                                 className="header-login-user-password" 
                                 id="PW" 

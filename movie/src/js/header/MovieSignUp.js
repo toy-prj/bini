@@ -1,6 +1,9 @@
 import React from "react";
 import { MdOutlineClose } from "react-icons/md";
-import { AiOutlineLeft }from 'react-icons/ai';
+import { AiFillLock, AiOutlineLeft }from 'react-icons/ai';
+import { BsPersonFill } from "react-icons/bs";
+import { GiSmartphone } from "react-icons/gi";
+import { LiaBirthdayCakeSolid } from "react-icons/lia";
 
 import '../../scss/header/MovieSignUp.scss';
 
@@ -41,7 +44,7 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
 
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title">이메일</p>
+                                        <p className="header-sign-up-user-info-title"><BsPersonFill /></p>
                                     </div>
 
                                     <input 
@@ -49,13 +52,14 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         type="text"
                                         name="id"
                                         id="id"
+                                        placeholder="이메일을 입력해주세요"
                                         required
                                         autoFocus
                                     />
                                 </div>
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title">비밀번호</p>
+                                        <p className="header-sign-up-user-info-title"><AiFillLock /></p>
                                     </div>
 
                                     <input 
@@ -63,12 +67,13 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         type="password"
                                         name="pw"
                                         id="pw"
+                                        placeholder="비밀번호를 입력해주세요"
                                         required
-                                    />
+                                        />
                                 </div>
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title">비밀번호 확인</p>
+                                        <p className="header-sign-up-user-info-title"><AiFillLock /></p>
                                     </div>
 
                                     <input 
@@ -76,12 +81,13 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         type="text"
                                         name="pwCheck"
                                         id="pwCheck"
+                                        placeholder="비밀번호를 한번 더 입력해주세요"
                                         required
-                                    />
+                                        />
                                 </div>
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title">휴대폰 번호</p>
+                                        <p className="header-sign-up-user-info-title"><GiSmartphone /></p>
                                     </div>
 
                                     <input 
@@ -89,12 +95,13 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         type="text"
                                         name="phone"
                                         id="phone"
+                                        placeholder="휴대폰 번호를 입력해주세요"
                                         required
-                                    />
+                                        />
                                 </div>
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title">생년월일</p>
+                                        <p className="header-sign-up-user-info-title"><LiaBirthdayCakeSolid /></p>
                                     </div>
 
                                     <input 
@@ -102,22 +109,21 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         type="text"
                                         name="birth"
                                         id="birth"
+                                        placeholder="생년월일을 입력해주세요"
                                         required
                                     />
                                 </div>
                                 
                             </div>
 
-                            <div className="header-sign-in-btn-box">
-                                <button className="header-sign-in-btn">
-                                    <p className="header-sign-in-btn-text">회원가입</p>
-                                </button>
-                            </div>
-
-
                         </div>
                     </div>
 
+                    <div className="header-sign-in-btn-box">
+                        <button className="header-sign-in-btn">
+                            <p className="header-sign-in-btn-text">회원가입</p>
+                        </button>
+                    </div>
 
                 </div>
             </div>
