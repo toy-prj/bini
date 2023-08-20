@@ -25,7 +25,7 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                     <MovieSignUpSelectInfo 
                         clickCloseBtn={ clickCloseBtn }
                 /> }
-                
+
                     {/* 버튼 관련 */}
                     <div className="header-sign-up-btn-box">
                         <div className="header-sign-up-back-btn-box">

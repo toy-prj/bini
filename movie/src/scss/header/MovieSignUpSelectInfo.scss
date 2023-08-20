@@ -9,28 +9,28 @@
 @keyframes openSignUpSelectInfoModal {
     0% {
         opacity: 0;
+        transform: translate(0, -200%);
     }
     
     100% {
         opacity: 1;
         transform: translate(0, -50%);
-        display: block;
     }
 }
 
 .movie-sign-up-select-info-wrapper {
+    border-left: 2px solid rgb(0, 117, 255, .9);
     background: #fff;
     width: 400px;
     height: 500px;
     transition-duration: 0.3s;
-    animation: openSignUpSelectInfoModal .5s 1s forwards 1;
-    display: none;
+    animation: openSignUpSelectInfoModal 1s .3s forwards 1;
 
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -200%);
 
-    z-index: 1900;
+    z-index: 2001;
 
 }
