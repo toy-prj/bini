@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { AiFillLock, AiOutlineLeft }from 'react-icons/ai';
 import { BsPersonFill } from "react-icons/bs";
-import { GiSmartphone } from "react-icons/gi";
-import { LiaBirthdayCakeSolid } from "react-icons/lia";
+import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
 
 import '../../scss/header/MovieSignUp.scss';
 
 const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
 
+    const [isOpenSelectInfo, isSetOpenSelectInfo] = useState(false);
+
+    const clickNextSelectInfo = () => {
+        isSetOpenSelectInfo(true);
+    }
+
+
     return (
         <>
-            <div className="header-sign-up-wrapper">
+
+            <div className={`header-sign-up-wrapper ${isOpenSelectInfo ? 'shifted' : ''}`}>
                 <div className="header-sign-up-box">
 
+                { isOpenSelectInfo && 
+                    <MovieSignUpSelectInfo 
+                        clickCloseBtn={ clickCloseBtn }
+                /> }
+                
                     {/* 버튼 관련 */}
                     <div className="header-sign-up-btn-box">
                         <div className="header-sign-up-back-btn-box">
@@ -56,6 +68,11 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         required
                                         autoFocus
                                     />
+                                    <div className="header-sign-up-user-certify-email-box">
+                                        <button className="header-sign-up-user-certify-email">
+                                            <p className="header-sign-up-user-certify-email-text">이메일 인증</p>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
@@ -85,7 +102,8 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         required
                                         />
                                 </div>
-                                <div className="header-sign-up-user-info-list">
+
+                                {/* <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
                                         <p className="header-sign-up-user-info-title"><GiSmartphone /></p>
                                     </div>
@@ -95,8 +113,7 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         type="text"
                                         name="phone"
                                         id="phone"
-                                        placeholder="휴대폰 번호를 입력해주세요"
-                                        required
+                                        placeholder="휴대폰 번호를 입력해주세요 (선택)"
                                         />
                                 </div>
                                 <div className="header-sign-up-user-info-list">
@@ -112,18 +129,28 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         placeholder="생년월일을 입력해주세요"
                                         required
                                     />
-                                </div>
+                                </div> */}
                                 
+                            </div>
+
+                            <div className="header-sign-up-next-btn-box">
+                                <button 
+                                    className="header-sign-up-next-btn"
+                                    type="button"
+                                    onClick={ clickNextSelectInfo }
+                                >
+                                    <p className="header-sign-up-next-btn-text">다음으로</p>
+                                </button>
                             </div>
 
                         </div>
                     </div>
 
-                    <div className="header-sign-in-btn-box">
+                    {/* <div className="header-sign-in-btn-box">
                         <button className="header-sign-in-btn">
                             <p className="header-sign-in-btn-text">회원가입</p>
                         </button>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

@@ -6,10 +6,9 @@ import { WiDirectionUp } from 'react-icons/wi';
 import MovieLogin from "./MoiveLogin";
 import MovieSignUp from "./MovieSignUp";
 import HeaderMenuBar from "./menu/HeaderMenuBar";
-import MovieReservation from "./menu/reservation/HeaderReservation";
+import HeaderReservation from "./menu/reservation/HeaderReservation";
 
 import '../../scss/header/MovieHeader.scss';
-import HeaderReservation from "./menu/reservation/HeaderReservation";
 
 const MovieHeader = () => {
     
@@ -36,7 +35,7 @@ const MovieHeader = () => {
         setOpenSignUp(true);
         setOpenLogin(false);
     }
-
+    
     // 새로 고침(임시)
     const reload = () => {
         window.onload.href='/';
@@ -99,7 +98,8 @@ const MovieHeader = () => {
                 <MovieSignUp 
                     clickCloseBtn={ clickCloseBtn } 
                     clickLogin={ clickLogin }
-            /> }         
+                    clickSignUp={ clickSignUp }
+            /> }          
             
             { openReservation && <HeaderReservation /> }
 

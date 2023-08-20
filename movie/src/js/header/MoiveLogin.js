@@ -1,9 +1,9 @@
 import React from "react";
 import { MdOutlineClose } from 'react-icons/md';
-
-import '../../scss/header/MovieLogin.scss';
 import { BsPersonFill } from "react-icons/bs";
 import { AiFillLock } from "react-icons/ai";
+
+import '../../scss/header/MovieLogin.scss';
 
 const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
 
