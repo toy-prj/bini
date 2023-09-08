@@ -8,29 +8,27 @@
 
 @keyframes openSignUpSelectInfoModal {
     0% {
-        opacity: 0;
-        transform: translate(0, -200%);
+        // transform: perspective(7200px) rotateY(-180deg) translate(-50%, -50%);
+        transform: rotateX(-270deg) translate(-50%, -50%);
     }
     
     100% {
-        opacity: 1;
-        transform: translate(0, -50%);
+        // transform: perspective(7200px) rotateY(-360deg) translate(-50%, -50%);
+        transform: rotateX(-360deg) translate(-50%, -50%);
     }
 }
 
 .movie-sign-up-select-info-wrapper {
-    border-left: 2px solid rgb(0, 117, 255, .9);
     background: #eee;
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
     transition-duration: 0.3s;
-    animation: openSignUpSelectInfoModal 1s .3s forwards 1;
-
+    animation: openSignUpSelectInfoModal .75s forwards 1;
+    
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(0, -200%);
+    transform: translate(-50%, -50%);
 
     z-index: 2001;
-
 }

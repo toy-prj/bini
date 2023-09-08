@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { AiFillLock, AiOutlineLeft }from 'react-icons/ai';
 import { BsPersonFill } from "react-icons/bs";
+import { FaCheckCircle } from "react-icons/fa";
 import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
 
 import '../../scss/header/MovieSignUp.scss';
@@ -51,7 +52,31 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                             <div className="header-sign-up-logo-box">
                                 <div className="header-sign-up-logo">Logo</div>
                             </div>
+                            
+                            {/* 진행상황 bar */}
+                            <div className="header-sign-up-progress-bar-box">
 
+                                <div className="header-sign-up-progress-bar"></div>
+
+                                <div className="header-sign-up-progress-bar-title-box">
+                                    <div className="header-sign-up-progress-bar-title">
+                                        <p className="header-sign-up-progress-bar-title-text">약관동의</p>
+                                    </div>
+                                    <div className="header-sign-up-progress-bar-title">
+                                        <p className="header-sign-up-progress-bar-title-text">정보입력</p>
+                                    </div>
+                                    <div className="header-sign-up-progress-bar-title">
+                                        <p className="header-sign-up-progress-bar-title-text">가입완료</p>
+                                    </div>
+                                </div>
+
+                                <div className="header-sign-up-progress-bar-icons"><FaCheckCircle /></div>
+                                <div className="header-sign-up-progress-bar-icons"><FaCheckCircle /></div>
+                                <div className="header-sign-up-progress-bar-icons"><FaCheckCircle /></div>
+
+                            </div>
+
+                            {/* 회원가입 메뉴 */}
                             <div className="header-sign-up-user-info-list-box">
 
                                 <div className="header-sign-up-user-info-list">
@@ -70,10 +95,12 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                     />
                                     <div className="header-sign-up-user-certify-email-box">
                                         <button className="header-sign-up-user-certify-email">
-                                            <p className="header-sign-up-user-certify-email-text">이메일 인증</p>
+                                            <p className="header-sign-up-user-certify-email-text">이메일</p>
+                                            <p className="header-sign-up-user-certify-email-text">인증</p>
                                         </button>
                                     </div>
                                 </div>
+
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
                                         <p className="header-sign-up-user-info-title"><AiFillLock /></p>
