@@ -18,16 +18,23 @@
 
 @keyframes closeSignUpModal {
     0% {
-        // transform: perspective(7200px) rotateY(0deg) translate(-50%, -50%);
+        // transform: translate(-50%, -50%);
+        width: 500px;
+        height: 600px;
+        opacity: 1;
     }
     
     100% {
-        // transform: perspective(7200px) rotateY(-360deg) translate(-50%, -50%);
+        // transform: translate(-50%, -50%);
+        width: 400px;
+        height: 500px;
+        opacity: 0;
     }
 }
 
 .header-sign-up-wrapper.shifted {
     animation: closeSignUpModal 1s forwards 1;
+    transition-duration: .3s;
 }
 
 .header-sign-up-wrapper {

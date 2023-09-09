@@ -7,7 +7,7 @@ import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
 
 import '../../scss/header/MovieSignUp.scss';
 
-const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
+const MovieSignUp = ({ clickCloseBtn, clickLogin, clickSignUp }) => {
 
     const [isOpenSelectInfo, isSetOpenSelectInfo] = useState(false);
 
@@ -18,14 +18,15 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
 
     return (
         <>
+            { isOpenSelectInfo && 
+                <MovieSignUpSelectInfo 
+                    clickCloseBtn={ clickCloseBtn }
+                    clickSignUp={ clickSignUp }
+            /> }
 
             <div className={`header-sign-up-wrapper ${isOpenSelectInfo ? 'shifted' : ''}`}>
                 <div className="header-sign-up-box">
 
-                { isOpenSelectInfo && 
-                    <MovieSignUpSelectInfo 
-                        clickCloseBtn={ clickCloseBtn }
-                /> }
 
                     {/* 버튼 관련 */}
                     <div className="header-sign-up-btn-box">
