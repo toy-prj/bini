@@ -35,11 +35,7 @@ const MovieHeader = () => {
         setOpenSignUp(true);
         setOpenLogin(false);
     }
-
-    // 임시 저장
-    // const [isCloseSelectInfo, setIsCloseSelectInfo] = useState(true);
-
-
+    
     // 새로 고침(임시)
     const reload = () => {
         window.onload.href='/';
@@ -102,7 +98,6 @@ const MovieHeader = () => {
                 <MovieSignUp 
                     clickCloseBtn={ clickCloseBtn } 
                     clickLogin={ clickLogin }
-                    clickSignUp={ clickSignUp }
             /> }          
             
             { openReservation && <HeaderReservation /> }

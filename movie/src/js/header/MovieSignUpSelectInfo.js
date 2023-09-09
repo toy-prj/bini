@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineLeft } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 
 import '../../scss/header/MovieSignUpSelectInfo.scss';
 
-const MovieSignUpSelectInfo = ({ clickCloseBtn, clickSignUp }) => {
+const MovieSignUpSelectInfo = ({ clickCloseBtn }) => {
 
-    const [isCloseSelectInfo, setIsCloseSelectInfo] = useState(true);
-
-    const clickBackToSignUp = () => {
-        setIsCloseSelectInfo(false);
-    }
+    
 
     return(
         <>
-
             <div className="movie-sign-up-select-info-wrapper">
                 <div className="movie-sign-up-select-info-box">
 
@@ -24,7 +19,6 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickSignUp }) => {
                             <button 
                                 className="movie-sign-up-select-info-btn back"
                                 type="button"
-                                onClick={ clickBackToSignUp }
                             >
                                 <AiOutlineLeft />
                             </button>
