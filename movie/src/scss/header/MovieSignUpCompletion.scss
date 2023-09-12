@@ -28,7 +28,7 @@
     }
     
     30% {
-        transform: translate(-50%, 20%) scale(1.1);
+        transform: translate(-50%, 20%);
         background: rgb(0, 117, 255);
         border-radius: 0 0 125px 125px;
         box-shadow: none;
@@ -59,13 +59,13 @@
     }
     
     100% {
-        transform: translate(-50%, 40%);
+        transform: translate(-50%, 15%);
         background: #eee;
         border-radius: 0;
         width: 400px;
         height: 600px;
         opacity: 0;
-        z-index: -1000;
+        z-index: -2000;
     }
 }
 
@@ -82,7 +82,7 @@
     left: 50%;
     transform: translate(-50%, 20%);
 
-    z-index: 1999;
+    // z-index: 1999;
 
     .movie-sign-up-completion-box {
         width: 100%;
@@ -109,6 +109,7 @@
                     transform: scale(1.2) rotate(-10deg);
                 }100% {
                     transform: scale(1);
+                    z-index: -1000;
                 }
             }
         }
@@ -124,7 +125,7 @@
                 height: 100%;
                 font-size: 30px;
                 font-weight: bold;
-                animation: textExpansion 1s .5s forwards 1;
+                animation: textExpansion 1s 1s forwards 1;
                 @include disflex();
             }
 
@@ -132,10 +133,11 @@
                 0% {
                     transform: scale(1);
                 } 50% {
-                    transform: scale(1.2) rotate(10deg);
-                    letter-spacing: 5px;
+                    transform: scale(1.2) rotate(5deg);
+                    letter-spacing: 1px;
                 }100% {
                     transform: scale(1);
+                    z-index: -1000;
                 }
             }
         }
