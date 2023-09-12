@@ -8,7 +8,7 @@
 
 @keyframes openSignUpSelectInfoModal {
     0% {
-        transform: translate(-50%, -40%);
+        transform: translate(0, -50%);
         width: 500px;
         height: 600px;
         opacity: 0;
@@ -30,8 +30,6 @@
     }
 
     100% {
-        width: 400px;
-        height: 500px;
         width: 500px;
         height: 600px;
         opacity: 0;
@@ -88,24 +86,33 @@
             }
         }
 
+        .movie-sign-up-select-info-progress-bar-wrapper {
+            width: 90%;
+            margin: 0 auto;
+        }
+
         .movie-sign-up-user-select-info-wrapper {
             width: 100%;
             height: 360px;
-
+            
             .movie-sign-up-user-select-info-box {
                 width: 100%;
                 height: 100%;
-
+                
                 .movie-sign-up-select-info-list-box {
                     width: 90%;
                     height: 75%;
                     margin: 0 auto;
-
+                    
                     .movie-sign-up-select-info-list {
                         width: 100%;
                         height: 50px;
                         margin-bottom: 40px;
                         display: flex;
+                        
+                        &:first-child {
+                            margin-top: 45px;
+                        }
                     }
 
                     .header-sign-up-user-select-info-title-box {
@@ -149,41 +156,15 @@
 
                 .header-sign-up-completion-btn-wrapper {
                     width: 100%;
-                    height: 25%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    .header-sign-up-skip-btn {
-                        background: rgb(0, 117, 255, .9);
-                        border-radius: 5px;
-                        border: none;
-                        width: 47.5%;
-                        height: 80%;
-                        transition-duration: .3s;
-                        cursor: pointer;
-                        @include disflex();
-
-                        &:hover {
-                            background: rgb(0, 117, 255, .7);
-                        }
-
-                        .header-sign-up-completion-btn-text {
-                            color: #fff;
-                            width: 100%;
-                            height: 100%;
-                            font-size: 16px;
-                            font-weight: bold;
-                            @include disflex();
-                        }
-                    }
+                    height: 70px;
+                    @include disflex();
                     
                     .header-sign-up-completion-btn {
                         background: rgb(0, 117, 255, .9);
                         border-radius: 5px;
                         border: none;
-                        width: 47.5%;
-                        height: 80%;
+                        width: 100%;
+                        height: 70%;
                         transition-duration: .3s;
                         cursor: pointer;
                         @include disflex();

@@ -229,7 +229,7 @@ body {
 
                 .header-login-find-email-pw-box {
                     color: rgb(0, 117, 255, .9);
-                    width: 70%;
+                    width: 75%;
                     height: 100%;
                     display: flex;
                     justify-content: center;
@@ -263,7 +263,7 @@ body {
 
                 // 회원가입
                 .header-login-signup-box {
-                    width: 30%;
+                    width: 25%;
                     height: 100%;
                     @include disflex();
 

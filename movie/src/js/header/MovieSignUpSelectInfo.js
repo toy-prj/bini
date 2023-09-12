@@ -68,7 +68,7 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
                                         type="text"
                                         name="name"
                                         id="name"
-                                        placeholder="이름을 입력해주세요 (선택)"
+                                        placeholder="이름을 입력해주세요"
                                         autoFocus
                                     />
                                 </div>
@@ -83,7 +83,7 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
                                         type="text"
                                         name="phone"
                                         id="phone"
-                                        placeholder="핸드폰 번호를 입력해주세요 (선택)"
+                                        placeholder="핸드폰 번호를 입력해주세요"
                                         autoFocus
                                     />
                                 </div>
@@ -98,20 +98,13 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
                                         type="text"
                                         name="birth"
                                         id="birth"
-                                        placeholder="생년월일을 입력해주세요 (선택)"
+                                        placeholder="생년월일을 입력해주세요"
                                         autoFocus
                                     />
                                 </div>
 
                                 {/* 회원가입 완료 버튼 */}
                                 <div className="header-sign-up-completion-btn-wrapper">
-                                    <button 
-                                        className="header-sign-up-skip-btn"
-                                        type="button"
-                                        onClick={ successSignUp }
-                                        >
-                                        <p className="header-sign-up-completion-btn-text">건너뛰기</p>
-                                    </button>
                                     <button 
                                         className="header-sign-up-completion-btn"
                                         type="button"
