@@ -7,13 +7,9 @@ import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
 
 import '../../scss/header/MovieSignUp.scss';
 
-const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
+const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn }) => {
 
-    const [isOpenSelectInfo, isSetOpenSelectInfo] = useState(false);
-
-    const clickNextSelectInfo = () => {
-        isSetOpenSelectInfo(true);
-    }
+    
 
 
     return (
@@ -21,9 +17,11 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
             { isOpenSelectInfo && 
                 <MovieSignUpSelectInfo 
                     clickCloseBtn={ clickCloseBtn }
+                    clickBackToSignUpBtn={ clickBackToSignUpBtn }
             /> }
 
             <div className={`header-sign-up-wrapper ${isOpenSelectInfo ? 'shifted' : ''}`}>
+                
                 <div className="header-sign-up-box">
 
                     {/* 버튼 관련 */}
@@ -129,34 +127,6 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
                                         />
                                 </div>
 
-                                {/* <div className="header-sign-up-user-info-list">
-                                    <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title"><GiSmartphone /></p>
-                                    </div>
-
-                                    <input 
-                                        className="header-sign-up-user-info-input"
-                                        type="text"
-                                        name="phone"
-                                        id="phone"
-                                        placeholder="휴대폰 번호를 입력해주세요 (선택)"
-                                        />
-                                </div>
-                                <div className="header-sign-up-user-info-list">
-                                    <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title"><LiaBirthdayCakeSolid /></p>
-                                    </div>
-
-                                    <input 
-                                        className="header-sign-up-user-info-input"
-                                        type="text"
-                                        name="birth"
-                                        id="birth"
-                                        placeholder="생년월일을 입력해주세요"
-                                        required
-                                    />
-                                </div> */}
-                                
                             </div>
 
                             <div className="header-sign-up-next-btn-box">
@@ -171,12 +141,6 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin }) => {
 
                         </div>
                     </div>
-
-                    {/* <div className="header-sign-in-btn-box">
-                        <button className="header-sign-in-btn">
-                            <p className="header-sign-in-btn-text">회원가입</p>
-                        </button>
-                    </div> */}
 
                 </div>
             </div>

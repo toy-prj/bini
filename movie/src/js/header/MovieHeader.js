@@ -9,6 +9,7 @@ import HeaderMenuBar from "./menu/HeaderMenuBar";
 import HeaderReservation from "./menu/reservation/HeaderReservation";
 
 import '../../scss/header/MovieHeader.scss';
+import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
 
 const MovieHeader = () => {
     
@@ -25,6 +26,7 @@ const MovieHeader = () => {
     const clickLogin = () => {
         setOpenLogin(true);
         setOpenSignUp(false);
+        isSetOpenSelectInfo(false);
     }
 
     // 회원가입
@@ -34,8 +36,22 @@ const MovieHeader = () => {
     const clickSignUp = () => {
         setOpenSignUp(true);
         setOpenLogin(false);
+        isSetOpenSelectInfo(false);
     }
-    
+
+    // 회원가입 다음으로 버튼
+    const [isOpenSelectInfo, isSetOpenSelectInfo] = useState(false);
+
+    const clickNextSelectInfo = () => {
+        isSetOpenSelectInfo(true);
+    }
+
+    // 회원가입 선택 사항 목록
+    const clickBackToSignUpBtn = () => {
+        isSetOpenSelectInfo(false);
+        setOpenSignUp(true);
+    }
+
     // 새로 고침(임시)
     const reload = () => {
         window.onload.href='/';
@@ -98,7 +114,13 @@ const MovieHeader = () => {
                 <MovieSignUp 
                     clickCloseBtn={ clickCloseBtn } 
                     clickLogin={ clickLogin }
+                    clickNextSelectInfo={ clickNextSelectInfo }
+                    clickBackToSignUpBtn={ clickBackToSignUpBtn }
+                    isOpenSelectInfo={ isOpenSelectInfo }
             /> }          
+
+            
+
             
             { openReservation && <HeaderReservation /> }
 

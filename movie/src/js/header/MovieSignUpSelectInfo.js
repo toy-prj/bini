@@ -4,7 +4,7 @@ import { MdOutlineClose } from "react-icons/md";
 
 import '../../scss/header/MovieSignUpSelectInfo.scss';
 
-const MovieSignUpSelectInfo = ({ clickCloseBtn }) => {
+const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn }) => {
 
     
 
@@ -19,6 +19,7 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn }) => {
                             <button 
                                 className="movie-sign-up-select-info-btn back"
                                 type="button"
+                                onClick={ clickBackToSignUpBtn }
                             >
                                 <AiOutlineLeft />
                             </button>
