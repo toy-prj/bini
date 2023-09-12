@@ -1,4 +1,5 @@
 import React from "react";
+import MovieSignUpLogo from "./MovieSignUpLogo";
 import { MdOutlineClose } from 'react-icons/md';
 import { BsPersonFill } from "react-icons/bs";
 import { AiFillLock } from "react-icons/ai";
@@ -25,8 +26,8 @@ const MovieLogin = ( {clickCloseBtn, clickSignUp} ) => {
                     </div>
 
                     {/* Logo */}
-                    <div className="header-login-logo-box">
-                        <div className="header-login-logo">Logo</div>
+                    <div className="header-login-logo-wrapper">
+                        <MovieSignUpLogo />
                     </div>
 
                     {/* 사용자 정보 입력 창 */}

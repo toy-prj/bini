@@ -7,9 +7,9 @@ import MovieLogin from "./MoiveLogin";
 import MovieSignUp from "./MovieSignUp";
 import HeaderMenuBar from "./menu/HeaderMenuBar";
 import HeaderReservation from "./menu/reservation/HeaderReservation";
+import MovieSignUpCompletion from "./MovieSignUpCompletion";
 
 import '../../scss/header/MovieHeader.scss';
-import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
 
 const MovieHeader = () => {
     
@@ -27,6 +27,7 @@ const MovieHeader = () => {
         setOpenLogin(true);
         setOpenSignUp(false);
         isSetOpenSelectInfo(false);
+        setIsSuccessSignUp(false);
     }
 
     // 회원가입
@@ -37,6 +38,7 @@ const MovieHeader = () => {
         setOpenSignUp(true);
         setOpenLogin(false);
         isSetOpenSelectInfo(false);
+        setIsSuccessSignUp(false);
     }
 
     // 회원가입 다음으로 버튼
@@ -44,6 +46,7 @@ const MovieHeader = () => {
 
     const clickNextSelectInfo = () => {
         isSetOpenSelectInfo(true);
+        setIsSuccessSignUp(false);
     }
 
     // 회원가입 선택 사항 목록
@@ -52,10 +55,20 @@ const MovieHeader = () => {
         setOpenSignUp(true);
     }
 
-    // 새로 고침(임시)
-    const reload = () => {
-        window.onload.href='/';
+    // 회원가입 성공 컴포넌트 호출
+    const [isSuccessSignUp, setIsSuccessSignUp] = useState(false);
+
+    const successSignUp = () => {
+        setOpenSignUp(false);
+        isSetOpenSelectInfo(false);
+        setIsSuccessSignUp(true);
+    
+        setTimeout(() => {
+            setOpenLogin(true);
+        }, 1600);
     }
+
+    
     
     // sticky header 
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -69,7 +82,6 @@ const MovieHeader = () => {
     });
 
     // scroll top
-
     const handleScroll = () => {
         const currentposition = window.pageYOffset || document.documentElement.scrollTop;
         setScrollPosition(currentposition);
@@ -91,7 +103,10 @@ const MovieHeader = () => {
         setOpenReservation(true);
     }
 
-    
+    // 새로 고침(임시)
+    const reload = () => {
+        window.onload.href='/';
+    }
 
 
 
@@ -116,12 +131,11 @@ const MovieHeader = () => {
                     clickLogin={ clickLogin }
                     clickNextSelectInfo={ clickNextSelectInfo }
                     clickBackToSignUpBtn={ clickBackToSignUpBtn }
+                    successSignUp={ successSignUp }
                     isOpenSelectInfo={ isOpenSelectInfo }
             /> }          
 
-            
-
-            
+            { isSuccessSignUp && <MovieSignUpCompletion /> }
             { openReservation && <HeaderReservation /> }
 
             {/* scroll btn */}

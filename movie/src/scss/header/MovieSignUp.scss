@@ -56,7 +56,7 @@
 
         .header-sign-up-btn-box {
             width: 100%;
-            height: 25px;
+            height: 30px;
             display: flex;
 
             position: absolute;
@@ -96,74 +96,20 @@
             }
         }
 
-        .header-sign-up-logo-box {
+        // Logo
+        .header-sign-up-logo-wrapper {
             width: 100%;
             height: 150px;
-
-            .header-sign-up-logo {
-                color: rgb(0, 117, 255, .9);
-                width: 100%;
-                height: 100%;
-                @include disflex();
-            }
         }
 
-        .header-sign-up-progress-bar-box {
-            width: 85%;
-            height: 30px;
-            margin: 0 auto;
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-
-            .header-sign-up-progress-bar-title-box {
-                width: 110%;
-                height: 25px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: absolute;
-                top: 100%;
-                left: -19px;
-
-                .header-sign-up-progress-bar-title {
-                    width: 15%;
-                    height: 100%;
-
-                    .header-sign-up-progress-bar-title-text {
-                        color: rgb(0, 117, 255, .9);
-                        width: 100%;
-                        height: 100%;
-                        font-size: 14px;
-                        font-weight: bold;
-                        @include disflex();
-                    }
-                }
-            }
-
-
-            .header-sign-up-progress-bar {
-                background: #ddd;
-                width: 100%;
-                height: 20%;
-                position: absolute;
-                z-index: -1;
-            }
-
-            .header-sign-up-progress-bar-icons {
-                background: #fff;
-                color: rgb(0, 117, 255, .9);
-                border: none;
-                border-radius: 50%;
-                width: 25px;
-                height: 25px;
-                font-size: 25px;
-                @include disflex();
-            }
+        // 진행 상황 Bar
+        .header-sign-up-progress-bar-wrapper {
+            width: 100%;
+            height: 75px;
+            margin-bottom: 20px;
         }
 
+        // 유저 정보 입력 창
         .header-sign-up-user-info-wrapper {
             width: 100%;
             height: 700px;
@@ -172,18 +118,18 @@
                 width: 90%;
                 height: 600px;
                 margin: 0 auto;
-
+                
                 .header-sign-up-user-info-list-box {
                     width: 100%;
-                    height: 300px;
-
+                    height: 280px;
+                    
                     .header-sign-up-user-info-list {
                         width: 100%;
                         height: 50px;
                         margin-bottom: 40px;
                         display: flex;
                     }
-
+                    
                     .header-sign-up-user-info-title-box {
                         background: rgb(0, 117, 255, .9);
                         border: 1px solid rgb(0, 117, 255, .9);
@@ -191,7 +137,7 @@
                         border-right: none;
                         width: 15%;
                         height: 100%;
-
+                        
                         .header-sign-up-user-info-title {
                             color: #fff;
                             width: 100%;
@@ -211,7 +157,7 @@
                         height: 100%;
                         padding-left: 2%;
                         letter-spacing: 1px;
-
+                        
                         &:focus {
                             outline: none;
                         }
@@ -234,7 +180,7 @@
                         border-radius: 0 5px 5px 0;
                         width: 15%;
                         height: 100%;
-
+                        
                         .header-sign-up-user-certify-email {
                             background: rgb(0, 117, 255, .9);
                             border-radius: 0 5px 5px 0;
@@ -256,15 +202,14 @@
 
                 .header-sign-up-next-btn-box {
                     width: 100%;
-                    height: 80px;
-                    @include disflex();
-
+                    height: 50px;
+                    
                     .header-sign-up-next-btn {
                         background: rgb(0, 117, 255, .9);
                         border-radius: 5px;
                         border: none;
                         width: 100%;
-                        height: 65%;
+                        height: 100%;
                         transition-duration: .3s;
                         cursor: pointer;
                         @include disflex();
@@ -285,35 +230,5 @@
                 }
             }
         }
-
-        // 회원가입 버튼
-        // .header-sign-in-btn-box {
-        //     width: 100%;
-        //     height: 100px;
-        //     @include disflex();
-
-        //     .header-sign-in-btn {
-        //         background: rgb(0, 117, 255, .9);
-        //         border-radius: 5px;
-        //         width: 90%;
-        //         height: 50%;
-        //         transition-duration: .3s;
-        //         cursor: pointer;
-        //         @include disflex();
-
-        //         &:hover {
-        //             background: rgb(0, 117, 255, .7);
-        //         }
-
-        //         .header-sign-in-btn-text {
-        //             color: #fff;
-        //             width: 100%;
-        //             height: 100%;
-        //             font-size: 16px;
-        //             font-weight: bold;
-        //             @include disflex();
-        //         }
-        //     }
-        // }
     }
 }

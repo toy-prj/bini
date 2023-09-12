@@ -11,19 +11,25 @@ body {
 }
 
 @keyframes openScrollBtn {
-    0%{
+    0% {
         opacity: 0;
-    }100% {
+    }
+
+    100% {
         opacity: 1;
     }
 }
 
 @keyframes openReservationBtn {
-    0%{
+    0% {
         transform: translate(-50px);
-    }50% {
+    }
+
+    50% {
         opacity: 0;
-    }100% {
+    }
+
+    100% {
         opacity: 1;
         transform: translate(-90px);
         display: block;
@@ -33,9 +39,13 @@ body {
 @keyframes upDown {
     0% {
         transform: translateY(1px);
-    } 50% {
+    }
+
+    50% {
         transform: translateY(-4px);
-    }100% {
+    }
+
+    100% {
         transform: translateY(1px);
     }
 }
@@ -70,10 +80,10 @@ body {
             overflow: hidden;
             cursor: pointer;
             @include disflex();
-            
+
             position: absolute;
             z-index: 1900;
-            
+
             &:hover {
                 color: #fff;
             }
@@ -94,7 +104,7 @@ body {
                 top: 0;
                 left: 0;
             }
-            
+
             .reservation-btn-text {
                 font-size: 14px;
                 font-weight: bold;
@@ -116,8 +126,8 @@ body {
                 border-radius: 10px;
                 transition-duration: .3s;
             }
-            
-            &:hover .scroll-btn-icon{
+
+            &:hover .scroll-btn-icon {
                 transition-duration: .3s;
                 animation: upDown 1s forwards infinite;
             }
@@ -148,21 +158,23 @@ body {
     display: none;
 }
 
+
+
 // header 
 #headerWrapper {
     width: 100%;
     height: 130px;
     z-index: 1500;
-    
+
     position: fixed;
     top: 0;
     left: 0;
-    
+
     .header-box {
         width: 980px;
         height: 100%;
         margin: 0 auto;
-        
+
         // header 위쪽 banner
         .header-top-banner {
             border-bottom: 1px solid #ccc;
@@ -173,18 +185,20 @@ body {
             animation: showHeaderTopBanner 1s forwards 1;
 
             @keyframes showHeaderTopBanner {
-                0%{
+                0% {
                     transform: translateY(-100px);
-                } 100% {
+                }
+
+                100% {
                     transform: translateY(0);
                 }
             }
-            
+
             .header-main-logo-box {
                 width: 10%;
                 height: 100%;
                 @include disflex();
-                
+
                 .header-main-logo {
                     width: 100%;
                     height: 100%;
@@ -212,18 +226,19 @@ body {
                         width: 10%;
                         height: 100%;
                         cursor: pointer;
-                        
+
                         &:hover {
                             .header-menu-list-icons-box .header-menu-list-icons {
                                 transition-duration: .3s;
                                 color: rgb(0, 117, 255, .9);
                             }
+
                             .header-menu-list-text {
                                 transition-duration: .3s;
                                 color: rgb(0, 117, 255, .9);
                             }
                         }
-                        
+
                         .header-menu-list-icons-box {
                             width: 100%;
                             height: 60%;

@@ -22,7 +22,6 @@ body {
 
 // 로그인 모달
 #Header-Login-Wrapper {
-    // border: 1px solid rgb(0, 117, 255, .9);
     background: rgb(255, 255, 255);
     width: 400px;
     height: 600px;
@@ -31,7 +30,7 @@ body {
     animation: openLoginModal 0.5s forwards 1;
     
     position: fixed;
-    top: 54%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     

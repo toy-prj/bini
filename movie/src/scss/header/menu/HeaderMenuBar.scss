@@ -10,11 +10,11 @@
     background: none;
     width: 100vmax;
     height: 50px;
-    
+
     position: fixed;
     top: 0;
     left: 0;
-    
+
     .header-menu-bar-box {
         width: 100%;
         height: 100%;
@@ -30,13 +30,15 @@
     @keyframes showHeaderBottomBanner {
         0% {
             transform: translateY(-10px);
-        } 100% {
+        }
+
+        100% {
             transform: translateY(0);
             opacity: 1;
         }
-        
+
     }
-    
+
     .header-menu-bar-box {
         width: 50%;
         height: 100%;

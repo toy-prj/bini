@@ -1,0 +1,91 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes successSignUp {
+    0% {
+        background: rgb(0, 117, 255);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 2100;
+    }
+    
+    30% {
+        background: rgb(0, 117, 255);
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        z-index: 2100;
+    }
+    
+    60% {
+        background: rgb(0, 117, 255);
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        z-index: 2100;
+    }
+    
+    100% {
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -1000;
+    }
+}
+
+.movie-sign-up-completion-wrapper {
+    background: rgb(0, 117, 255);
+    width: 500px;
+    height: 600px;
+    transition-duration: 0.3s;
+    animation: successSignUp 2.5s forwards 1;
+    @include disflex();
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1999;
+
+    .movie-sign-up-completion-box {
+        width: 100%;
+        height: 50%;
+
+        .movie-sign-up-completion-img-box {
+            width: 100%;
+            height: 70%;
+            @include disflex();
+
+            .movie-sign-up-completion-img {
+                color: #fff;
+                width: 50%;
+                height: 100%;
+                font-size: 100px;
+                @include disflex();
+            }
+        }
+
+        .movie-sign-up-completion-text-box {
+            width: 100%;
+            height: 30%;
+            @include disflex();
+
+            .movie-sign-up-completion-text {
+                color: #fff;
+                width: 50%;
+                height: 100%;
+                font-size: 30px;
+                font-weight: bold;
+                @include disflex();
+            }
+        }
+    }
+}

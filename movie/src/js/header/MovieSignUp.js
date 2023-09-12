@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdOutlineClose } from "react-icons/md";
-import { AiFillLock, AiOutlineLeft }from 'react-icons/ai';
-import { BsPersonFill } from "react-icons/bs";
-import { FaCheckCircle } from "react-icons/fa";
+import { AiFillLock, AiOutlineLeft, AiOutlineMail }from 'react-icons/ai';
 import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
+import MovieSignUpProgressBar from "./MovieSignUpProgressBar";
+import MovieSignUpLogo from "./MovieSignUpLogo";
 
 import '../../scss/header/MovieSignUp.scss';
 
-const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn }) => {
+const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn, successSignUp }) => {
 
     
 
@@ -18,10 +18,11 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
                 <MovieSignUpSelectInfo 
                     clickCloseBtn={ clickCloseBtn }
                     clickBackToSignUpBtn={ clickBackToSignUpBtn }
+                    clickLogin={ clickLogin }
+                    successSignUp={ successSignUp }
             /> }
 
             <div className={`header-sign-up-wrapper ${isOpenSelectInfo ? 'shifted' : ''}`}>
-                
                 <div className="header-sign-up-box">
 
                     {/* 버튼 관련 */}
@@ -46,31 +47,15 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
                     <div className="header-sign-up-user-info-wrapper">
                         <div className="header-sign-up-user-info">
 
-                            <div className="header-sign-up-logo-box">
-                                <div className="header-sign-up-logo">Logo</div>
+                            {/* Logo */}
+                            <div className="header-sign-up-logo-wrapper">
+                                <MovieSignUpLogo />
                             </div>
                             
-                            {/* 진행상황 bar */}
-                            <div className="header-sign-up-progress-bar-box">
-
-                                <div className="header-sign-up-progress-bar"></div>
-
-                                <div className="header-sign-up-progress-bar-title-box">
-                                    <div className="header-sign-up-progress-bar-title">
-                                        <p className="header-sign-up-progress-bar-title-text">약관동의</p>
-                                    </div>
-                                    <div className="header-sign-up-progress-bar-title">
-                                        <p className="header-sign-up-progress-bar-title-text">정보입력</p>
-                                    </div>
-                                    <div className="header-sign-up-progress-bar-title">
-                                        <p className="header-sign-up-progress-bar-title-text">가입완료</p>
-                                    </div>
-                                </div>
-
-                                <div className="header-sign-up-progress-bar-icons"><FaCheckCircle /></div>
-                                <div className="header-sign-up-progress-bar-icons"><FaCheckCircle /></div>
-                                <div className="header-sign-up-progress-bar-icons"><FaCheckCircle /></div>
-
+                            
+                            {/* 진행상황 Bar */}
+                            <div className="header-sign-up-progress-bar-wrapper">
+                                <MovieSignUpProgressBar />
                             </div>
 
                             {/* 회원가입 메뉴 */}
@@ -78,7 +63,7 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
 
                                 <div className="header-sign-up-user-info-list">
                                     <div className="header-sign-up-user-info-title-box">
-                                        <p className="header-sign-up-user-info-title"><BsPersonFill /></p>
+                                        <p className="header-sign-up-user-info-title"><AiOutlineMail /></p>
                                     </div>
 
                                     <input 

@@ -1,0 +1,19 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-sign-up-logo-box {
+    width: 100%;
+    height: 150px;
+
+    .header-sign-up-logo {
+        color: rgb(0, 117, 255, .9);
+        width: 100%;
+        height: 100%;
+        @include disflex();
+    }
+}
