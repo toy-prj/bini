@@ -24,8 +24,8 @@
 .header-menu-bar-wrapper {
     width: 980px;
     height: 50px;
-    opacity: 0;
-    animation: showHeaderBottomBanner 1s .8s forwards 1;
+    // opacity: 0;
+    // animation: showHeaderBottomBanner 1s .8s forwards 1;
 
     @keyframes showHeaderBottomBanner {
         0% {

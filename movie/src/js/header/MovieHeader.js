@@ -68,8 +68,6 @@ const MovieHeader = () => {
         }, 1600);
     }
 
-    
-    
     // sticky header 
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -139,7 +137,8 @@ const MovieHeader = () => {
             { openReservation && <HeaderReservation /> }
 
             {/* scroll btn */}
-            <div className={ scrollPosition < 130 ? "scroll-btn-wrapper" : "scroll-btn-wrapper-sticky"}>
+            {/* <div className={ scrollPosition < 130 ? "scroll-btn-wrapper" : "scroll-btn-wrapper-sticky"}> */}
+            <div className="scroll-btn-wrapper">
                 <div className="scroll-btn-box">
                     <button 
                         className="reservation-btn"
