@@ -9,32 +9,32 @@
 @keyframes successSignUp {
     0% {
         background: rgb(0, 117, 255);
-        width: 100%;
-        height: 100%;
+        width: 500px;
+        height: 600px;
         opacity: 0;
         z-index: 2100;
     }
     
     30% {
         background: rgb(0, 117, 255);
-        width: 100%;
-        height: 100%;
+        width: 500px;
+        height: 600px;
         opacity: 1;
         z-index: 2100;
     }
     
     60% {
         background: rgb(0, 117, 255);
-        width: 100%;
-        height: 100%;
+        width: 500px;
+        height: 600px;
         opacity: 1;
         z-index: 2100;
     }
     
     100% {
         background: #eee;
-        width: 100%;
-        height: 100%;
+        width: 500px;
+        height: 600px;
         opacity: 0;
         z-index: -1000;
     }
