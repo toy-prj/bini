@@ -48,6 +48,10 @@
         height: 20%;
         position: absolute;
         z-index: -1;
+        
+        ::-moz-progress-bar {
+            background-color: rgb(0, 117, 255, .9);
+        }
     }
 
     .header-sign-up-progress-bar-icons {
