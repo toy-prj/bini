@@ -8,23 +8,50 @@
 
 @keyframes successSignUp {
     0% {
-        background: rgb(0, 117, 255);
+        transform: translate(-50%, 0);
+        background: #eee;
+        border-radius: 125px;
         width: 400px;
         height: 600px;
         opacity: 0;
         z-index: 2100;
     }
-    
-    30% {
+
+    15% {
+        transform: translate(-50%, 20%);
         background: rgb(0, 117, 255);
+        border-radius: 0 125px 125px 125px;
         width: 400px;
         height: 600px;
         opacity: 1;
         z-index: 2100;
     }
     
-    60% {
+    30% {
+        transform: translate(-50%, 20%) scale(1.1);
         background: rgb(0, 117, 255);
+        border-radius: 0 0 125px 125px;
+        box-shadow: none;
+        width: 400px;
+        height: 600px;
+        opacity: 1;
+        z-index: 2100;
+    }
+    
+    45% {
+        transform: translate(-50%, 20%);
+        background: rgb(0, 117, 255);
+        border-radius: 0 0 0 125px;
+        width: 400px;
+        height: 600px;
+        opacity: 1;
+        z-index: 2100;
+    }
+
+    60% {
+        transform: translate(-50%, 20%);
+        background: rgb(0, 117, 255);
+        border-radius: 0;
         width: 400px;
         height: 600px;
         opacity: 1;
@@ -32,9 +59,11 @@
     }
     
     100% {
+        transform: translate(-50%, 40%);
         background: #eee;
+        border-radius: 0;
         width: 400px;
-        height: 400px;
+        height: 600px;
         opacity: 0;
         z-index: -1000;
     }
@@ -45,19 +74,19 @@
     width: 500px;
     height: 600px;
     transition-duration: 0.3s;
-    animation: successSignUp 2.5s forwards 1;
+    animation: successSignUp 3s forwards 1;
     @include disflex();
 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 20%);
 
     z-index: 1999;
 
     .movie-sign-up-completion-box {
         width: 100%;
-        height: 50%;
+        height: 30%;
 
         .movie-sign-up-completion-img-box {
             width: 100%;
@@ -69,7 +98,18 @@
                 width: 50%;
                 height: 100%;
                 font-size: 100px;
+                animation: logoExpansion 1s .5s forwards 1;
                 @include disflex();
+            }
+
+            @keyframes logoExpansion {
+                0% {
+                    transform: scale(1);
+                } 50% {
+                    transform: scale(1.2) rotate(-10deg);
+                }100% {
+                    transform: scale(1);
+                }
             }
         }
 
@@ -84,7 +124,19 @@
                 height: 100%;
                 font-size: 30px;
                 font-weight: bold;
+                animation: textExpansion 1s .5s forwards 1;
                 @include disflex();
+            }
+
+            @keyframes textExpansion {
+                0% {
+                    transform: scale(1);
+                } 50% {
+                    transform: scale(1.2) rotate(10deg);
+                    letter-spacing: 5px;
+                }100% {
+                    transform: scale(1);
+                }
             }
         }
     }

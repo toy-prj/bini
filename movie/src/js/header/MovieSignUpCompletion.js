@@ -1,7 +1,7 @@
 import React from "react";
+import { FaCheckCircle } from "react-icons/fa";
 
 import '../../scss/header/MovieSignUpCompletion.scss';
-import { FaCheckCircle } from "react-icons/fa";
 
 const MovieSignUpCompletion = () => {
 

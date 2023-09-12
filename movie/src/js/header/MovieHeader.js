@@ -65,7 +65,7 @@ const MovieHeader = () => {
     
         setTimeout(() => {
             setOpenLogin(true);
-        }, 1600);
+        }, 1900);
     }
 
     // sticky header 
@@ -133,7 +133,7 @@ const MovieHeader = () => {
                     isOpenSelectInfo={ isOpenSelectInfo }
             /> }          
 
-            { isSuccessSignUp && <MovieSignUpCompletion /> }
+            
             { openReservation && <HeaderReservation /> }
 
             {/* scroll btn */}
@@ -160,6 +160,8 @@ const MovieHeader = () => {
             {/* header 전체 */}
             <div id='headerWrapper'>
                 <div className="header-box">
+
+                { isSuccessSignUp && <MovieSignUpCompletion /> }
 
                     {/* header 위쪽 banner */}
                     <div className={ scrollPosition < 130 ? "header-top-banner" : "header-top-banner_none"}>
