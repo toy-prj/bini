@@ -59,9 +59,10 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
     // ---------------------------------------------------------------------
     // 이름 입력창 체인지 이벤트 핸들러
     const nameHandler = e => {
-
+        
+        const userNameBox = document.getElementById('userNameBox');
+        const userNameInput = document.getElementById('name');
         const nameRegex = /^[가-힣]{2,5}$/;
-
         const inputVal = e.target.value;
 
         // 입력값 검증
@@ -71,12 +72,21 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
         if(!inputVal) {
             msg = '사용자 이름을 필수입니다.';
             flag = false; 
+            userNameBox.style.backgroundColor = 'red';
+            userNameBox.style.border = '1px solid red';
+            userNameInput.style.border = '2px solid red';
         } else if (!nameRegex.test(inputVal)) {
             msg = '2~5글자 사이의 한글로 작성해주세요.';
             flag = false;
+            userNameBox.style.backgroundColor = 'red';
+            userNameBox.style.border = '1px solid red';
+            userNameInput.style.border = '2px solid red';
         } else {
             msg = '사용 가능한 이름입니다.';
             flag = true;
+            userNameBox.style.backgroundColor = 'rgb(0, 117, 255, .9)';
+            userNameBox.style.border = '1px solid rgb(0, 117, 255, .9)';
+            userNameInput.style.border = '2px solid rgb(0, 117, 255, .9)';
         }
 
         saveInputState({
@@ -225,7 +235,7 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
                                 <div className="movie-sign-up-select-info-list">
 
                                     <div className="header-sign-up-user-info-verification-box">
-                                        <div className="header-sign-up-user-select-info-title-box">
+                                        <div className="header-sign-up-user-select-info-title-box" id="userNameBox">
                                             <p className="header-sign-up-user-select-info-title"><BsFillPersonFill /></p>
                                         </div>
 
@@ -251,7 +261,7 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
                                 <div className="movie-sign-up-select-info-list">
                                     <div className="header-sign-up-user-info-verification-box">
                                         <div className="header-sign-up-user-select-info-title-box">
-                                            <p className="header-sign-up-user-select-info-title"><GiSmartphone /></p>
+                                            <p className="header-sign-up-user-select-info-title "><GiSmartphone /></p>
                                         </div>
 
                                         <input 

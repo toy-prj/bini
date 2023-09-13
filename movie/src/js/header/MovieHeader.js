@@ -17,6 +17,8 @@ const MovieHeader = () => {
     const clickCloseBtn = () => {
         setOpenLogin(false);
         setOpenSignUp(false);
+        isSetOpenSelectInfo(false);
+        setIsSuccessSignUp(false);
     }
 
     // 로그인

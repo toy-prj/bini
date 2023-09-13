@@ -8,7 +8,7 @@
 
 @keyframes successSignUp {
     0% {
-        transform: translate(-50%, 0);
+        transform: translate(-50%, 10%);
         background: #eee;
         border-radius: 125px;
         width: 400px;
@@ -59,7 +59,7 @@
     }
     
     100% {
-        transform: translate(-50%, 15%);
+        transform: translate(-50%, 20%);
         background: #eee;
         border-radius: 0;
         width: 400px;

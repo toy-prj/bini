@@ -9,49 +9,49 @@ import '../../scss/header/MovieSignUp.scss';
 
 const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn, successSignUp }) => {
 
-    // 상태변수로 회원가입 입력값 관리
-    const [userValue, setUserValue] = useState({
-        id: '',
-        password: ''
-    });
+    // // 상태변수로 회원가입 입력값 관리
+    // const [userValue, setUserValue] = useState({
+    //     id: '',
+    //     password: ''
+    // });
 
-    // 검증 메시지에 대한 상태변수 관리
-    const [message, setMessage] = useState({
-        id: '',
-        password: '',
-        passwordCheck: ''
-    });
+    // // 검증 메시지에 대한 상태변수 관리
+    // const [message, setMessage] = useState({
+    //     id: '',
+    //     password: '',
+    //     passwordCheck: ''
+    // });
 
-    // 검증 완료 체크에 대한 상태변수 관리
-    const [correct, setCorrect] = useState({
-        id: false,
-        password: false,
-        passwordCheck: false
-    });
+    // // 검증 완료 체크에 대한 상태변수 관리
+    // const [correct, setCorrect] = useState({
+    //     id: false,
+    //     password: false,
+    //     passwordCheck: false
+    // });
 
-    // 검증 데이터를 상태변수에 저장하는 함수
-    const saveInputState = ({
-        key,
-        inputVal,
-        flag,
-        msg
-    }) => {
+    // // 검증 데이터를 상태변수에 저장하는 함수
+    // const saveInputState = ({
+    //     key,
+    //     inputVal,
+    //     flag,
+    //     msg
+    // }) => {
 
-        inputVal !== 'pass' && setUserValue({
-            ...userValue,
-            [key]: inputVal
-        });
+    //     inputVal !== 'pass' && setUserValue({
+    //         ...userValue,
+    //         [key]: inputVal
+    //     });
 
-        setMessage({
-            ...message,
-            [key]: msg
-        });
+    //     setMessage({
+    //         ...message,
+    //         [key]: msg
+    //     });
 
-        setCorrect({
-            ...correct,
-            [key]: flag
-        });
-    };
+    //     setCorrect({
+    //         ...correct,
+    //         [key]: flag
+    //     });
+    // };
 
 
     return (

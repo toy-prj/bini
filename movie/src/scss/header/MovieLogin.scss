@@ -20,6 +20,19 @@ body {
     }
 }
 
+@keyframes clickCloseModalBtn {
+    0%{
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+    }
+}
+
+// 모달창 닫기 버튼 클릭
+.click-close-modal-btn {
+    animation: clickCloseModalBtn 1s forwards 1;
+}
+
 // 로그인 모달
 #Header-Login-Wrapper {
     background: rgb(255, 255, 255);
