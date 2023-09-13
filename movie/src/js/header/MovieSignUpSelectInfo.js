@@ -293,6 +293,11 @@ const MovieSignUpSelectInfo = ({ clickCloseBtn, clickBackToSignUpBtn, successSig
                                             autoFocus
                                             onChange={ birthDateHandler }
                                         />
+                                            <span style={
+                                                correct.birthdate
+                                                ? {color:'rgb(0, 117, 255'}
+                                                : {color: 'red'}
+                                            }>{message.birthdate}</span>
                                     </div>
                                 </div>
 
