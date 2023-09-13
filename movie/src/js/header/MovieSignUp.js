@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { AiFillLock, AiOutlineLeft, AiOutlineMail }from 'react-icons/ai';
 import MovieSignUpSelectInfo from "./MovieSignUpSelectInfo";
@@ -9,7 +9,49 @@ import '../../scss/header/MovieSignUp.scss';
 
 const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn, successSignUp }) => {
 
-    
+    // 상태변수로 회원가입 입력값 관리
+    const [userValue, setUserValue] = useState({
+        id: '',
+        password: ''
+    });
+
+    // 검증 메시지에 대한 상태변수 관리
+    const [message, setMessage] = useState({
+        id: '',
+        password: '',
+        passwordCheck: ''
+    });
+
+    // 검증 완료 체크에 대한 상태변수 관리
+    const [correct, setCorrect] = useState({
+        id: false,
+        password: false,
+        passwordCheck: false
+    });
+
+    // 검증 데이터를 상태변수에 저장하는 함수
+    const saveInputState = ({
+        key,
+        inputVal,
+        flag,
+        msg
+    }) => {
+
+        inputVal !== 'pass' && setUserValue({
+            ...userValue,
+            [key]: inputVal
+        });
+
+        setMessage({
+            ...message,
+            [key]: msg
+        });
+
+        setCorrect({
+            ...correct,
+            [key]: flag
+        });
+    };
 
 
     return (
@@ -69,8 +111,8 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
                                     <input 
                                         className="header-sign-up-user-info-input"
                                         type="text"
-                                        name="id"
-                                        id="id"
+                                        name="mail"
+                                        id="mail"
                                         placeholder="이메일을 입력해주세요"
                                         required
                                         autoFocus
