@@ -6,7 +6,7 @@ import { AiFillLock } from "react-icons/ai";
 
 import '../../scss/header/MovieLogin.scss';
 
-const MovieLogin = ({ clickCloseBtn, clickSignUp, isOpenModal }) => {
+const MovieLogin = ({ clickCloseBtn, clickSignUp }) => {
 
     
 
@@ -19,7 +19,7 @@ const MovieLogin = ({ clickCloseBtn, clickSignUp, isOpenModal }) => {
                     {/* 닫기 */}
                     <div id="Close-Login-Modal-Wrapper">
                         <button 
-                            className={`header-login-close-btn ${isOpenModal ? 'click-close-modal-btn' : ''}`}
+                            className="header-login-close-btn"
                             type="button"  
                             onClick={ clickCloseBtn }
                         ><MdOutlineClose id="Login-Modal-Close-Btn"/></button>

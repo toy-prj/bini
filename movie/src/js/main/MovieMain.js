@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { BsChevronCompactLeft, BsChevronCompactRight }from 'react-icons/bs';
 import { AiOutlineLeft, AiOutlineRight }from 'react-icons/ai';
 import MovieMainAdContents from "./MovieMainAdContents";
@@ -20,6 +21,32 @@ const MovieMain = () => {
     useEffect(() => {
         window.addEventListener('scroll', updateScroll);
     });
+
+
+    // // 영화 리스트 axios
+    // const [movies, setMovies] = useState([]); 
+    // const [isLoading, setIsLoading] = useState(true); 
+
+    // const getMovies = () => {
+    //     axios.get()
+    //         .then((res) => {
+    //             setMovies(res.data.movies)
+    //             setIsLoading(false)
+    //         })
+    // }
+
+    // useEffect(() => {
+    //     getMovies()
+    // }, []);
+
+    
+
+
+
+
+
+
+
 
     return(
         <>

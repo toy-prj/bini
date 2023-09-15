@@ -28,9 +28,16 @@ body {
     }
 }
 
-// 모달창 닫기 버튼 클릭
-.click-close-modal-btn {
-    animation: clickCloseModalBtn 1s forwards 1;
+@keyframes openSignUpShifted {
+    0% {
+        
+    } 100% {
+
+    }
+}
+
+.open-sign-up-shifted {
+
 }
 
 // 로그인 모달

@@ -8,7 +8,7 @@
 
 @keyframes openSignUpSelectInfoModal {
     0% {
-        transform: translate(0, -50%);
+        transform: translate(-30%, -50%);
         width: 500px;
         height: 600px;
         opacity: 0;
@@ -94,21 +94,21 @@
         .movie-sign-up-user-select-info-wrapper {
             width: 100%;
             height: 360px;
-            
+
             .movie-sign-up-user-select-info-box {
                 width: 100%;
                 height: 100%;
-                
+
                 .movie-sign-up-select-info-list-box {
                     width: 90%;
                     height: 75%;
                     margin: 0 auto;
-                    
+
                     .movie-sign-up-select-info-list {
                         width: 100%;
                         height: 50px;
                         margin-bottom: 40px;
-                        
+
                         &:first-child {
                             margin-top: 45px;
                         }
@@ -126,7 +126,7 @@
                                 width: 15%;
                                 height: 100%;
                                 // transition-duration: .3s;
-        
+
                                 .header-sign-up-user-select-info-title {
                                     color: #fff;
                                     width: 100%;
@@ -137,7 +137,7 @@
                                     @include disflex();
                                 }
                             }
-    
+
                             .header-sign-up-user-select-info-input {
                                 border: 2px solid rgb(0, 117, 255, .9);
                                 border-radius: 0 5px 5px 0;
@@ -146,11 +146,11 @@
                                 height: 100%;
                                 padding-left: 2%;
                                 letter-spacing: 1px;
-                                
+
                                 &:focus {
                                     outline: none;
                                 }
-        
+
                                 &::placeholder {
                                     font-size: 13px;
                                     letter-spacing: -1px;
@@ -170,7 +170,7 @@
                     width: 100%;
                     height: 70px;
                     @include disflex();
-                    
+
                     .header-sign-up-completion-btn {
                         background: rgb(0, 117, 255, .9);
                         border-radius: 5px;
