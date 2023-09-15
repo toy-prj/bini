@@ -6,6 +6,7 @@ import MovieSignUpProgressBar from "./MovieSignUpProgressBar";
 import MovieSignUpLogo from "./MovieSignUpLogo";
 
 import '../../scss/header/MovieSignUp.scss';
+import { Email } from "@mui/icons-material";
 
 const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn, successSignUp }) => {
 
@@ -54,6 +55,34 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
     };
 
     // -------------------------------------------------------------------------
+    // 이메일 유효성 검사 함수
+    const emailHandler = e => {
+
+        const inputVal = e.target.value;
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        
+        let msg, flag;
+
+        if (!e.target.value) {
+            msg = '이메일은 필수입니다.';
+            flag = false;
+        } else if (!emailRegex.test(e.target.value)) {
+            msg = '이메일 양식을 맞춰주세요.';
+            flag = false;
+        } else {
+            msg = '사용 가능한 이메일입니다. 이메일 인증 버튼을 눌러주세요.';
+            flag = true;
+        }
+
+        saveInputState({
+            key: 'mail',
+            inputVal,
+            msg,
+            flag
+        })
+    };
+
+
     // 비밀번호 체인지 이벤트 핸들러
     const passwordHandler = e => {
 
@@ -186,7 +215,7 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
                                             label='Email'
                                             placeholder="이메일을 입력해주세요"
                                             maxLength={35}
-                                            // onChange={ passwordHandler }
+                                            onChange={ emailHandler }
                                         />
                                         <div className="header-sign-up-user-certify-email-box">
                                             <button className="header-sign-up-user-certify-email">
