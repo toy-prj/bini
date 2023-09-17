@@ -1,0 +1,211 @@
+@import url('../common.scss');
+
+@mixin disflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes openCertifiedEmailModal {
+    0% {
+        transform: translate(-40%, -50%);
+        width: 500px;
+        height: 600px;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 600px;
+        opacity: 1;
+    }
+}
+
+.movie-certified-email-wrapper {
+    background: #fff;
+    width: 500px;
+    height: 600px;
+    animation: openCertifiedEmailModal 1s forwards 1;
+    transition-duration: .3s;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2003;
+
+    .movie-certified-email-box {
+        width: 100%;
+        height: 100%;
+
+        // 뒤로가기 / 닫기 버튼
+        .certified-email-btn-box {
+            width: 100%;
+            height: 30px;
+            display: flex;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            .certified-email-back-btn-box {
+                width: 50%;
+                height: 100%;
+    
+                .certified-email-back-btn {
+                    color: rgb(0, 117, 255, .9);
+                    background: none;
+                    width: 25px;
+                    height: 100%;
+                    font-size: 16px;
+                    cursor: pointer;
+                    @include disflex();
+                }
+            }
+    
+            .certified-email-close-btn-box {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: right;
+    
+                .certified-email-close-btn {
+                    color: rgb(0, 117, 255, .9);
+                    background: none;
+                    width: 25px;
+                    height: 100%;
+                    font-size: 16px;
+                    cursor: pointer;
+                    @include disflex();
+                }
+            }
+        }
+
+        // logo
+        .certified-email-logo-wrapper {
+            width: 100%;
+            height: 150px;
+        }
+
+        .certified-email-progress-bar-wrapper {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        // 인증번호 전송 메시지 출력 칸
+        .certified-email-user-email-text-box {
+            background: #eee;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .certified-email-user-email-view-text {
+                color: rgb(0, 117, 255, .9);
+                width: fit-content;
+                height: 100%;
+                font-size: 13px;
+                font-weight: bold;
+                @include disflex();
+            }
+            
+            .certified-email-user-email-text {
+                width: fit-content;
+                height: 100%;
+                font-weight: bold;
+                letter-spacing: .5px;
+                @include disflex();
+            }
+
+        }
+
+        // 인증번호 입력 칸
+        .certified-email-input-wrapper {
+            width: 100%;
+            height: 250px;
+            
+            .certified-email-input-box {
+                width: 85%;
+                height: 100%;
+                margin: 0 auto;
+
+                .certified-email-input-code-box {
+                    width: 100%;
+                    height: 50%;
+                    @include disflex();
+
+                    .header-sign-up-user-info-title-box {
+                        background: rgb(0, 117, 255, .9);
+                        border: 1px solid rgb(0, 117, 255, .9);
+                        border-radius: 5px 0 0 5px;
+                        border-right: none;
+                        width: 15%;
+                        height: 40%;
+
+                        .header-sign-up-user-info-title {
+                            color: #fff;
+                            width: 100%;
+                            height: 100%;
+                            font-size: 30px;
+                            font-weight: bold;
+                            letter-spacing: 0;
+                            @include disflex();
+                        }
+                    }
+
+                    .certified-email-input-code {
+                        border: 2px solid rgb(0, 117, 255, .9);
+                        border-radius: 0 5px 5px 0;
+                        width: 85%;
+                        height: 40%;
+                        font-size: 20px;
+                        letter-spacing: 1px;
+                        text-align: center;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &::placeholder {
+                            letter-spacing: -.1px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                // 인증하기 버튼
+                .certified-email-verification-btn-box {
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .certified-email-verification-btn {
+                        background: rgb(0, 117, 255, .9);
+                        border: none;
+                        border-radius: 5px;
+                        color: #fff;
+                        width: 150px;
+                        height: 50px;
+                        font-weight: bold;
+                        transition-duration: .3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: rgb(0, 117, 255, .7);
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        
+    }
+}

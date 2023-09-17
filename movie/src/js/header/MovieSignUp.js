@@ -6,9 +6,8 @@ import MovieSignUpProgressBar from "./MovieSignUpProgressBar";
 import MovieSignUpLogo from "./MovieSignUpLogo";
 
 import '../../scss/header/MovieSignUp.scss';
-import { Email } from "@mui/icons-material";
 
-const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn, successSignUp }) => {
+const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSelectInfo, clickBackToSignUpBtn, successSignUp, clickCertifiedEmail, isSuccessCertifiedEmail, isOpenCertifiedEmail }) => {
 
     // 상태변수로 회원가입 입력값 관리
     const [userValue, setUserValue] = useState({
@@ -143,7 +142,7 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
     }
 
 
-
+    
 
 
 
@@ -162,7 +161,10 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
                     successSignUp={ successSignUp }
             /> }
 
-            <div className={`header-sign-up-wrapper ${isOpenSelectInfo ? 'shifted' : ''}`}>
+            <div className={`header-sign-up-wrapper 
+                ${isOpenSelectInfo ? 'shifted' : ''} 
+                ${isOpenCertifiedEmail ? 'shifted' : ''}`
+            }>
                 <div className="header-sign-up-box">
 
                     {/* 버튼 관련 */}
@@ -218,7 +220,11 @@ const MovieSignUp = ({ clickCloseBtn, clickLogin, isOpenSelectInfo, clickNextSel
                                             onChange={ emailHandler }
                                         />
                                         <div className="header-sign-up-user-certify-email-box">
-                                            <button className="header-sign-up-user-certify-email">
+                                            <button 
+                                                className="header-sign-up-user-certify-email"
+                                                type="button"
+                                                onClick={ clickCertifiedEmail }
+                                            >
                                                 <p className="header-sign-up-user-certify-email-text">이메일</p>
                                                 <p className="header-sign-up-user-certify-email-text">인증</p>
                                             </button>

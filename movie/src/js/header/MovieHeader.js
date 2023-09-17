@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { MdCardMembership } from 'react-icons/md';
 import { BsPersonFill, BsPersonFillAdd, BsPersonFillLock } from 'react-icons/bs';
 import { WiDirectionUp } from 'react-icons/wi';
-import MovieLogin from "./MoiveLogin";
+import MovieLogin from "./MovieLogin";
 import MovieSignUp from "./MovieSignUp";
 import HeaderMenuBar from "./menu/HeaderMenuBar";
 import HeaderReservation from "./menu/reservation/HeaderReservation";
 import MovieSignUpCompletion from "./MovieSignUpCompletion";
 
 import '../../scss/header/MovieHeader.scss';
+import MovieCertifiedEmail from "./MovieCertifiedEmail";
+import MovieCertifiedEmailCompletion from "./MovieCertifiedEmailCompletion";
 
 const MovieHeader = () => {
     
@@ -19,55 +21,90 @@ const MovieHeader = () => {
         setOpenSignUp(false);
         isSetOpenSelectInfo(false);
         setIsSuccessSignUp(false);
+        setIsOpenCertifiedEmail(false);
+        setIsSuccessCertifiedEmail(false);
     }
-
+    
     // 로그인
     const [openLogin, setOpenLogin] = useState(false);
-
+    
     // 메인화면 로그인 클릭
     const clickLogin = () => {
         setOpenLogin(true);
         setOpenSignUp(false);
         isSetOpenSelectInfo(false);
         setIsSuccessSignUp(false);
+        setIsOpenCertifiedEmail(false);
+        setIsSuccessCertifiedEmail(false);
     }
-
+    
     // 회원가입
     const [openSignUp, setOpenSignUp] = useState(false);
-
+    
     // 메인화면 회원가입 클릭
     const clickSignUp = () => {
         setOpenSignUp(true);
         setOpenLogin(false);
         isSetOpenSelectInfo(false);
         setIsSuccessSignUp(false);
+        setIsOpenCertifiedEmail(false);
+        setIsSuccessCertifiedEmail(false);
     }
-
+    
     // 회원가입 다음으로 버튼
     const [isOpenSelectInfo, isSetOpenSelectInfo] = useState(false);
-
+    
     const clickNextSelectInfo = () => {
         isSetOpenSelectInfo(true);
         setIsSuccessSignUp(false);
+        setIsOpenCertifiedEmail(false);
+        setIsSuccessCertifiedEmail(false);
     }
-
-    // 회원가입 선택 사항 목록
+    
+    // 회원가입 입력2 > 입력1로 이동
     const clickBackToSignUpBtn = () => {
-        isSetOpenSelectInfo(false);
         setOpenSignUp(true);
+        isSetOpenSelectInfo(false);
+        setIsOpenCertifiedEmail(false);
+        setIsSuccessCertifiedEmail(false);
     }
-
+    
     // 회원가입 성공 컴포넌트 호출
     const [isSuccessSignUp, setIsSuccessSignUp] = useState(false);
-
+    
     const successSignUp = () => {
+        setIsSuccessSignUp(true);
         setOpenSignUp(false);
         isSetOpenSelectInfo(false);
-        setIsSuccessSignUp(true);
-    
+        setIsOpenCertifiedEmail(false);
+        setIsSuccessCertifiedEmail(false);
+        
         setTimeout(() => {
             setOpenLogin(true);
         }, 1900);
+    }
+    
+    // 이메일 인증
+    const [isOpenCertifiedEmail, setIsOpenCertifiedEmail] = useState(false);
+    
+    const clickCertifiedEmail = () => {
+        setIsOpenCertifiedEmail(true);
+        setIsSuccessCertifiedEmail(false);
+    }
+    
+    // 이메일 인증 성공 컴포넌트 호출
+    const [isSuccessCertifiedEmail, setIsSuccessCertifiedEmail] = useState(false);    
+    
+    const clickCertifiedEmailBtn = () => {
+        setIsSuccessCertifiedEmail(true);
+        setIsSuccessSignUp(false);
+        isSetOpenSelectInfo(false);
+        setIsOpenCertifiedEmail(false);
+        
+        setTimeout(() => {
+            setOpenSignUp(true);
+        }, 1900);
+
     }
 
     // sticky header 
@@ -127,14 +164,26 @@ const MovieHeader = () => {
 
             { openSignUp && 
                 <MovieSignUp 
-                    clickCloseBtn={ clickCloseBtn } 
-                    clickLogin={ clickLogin }
-                    clickNextSelectInfo={ clickNextSelectInfo }
-                    clickBackToSignUpBtn={ clickBackToSignUpBtn }
-                    successSignUp={ successSignUp }
-                    isOpenSelectInfo={ isOpenSelectInfo }
+                clickCloseBtn={ clickCloseBtn } 
+                clickLogin={ clickLogin }
+                clickNextSelectInfo={ clickNextSelectInfo }
+                clickBackToSignUpBtn={ clickBackToSignUpBtn }
+                successSignUp={ successSignUp }
+                clickCertifiedEmail={ clickCertifiedEmail }
+                isOpenCertifiedEmail={ isOpenCertifiedEmail }
+                isSuccessCertifiedEmail={ isSuccessCertifiedEmail }
+                isOpenSelectInfo={ isOpenSelectInfo }
             /> }          
 
+            { isOpenCertifiedEmail && 
+                <MovieCertifiedEmail 
+                    clickCloseBtn={ clickCloseBtn } 
+                    clickSignUp={ clickSignUp }
+                    clickCertifiedEmailBtn= { clickCertifiedEmailBtn }
+                    isOpenCertifiedEmail={ isOpenCertifiedEmail }
+            /> }
+
+            { isSuccessCertifiedEmail && <MovieCertifiedEmailCompletion /> }
             
             { openReservation && <HeaderReservation /> }
 

@@ -6,93 +6,108 @@
     align-items: center;
 }
 
-@keyframes successSignUp {
+
+@keyframes successCertifiedEmail {
     0% {
-        transform: translate(-50%, 10%);
+        transform: translate(-50%, -60%);
         background: #eee;
-        border-radius: 125px;
-        width: 400px;
+        width: 500px;
         height: 600px;
         opacity: 0;
         z-index: 2100;
     }
 
     15% {
-        transform: translate(-50%, 20%);
+        transform: translate(-50%, -50%);
         background: rgb(0, 117, 255);
-        border-radius: 0 125px 125px 125px;
-        width: 400px;
+        width: 500px;
         height: 600px;
         opacity: 1;
         z-index: 2100;
     }
-    
+
     30% {
-        transform: translate(-50%, 20%);
+        transform: translate(-50%, -50%);
         background: rgb(0, 117, 255);
-        border-radius: 0 0 125px 125px;
-        width: 400px;
+        width: 500px;
         height: 600px;
         opacity: 1;
         z-index: 2100;
     }
-    
+
     45% {
-        transform: translate(-50%, 20%);
+        transform: translate(-50%, -50%);
         background: rgb(0, 117, 255);
-        border-radius: 0 0 0 125px;
-        width: 400px;
+        width: 500px;
         height: 600px;
         opacity: 1;
         z-index: 2100;
     }
 
     60% {
-        transform: translate(-50%, 20%);
+        transform: translate(-50%, -50%);
         background: rgb(0, 117, 255);
-        border-radius: 0;
-        width: 400px;
+        width: 500px;
         height: 600px;
         opacity: 1;
         z-index: 2100;
     }
-    
+
     100% {
-        transform: translate(-50%, 20%);
+        transform: translate(-50%, -50%);
         background: #eee;
-        border-radius: 0;
-        width: 400px;
+        width: 500px;
         height: 600px;
         opacity: 0;
         z-index: -2000;
     }
 }
 
-.movie-sign-up-completion-wrapper {
+// @keyframes openCertifiedEmailModal {
+//     0% {
+//         transform: translate(-50%, -50%) scale(1);
+//         opacity: 1;
+//         pointer-events: none;
+//     }
+    
+//     100% {
+//         transform: translate(-60%, -50%) scale(.9);
+//         opacity: .5;
+//         pointer-events: none;
+//     }
+// }
+
+// .open-certified-email-modal {
+//     animation: openCertifiedEmailModal 1s forwards 1;
+// }
+
+
+.movie-certified-email-completion-wrapper {
     background: rgb(0, 117, 255);
+    border: none;
     width: 500px;
     height: 600px;
-    transition-duration: 0.3s;
-    animation: successSignUp 3s forwards 1;
+    transition-duration: .3s;
+    animation: successCertifiedEmail 3.5s forwards 1;
     @include disflex();
 
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -50%);
 
-    // z-index: 1999;
+    z-index: 2100;
 
-    .movie-sign-up-completion-box {
+    .movie-certified-email-completion-box {
         width: 100%;
         height: 30%;
 
-        .movie-sign-up-completion-img-box {
+        .movie-certified-email-completion-img-box {
             width: 100%;
             height: 70%;
             @include disflex();
 
-            .movie-sign-up-completion-img {
+            .movie-certified-email-completion-img {
                 color: #fff;
                 width: 50%;
                 height: 100%;
@@ -100,7 +115,7 @@
                 animation: logoExpansion 1s .5s forwards 1;
                 @include disflex();
             }
-
+            
             @keyframes logoExpansion {
                 0% {
                     transform: scale(1);
@@ -113,12 +128,12 @@
             }
         }
 
-        .movie-sign-up-completion-text-box {
+        .movie-certified-email-completion-text-box {
             width: 100%;
             height: 30%;
             @include disflex();
 
-            .movie-sign-up-completion-text {
+            .movie-certified-email-completion-text {
                 color: #fff;
                 width: 50%;
                 height: 100%;

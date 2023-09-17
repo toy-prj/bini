@@ -22,7 +22,21 @@
         opacity: 1;
         pointer-events: none;
     }
-    
+
+    100% {
+        transform: translate(-60%, -50%) scale(.9);
+        opacity: .5;
+        pointer-events: none;
+    }
+}
+
+@keyframes openingCertifiedEmail {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        pointer-events: none;
+    }
+
     100% {
         transform: translate(-60%, -50%) scale(.9);
         opacity: .5;
@@ -33,6 +47,10 @@
 .header-sign-up-wrapper.shifted {
     animation: closeSignUpModal 1s forwards 1;
     transition-duration: .3s;
+}
+
+.header-sign-up-wrapper.shifted.opening {
+    animation: openingCertifiedEmail 1s forwards 1;
 }
 
 .header-sign-up-wrapper {
@@ -118,7 +136,7 @@
                 width: 90%;
                 height: 600px;
                 margin: 0 auto;
-                
+
                 .header-sign-up-user-info-list-box {
                     width: 100%;
                     height: 280px;
@@ -182,14 +200,14 @@
                                 border-radius: 0 5px 5px 0;
                                 width: 15%;
                                 height: 100%;
-                                
+
                                 .header-sign-up-user-certify-email {
                                     background: rgb(0, 117, 255, .9);
                                     border-radius: 0 5px 5px 0;
                                     width: 100%;
                                     height: 100%;
                                     cursor: pointer;
-        
+
                                     .header-sign-up-user-certify-email-text {
                                         color: #fff;
                                         width: 100%;
@@ -202,7 +220,7 @@
                             }
                         }
 
-                        
+
 
                         span {
                             width: fit-content;
@@ -210,14 +228,14 @@
                             letter-spacing: .3px;
                         }
                     }
-                    
+
                     // .header-sign-up-user-info-list {
                     //     width: 100%;
                     //     height: 50px;
                     //     margin-bottom: 40px;
                     //     display: flex;
                     // }
-                    
+
                     // .header-sign-up-user-info-title-box {
                     //     background: rgb(0, 117, 255, .9);
                     //     border: 1px solid rgb(0, 117, 255, .9);
@@ -225,7 +243,7 @@
                     //     border-right: none;
                     //     width: 15%;
                     //     height: 100%;
-                        
+
                     //     .header-sign-up-user-info-title {
                     //         color: #fff;
                     //         width: 100%;
@@ -245,7 +263,7 @@
                     //     height: 100%;
                     //     padding-left: 2%;
                     //     letter-spacing: 1px;
-                        
+
                     //     &:focus {
                     //         outline: none;
                     //     }
@@ -262,13 +280,13 @@
                     //     border-right: none;
                     // }
 
-                    
+
                 }
 
                 .header-sign-up-next-btn-box {
                     width: 100%;
                     height: 50px;
-                    
+
                     .header-sign-up-next-btn {
                         background: rgb(0, 117, 255, .9);
                         border-radius: 5px;
