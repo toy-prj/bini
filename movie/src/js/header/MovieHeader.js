@@ -97,6 +97,7 @@ const MovieHeader = () => {
     
     const clickCertifiedEmailBtn = () => {
         setIsSuccessCertifiedEmail(true);
+        setOpenSignUp(false);
         setIsSuccessSignUp(false);
         isSetOpenSelectInfo(false);
         setIsOpenCertifiedEmail(false);
